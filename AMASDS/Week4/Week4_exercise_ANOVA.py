@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.16.3"
+__generated_with = "0.16.5"
 app = marimo.App()
 
 
@@ -34,7 +34,7 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    _conditions = mo.image(src="conditions.png")
+    _conditions = mo.image(src="AMASDS/Week4/conditions.png")
     mo.md(
         f"""
         {_conditions}
@@ -56,14 +56,13 @@ def _(mo):
     return
 
 
-app._unparsable_cell(
-    r"""
+@app.cell
+def _():
     from matplotlib import pyplot as plt
-    from scipy.stats import   # complete this line
+    from scipy.stats import f_oneway
     import pandas as pd
-    """,
-    name="_"
-)
+    import scipy
+    return f_oneway, pd, scipy
 
 
 @app.cell(hide_code=True)
@@ -85,17 +84,17 @@ def _(mo):
 @app.cell
 def _(pd):
     # Data import
-    filename = ''  # complete
+    filename = 'AMASDS/Week4/thinkingmode.csv'  # complete
     df = pd.read_csv(filename)
 
-    df  # Show data
-    return
+    df.isna()
+    df.count() #Doesn't include NAN 
+    basic_group = df['Basic'].count()
+    light_group = df['Light'].count()
+    full_group = df['Full'].count()
 
-
-@app.cell
-def _():
-    # Get data from columns
-    return
+    print(f"Basic: {basic_group}\nLight: {light_group}\nFull: {full_group}")
+    return (df,)
 
 
 @app.cell(hide_code=True)
@@ -111,9 +110,19 @@ def _(mo):
 
 
 @app.cell
-def _():
-    # Perform a one-way ANOVA
-    return
+def _(df, f_oneway):
+    cols = ['Basic', 'Light', 'Full']
+
+    df_clean = df.copy()
+
+    #Cleaning
+    #df_clean[cols] = df_clean[cols].apply(pd.to_numeric, errors='coerce')
+    df_clean = df_clean.dropna(subset=cols)
+
+    f_stat, p_val = f_oneway(df_clean['Basic'], df_clean['Light'], df_clean['Full'])
+    print(f"F-statistic: {f_stat:.4f}, p-value: {p_val:.6f}")
+
+    return (df_clean,)
 
 
 @app.cell(hide_code=True)
@@ -133,9 +142,28 @@ def _(mo):
 
 
 @app.cell
-def _():
+def _(df_clean, scipy):
     # Post-hoc t-tests between groups
-    return
+    t_stat1, p_val1= scipy.stats.ttest_ind(df_clean['Basic'], df_clean['Light'])
+    print(f"Basic vs Light T_stat:{t_stat1} P_val: {p_val1}")
+
+    t_stat2, p_val2= scipy.stats.ttest_ind(df_clean['Light'], df_clean['Full'])
+    print(f"Light vs Full T_stat:{t_stat2} P_val: {p_val2}")
+
+    t_stat3, p_val3= scipy.stats.ttest_ind(df_clean['Full'], df_clean['Basic'])
+    print(f"Full vs Basic T_stat:{t_stat3} P_val: {p_val3}")
+
+
+    results = {
+        "Basic vs Light": p_val1,
+        "Light vs Full": p_val2,
+        "Full vs Basic": p_val3
+    }
+
+    most_significant = min(results, key=results.get)
+
+    print(f"The most significant difference exists between {most_significant} (p = {results[most_significant]:.5f})")
+    return p_val1, p_val2, p_val3
 
 
 @app.cell(hide_code=True)
@@ -153,9 +181,35 @@ def _(mo):
 
 
 @app.cell
-def _():
-    # Adjustment of p-values to control the false discovery rate
+def _(p_val1, p_val2, p_val3, p_values, scipy):
+    pvals = [p_val1,p_val2,p_val3]
+    adj_pvals = scipy.stats.false_discovery_control(p_values)
+    adj_pvals
     return
+
+
+@app.cell
+def _(p_val1, p_val2, p_val3, scipy):
+    # Adjustment of p-values to control the false discovery rate
+    p_values = [p_val1,p_val2,p_val3]
+    adj_p_vals = scipy.stats.false_discovery_control(p_values)
+    adj_p_vals
+    """
+    #adj_p_val1 = scipy.stats.false_discovery_control(p_val1)
+    #adj_p_val2 = scipy.stats.false_discovery_control(p_val2)
+    #adj_p_val3 = scipy.stats.false_discovery_control(p_val3)
+
+    results_adjusted = {
+        "Basic vs Light": adj_p_val1,
+        "Light vs Full": adj_p_val2,
+        "Full vs Basic": adj_p_val3
+    }
+    print(f"Adjusted values:\n {results_adjusted} ")
+    adj_most_significant = min(results, key=results_adjusted.get)
+
+    print(f"The most significant difference exists between {adj_most_significant} (p = {results_adjusted[adj_most_significant]:.5f})")
+    """
+    return (p_values,)
 
 
 @app.cell(hide_code=True)
