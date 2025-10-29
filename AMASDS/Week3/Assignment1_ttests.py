@@ -76,7 +76,7 @@ def _(mo):
 
 @app.cell
 def _(pd):
-    df = pd.read_csv("Week3/heights.csv")
+    df = pd.read_csv("AMASDS/Week3/heights.csv")
     df.head()
     return (df,)
 
@@ -139,7 +139,6 @@ def _(group1, group2, np, plt, sm, sns):
     plt.tight_layout()
     plt.savefig('qplots.png', dpi=150, bbox_inches='tight')
     plt.show()
-
     return group1_heights, group2_heights
 
 
@@ -191,10 +190,9 @@ def _(mo):
     Figures:
 
     Figure 1: Distribution of heights for both groups, showing the substantial mean difference.
-    {mo.image("height_distribution.png")}
+    {mo.image("AMASDS/Week3/height_distribution.png")}
     Figure 2: Q-Q plots assessing normality assumption for both groups.
-    {mo.image("qplots.png")}
-
+    {mo.image("AMASDS/Week3/qplots.png")}
     """
     )
     return
@@ -211,8 +209,6 @@ def _(mo):
     In two separate studies, several participants were invited to test the system (C) and compare it against two alternatives. In *Study 1*, the system is compared against Google Images (A). In *Study 2*, the system is compared against Stable Diffusion (B).
 
     The participants were asked to imagine working for a fashion design agency tasked with creating new dress designs for a client, and to “come up with a variety of styles with diferent colors, patterns, and textures… that should be creative, but not too impractical”.
-
-    ![](https://drive.google.com/uc?export=view&id=1gqnqwriqeVJgBempGqDjmTNyUW60mdtI)
 
     The study procedure was the following. First, participants would perform the task with the alternative system (A or B) for 10–15 minutes. They would then score their experience on the Creativity Support Index (CSI). Second, they would to the same task with the generative AI system (C). Afterwards, they score their experience again on the CSI.
 
@@ -236,6 +232,12 @@ def _(mo):
     - Create plots to separately visualise the results of the two studies
     """
     )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.image("AMASDS/Week3/fashion_study.png")
     return
 
 

@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.17.2"
+__generated_with = "0.16.5"
 app = marimo.App()
 
 
@@ -24,14 +24,14 @@ def _(mo):
 
 @app.cell(hide_code=True)
 def _(mo):
-    _studyflow = mo.image(src="studyflow.png")
-    _gameplay = mo.image(src="gameplay.png")
+    mo.md(f"""In a user study (N=64), they investigated the effects of music on players’ time perception (measured as retrospective time estimation). The study employed a between-subjects design with presence of music as the independent variable (with-music vs. no-music, see figure below). The primary research question was: *How does the presence of music affect time perception in a VR game?*""")
+    return
 
-    mo.md(f"""
-    {_studyflow}
 
-    In a user study (N=64), they investigated the effects of music on players’ time perception (measured as retrospective time estimation). The study employed a between-subjects design with presence of music as the independent variable (with-music vs. no-music, see figure below). The primary research question was: *How does the presence of music affect time perception in a VR game?*
-    """)
+@app.cell
+def _(mo):
+    studyflow = mo.image(src="AMASDS/Week5/studyflow.png")
+    studyflow
     return
 
 
@@ -44,7 +44,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
 
-    _gameplay = mo.image(src="gameplay.png")
+    _gameplay = mo.image(src="AMASDS/Week5/gameplay.png")
 
     mo.md(f"""
     {_gameplay}
@@ -66,7 +66,7 @@ def _():
     import numpy as np
     import scipy
     import pandas as pd
-    return np, pd
+    return np, pd, plt, scipy
 
 
 @app.cell(hide_code=True)
@@ -77,7 +77,7 @@ def _(mo):
 
     We measured retrospective time estimation (RTE). The participants were not informed that they would later be asked to estimate the duration of play to assess the remembered duration. After the game, we asked participants to estimate the duration of play.
 
-    Participants were asked to choose one of eleven RET intervals, starting from 61–90 seconds and ending with 361–390 seconds. With 272 seconds as the correct duration of the game, the eighth interval was the right choice. However, the seventh interval was also accepted as correct for the subsequent analysis because it was so close.
+    Participants were asked to choose one of eleven RTE intervals, starting from 61–90 seconds and ending with 361–390 seconds. With 272 seconds as the correct duration of the game, the eighth interval was the right choice. However, the seventh interval was also accepted as correct for the subsequent analysis because it was so close.
 
     Additionally, the researchers defined the relaxed absolute difference (RAD) as a metric for how close participants’ RTE was to the correct answer. An absolute measure was chosen as otherwise over vs. underestimations would skew each other, and we were interested in correct vs. incorrect time estimation. The measure was relaxed in the sense that both intervals 7 and 8 counted as correct (i.e., RAD = 0), intervals 6 and 9 both counted as RAD = 1, etc.
     """
@@ -90,7 +90,7 @@ def _(mo):
     _table = mo.ui.table(
         data=[
             {
-                "Time (sec)": "RET", 
+                "Time (sec)": "RTE", 
                 "61–90": 1, 
                 "91–120": 2, 
                 "121–150": 3, 
@@ -124,7 +124,7 @@ def _(mo):
     mo.md(f"""
     {_table}
 
-    The table above gives an overview of the time intervals and the corresponding RET and RAD values.
+    The table above gives an overview of the time intervals and the corresponding RTE and RAD values.
     """)
     return
 
@@ -144,17 +144,21 @@ def _(mo):
 @app.cell
 def _(pd):
     # Data import
-    filename = ''  # complete
+    filename = 'AMASDS/Week5/vr_rte.csv'  # complete
     df = pd.read_csv(filename)
 
     df  # Show data
-    return
+    return (df,)
 
 
 @app.cell
-def _():
+def _(df):
     # Get data from columns
-    return
+    rte_music = df['With music'].tolist()
+    print(rte_music)
+    rte_nomusic = df['Without music'].tolist()
+    print(rte_nomusic)
+    return rte_music, rte_nomusic
 
 
 @app.cell(hide_code=True)
@@ -180,13 +184,15 @@ def _(np):
             elif score > 8:  # Too high
                 rad[i] = np.abs(score - 8)
         return rad
-    return
+    return (rte_to_rad,)
 
 
 @app.cell
-def _():
+def _(rte_music, rte_nomusic, rte_to_rad):
     # Convert the data
-    return
+    rad_music=rte_to_rad(rte_music)
+    rad_nomusic = rte_to_rad(rte_nomusic)
+    return rad_music, rad_nomusic
 
 
 @app.cell(hide_code=True)
@@ -205,14 +211,63 @@ def _(mo):
 
 
 @app.cell
-def _():
+def _(plt, rte_music, rte_nomusic):
     # Plot RTE data
+    plt.figure(figsize=(6, 5))
+    plt.boxplot([rte_music, rte_nomusic], tick_labels=['Music', 'No Music'])
+    plt.title('Retrospective Time Estimation (RTE)')
+    plt.ylabel('Chosen RTE Interval')
+    plt.figtext(
+        0.5, -0.15,
+        "Boxplot comparing retrospective time estimations (RTE) between the with-music and without-music conditions. \n"
+        "Values represent the interval chosen by participants (1–11), where higher interval numbers indicate longer perceived durations. \n"
+        "The correct interval was 8 (271–300 seconds).",
+        wrap=True, ha='center', fontsize=9
+    )
+    plt.savefig("rad_music.pdf")
+    plt.show()
+
     return
 
 
 @app.cell
-def _():
+def _(pd, rte_music, rte_nomusic):
+    rte_music_series_median = (pd.Series(rte_music)).median()
+    rte_nomusic_series_median = (pd.Series(rte_nomusic)).median()
+    print("RTE median of Music group = " + str(rte_music_series_median))
+    print("RTE median of Non-music group = " + str(rte_nomusic_series_median))
+
+    return
+
+
+@app.cell
+def _(plt, rad_music, rad_nomusic):
     # Plot RAD data
+    plt.figure(figsize=(6, 5))
+    plt.boxplot([rad_music, rad_nomusic], tick_labels=['Music', 'No Music'])
+    plt.title('Relaxed Absolute Difference (RAD)')
+    plt.ylabel('Relaxed Absolute Difference (RAD)')
+
+    plt.figtext(
+        0.5,                
+        -0.05,             
+        "Lower RAD values indicate more accurate time estimation.\n "
+        "RAD = 0 corresponds to correct intervals (7–8);\n higher values show greater deviation.",
+        wrap=True,
+        ha='center',        
+        fontsize=9
+    )
+    plt.show()
+    return
+
+
+@app.cell
+def _(pd, rad_music, rad_nomusic):
+    rad_music_series_median = (pd.Series(rad_music)).median()
+    rad_nomusic_series_median = (pd.Series(rad_nomusic)).median()
+    print("RAD median of Music group = " + str(rad_music_series_median))
+    print("RAD median of Non-music group = " + str(rad_nomusic_series_median))
+
     return
 
 
@@ -236,14 +291,58 @@ def _(mo):
 
 
 @app.cell
-def _():
+def _(rte_music, rte_nomusic, scipy):
     # Significance testing RTE
+    _U1, _p = scipy.stats.mannwhitneyu(rte_music, rte_nomusic,method='auto')
+    print("U1: " + str(_U1))
+    print("P:" + str(_p))
+    if _p < 0.05:
+        print("Reject H0 — significant difference")
+    else:
+        print("Fail to reject H0 — no significant difference")
     return
 
 
 @app.cell
-def _():
+def _(rad_music, rad_nomusic, scipy):
     # Significance testing RAD
+    U1, p = scipy.stats.mannwhitneyu(rad_music, rad_nomusic,method='auto')
+    print("U1: " + str(U1))
+    print("P:" + str(p))
+    if p < 0.05:
+        print("Reject H0 — significant difference")
+    else:
+        print("Fail to reject H0 — no significant difference")
+
+    #RAD is already a “distance from correct interval” metric, which may produce more consistent differences between groups, hence smaller p (0.008).
+    return
+
+
+@app.cell
+def _(np, rte_music, rte_nomusic, scipy):
+    #Manual Check
+    n1 = len(rte_music)
+    n2 = len(rte_nomusic)
+    U = 705
+
+    mu_U = n1*n2 / 2
+    sigma_U = np.sqrt(n1*n2*(n1+n2+1)/12)
+    z = (U - mu_U -0.5) / sigma_U #with continuity correction
+    print(z)
+    print("Z check:")
+    if abs(z) > 1.96:
+        print("Reject H0 — significant difference\n")
+    else:
+        print("Fail to reject H0 — no significant difference\n")
+    
+    _p = 2 * (1 - scipy.stats.norm.cdf(abs(z)))  # two-tailed
+    print(_p) #continuous normal approximation - slightly different result
+
+    print("P check:")
+    if _p < 0.05:
+        print("Reject H0 — significant difference")
+    else:
+        print("Fail to reject H0 — no significant difference")
     return
 
 
@@ -260,6 +359,23 @@ def _(mo):
     3. Are the results of the test significant?
     4. Would you reject the null hypothesis or not?
     5. What are you conclusions about the research question?
+    """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    1. The analyses were conducted using non-parametric tests because the research question — *How does the presence of music affect time perception in a VR game?* — involves ordinal data that are not normally distributed, and population parameters could not be reliably estimated. Given that there are two independent groups (with-music vs. without-music), the **Mann–Whitney U test** was chosen to compare participants’ responses between conditions.
+    2. **H₀**: Music has no effect on time perception in VR games.<br>
+       **H₁**: Music affects time perception in VR games. <br>
+       **IV**; Condition: Music vs No Music <br>
+       **DV**; Time perception	Measured via RTE (Retrospective Time Estimation) and RAD (Relaxed Absolute Difference).
+    3. The p-values for both RTE and RAD were below 0.05 (RTE: p = 0.038; RAD: p = 0.008), indicating that the differences between the music and no-music conditions were statistically **significant**. 
+    4. Based on the results, **H₀ is rejected** for both measures.
+    5. Conclusion: The findings suggest that background music significantly influences time perception in VR games. Participants’ estimated durations (RTE) and their accuracy (RAD) differed between the music and no-music conditions, supporting the hypothesis that presence of music affects perceived time.
     """
     )
     return
