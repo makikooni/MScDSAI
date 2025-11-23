@@ -1,16 +1,18 @@
 import marimo
 
-__generated_with = "0.17.8"
+__generated_with = "0.16.5"
 app = marimo.App()
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     # Assignment 3: Classification
 
     In this exercise, we will work with two datasets. Perform all tasks below separately for either dataset.
-    """)
+    """
+    )
     return
 
 
@@ -26,7 +28,8 @@ def _():
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Task: Load data
 
     Load the two datasets and perform all tasks below on both datasets.
@@ -35,35 +38,41 @@ def _(mo):
     - How many samples does the dataset have?
     - How many predictors?
     - How many classes?
-    """)
+    """
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Task: Visualise data
 
     Plot the data and visualise the different classes (e.g. with different colour or markers)
-    """)
+    """
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Task: Split the data
 
     Split the dataset into a training (80 % of sample) and a test set (20 % of samples).
 
     https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
-    """)
+    """
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Task: Model optimisation
 
     Build both a logistic model and a k-NN classifier optimised on the training set.
@@ -80,13 +89,15 @@ def _(mo):
     Perform the following tasks for all combinations of the two models and the two datasets
 
     For k-NN, choose the metric you want to optimise for (e.g. accuracy, specificity, sensitivity) and tune the model: find the optimal number of neighbours $k$.
-    """)
+    """
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Task: Confusion matrix
 
     Evaluate the models on the test set.
@@ -96,13 +107,15 @@ def _(mo):
     https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html
 
     Calculate accuracy, specificity and sensitivity.
-    """)
+    """
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Task: ROC curve and AUC
 
     Plot the ROC curve and calculate the area under the curve (AUC).
@@ -117,13 +130,15 @@ def _(mo):
         `sklearn.metrics.roc_auc_score`
 
     Discuss which model is better on this dataset and why.
-    """)
+    """
+    )
     return
 
 
 @app.cell(hide_code=True)
 def _(mo):
-    mo.md(r"""
+    mo.md(
+        r"""
     ## Bonus: Other classification models (optional)
 
     Do the previous tasks for other classification models, for example:
@@ -136,7 +151,8 @@ def _(mo):
     Use the implementation in scikit-learn (`sklearn`).
 
     Compare the methods to logistic regression and k-NN.
-    """)
+    """
+    )
     return
 
 

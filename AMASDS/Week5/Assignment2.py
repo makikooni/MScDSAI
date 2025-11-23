@@ -226,7 +226,6 @@ def _(plt, rte_music, rte_nomusic):
     )
     plt.savefig("rad_music.pdf")
     plt.show()
-
     return
 
 
@@ -236,7 +235,6 @@ def _(pd, rte_music, rte_nomusic):
     rte_nomusic_series_median = (pd.Series(rte_nomusic)).median()
     print("RTE median of Music group = " + str(rte_music_series_median))
     print("RTE median of Non-music group = " + str(rte_nomusic_series_median))
-
     return
 
 
@@ -267,7 +265,6 @@ def _(pd, rad_music, rad_nomusic):
     rad_nomusic_series_median = (pd.Series(rad_nomusic)).median()
     print("RAD median of Music group = " + str(rad_music_series_median))
     print("RAD median of Non-music group = " + str(rad_nomusic_series_median))
-
     return
 
 
@@ -334,7 +331,7 @@ def _(np, rte_music, rte_nomusic, scipy):
         print("Reject H0 — significant difference\n")
     else:
         print("Fail to reject H0 — no significant difference\n")
-    
+
     _p = 2 * (1 - scipy.stats.norm.cdf(abs(z)))  # two-tailed
     print(_p) #continuous normal approximation - slightly different result
 
