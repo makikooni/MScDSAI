@@ -23,7 +23,8 @@ def _():
     import numpy as np
     import pandas as pd
     import sklearn
-    return (mo,)
+    from sklearn.model_selection import train_test_split
+    return mo, pd, plt, train_test_split
 
 
 @app.cell(hide_code=True)
@@ -43,6 +44,33 @@ def _(mo):
     return
 
 
+@app.cell
+def _(pd):
+    #Dataset 1
+    df1 = pd.read_csv("data1.csv")
+    df1.describe()
+    print(f"The first dataset contains {df1.shape[0]} rows")
+    print(f"The first dataset contains 2 columns of predictors")
+    df1['y'].value_counts()
+    print(f"The first dataset contains 2 classes: 0s and 1s")
+
+    return (df1,)
+
+
+@app.cell
+def _(pd):
+    #Dataset 2
+    df2 = pd.read_csv("data2.csv")
+    df2.describe()
+    print(f"The second dataset contains {df2.shape[0]} rows")
+    print(f"The second dataset contains 2 columns of predictors")
+    df2['y'].value_counts()
+    print(f"The second dataset contains 2 classes: 0s and 1s")
+
+
+    return (df2,)
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(
@@ -52,6 +80,60 @@ def _(mo):
     Plot the data and visualise the different classes (e.g. with different colour or markers)
     """
     )
+    return
+
+
+@app.cell
+def _(df1, plt):
+    #Dataset1
+    def vis_1():
+        X1 = df1.iloc[:, 0]    # first predictor, all rows, first column
+        X2 = df1.iloc[:, 1]    # second predictor, all rows second column
+        y  = df1['y']          # label column
+    
+        # Plot: class 0
+        plt.scatter(X1[y == 0], X2[y == 0], #x-axis,y-axis
+                    color='red', label='Class 0', alpha=0.7)
+    
+        # Plot: class 1
+        plt.scatter(X1[y == 1], X2[y == 1], 
+                    color='violet', label='Class 1', alpha=0.7)
+    
+        plt.xlabel('Predictor 1 (x-axis)')
+        plt.ylabel('Predictor 2 (y-axis)')
+        plt.title('Dataset 1: Visualisation of Classes')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+
+    vis_1()
+    return
+
+
+@app.cell
+def _(df2, plt):
+    #Dataset2
+    def vis_2():
+        X1 = df2.iloc[:, 0]    # first predictor, all rows, first column
+        X2 = df2.iloc[:, 1]    # second predictor, all rows second column
+        y  = df2['y']          # label column
+    
+        # Plot: class 0
+        plt.scatter(X1[y == 0], X2[y == 0], #x-axis,y-axis
+                    color='blue', label='Class 0', alpha=0.7)
+    
+        # Plot: class 1
+        plt.scatter(X1[y == 1], X2[y == 1], 
+                    color='green', label='Class 1', alpha=0.7)
+    
+        plt.xlabel('Predictor 1 (x-axis)')
+        plt.ylabel('Predictor 2 (y-axis)')
+        plt.title('Dataset 2: Visualisation of Classes')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+
+    vis_2()
     return
 
 
@@ -66,6 +148,46 @@ def _(mo):
     https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
     """
     )
+    return
+
+
+@app.cell
+def _(df1, train_test_split):
+    #Dataset 1
+    def split_1():
+        X = df1.iloc[:, :-1]   # predictors
+        y = df1.iloc[:, -1]    # target
+    
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, 
+            test_size=0.2,      
+            random_state=42,    # to keep same for all script runs
+            stratify=y          # preserve original ratio of targets
+        )
+    
+        print("Dataset 1: training set size:", X_train.shape[0], "samples")
+        print("Dataset 1: test set size:", X_test.shape[0], "samples")
+    split_1()
+    return
+
+
+@app.cell
+def _(df2, train_test_split):
+    #Dataset 2
+    def split_2():
+        X = df2.iloc[:, :-1]   # predictors
+        y = df2.iloc[:, -1]    # target
+    
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, 
+            test_size=0.2,      
+            random_state=42,    # to keep same for all script runs
+            stratify=y          # preserve original ratio of targets
+        )
+    
+        print("Dataset 2: training set size:", X_train.shape[0], "samples")
+        print("Dataset 2: test set size:", X_test.shape[0], "samples")
+    split_2()
     return
 
 

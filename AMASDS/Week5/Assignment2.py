@@ -30,7 +30,7 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    studyflow = mo.image(src="AMASDS/Week5/studyflow.png")
+    studyflow = mo.image(src="studyflow.png")
     studyflow
     return
 
@@ -44,7 +44,7 @@ def _(mo):
 @app.cell(hide_code=True)
 def _(mo):
 
-    _gameplay = mo.image(src="AMASDS/Week5/gameplay.png")
+    _gameplay = mo.image(src="gameplay.png")
 
     mo.md(f"""
     {_gameplay}
@@ -144,10 +144,10 @@ def _(mo):
 @app.cell
 def _(pd):
     # Data import
-    filename = 'AMASDS/Week5/vr_rte.csv'  # complete
+    filename = 'vr_rte.csv'
     df = pd.read_csv(filename)
 
-    df  # Show data
+    print(df)
     return (df,)
 
 
@@ -159,6 +159,24 @@ def _(df):
     rte_nomusic = df['Without music'].tolist()
     print(rte_nomusic)
     return rte_music, rte_nomusic
+
+
+@app.cell
+def _(plt, rte_music, rte_nomusic, scipy):
+    #Data normality checks
+    # Q–Q plot for RTE (music)
+    plt.figure(figsize=(5,4))
+    scipy.stats.probplot(rte_music, dist="norm", plot=plt)
+    plt.title("Q–Q Plot: RTE (Music)")
+    plt.show()
+
+    # Q–Q plot for RTE (no music)
+    plt.figure(figsize=(5,4))
+    scipy.stats.probplot(rte_nomusic, dist="norm", plot=plt)
+    plt.title("Q–Q Plot: RTE (No Music)")
+    plt.show()
+
+    return
 
 
 @app.cell(hide_code=True)
@@ -180,10 +198,10 @@ def _(np):
         rad = np.zeros_like(rte)
         for i, score in enumerate(rte):
             if score < 7:  # Too low
-                rad[i] = np.abs(score - 7)
+                rad[i] = np.abs(score - 7) #Distance from lower bound
             elif score > 8:  # Too high
-                rad[i] = np.abs(score - 8)
-        return rad
+                rad[i] = np.abs(score - 8) #Distance from higher bound
+        return rad #will return rad 0 for scores 7 and 8
     return (rte_to_rad,)
 
 
@@ -192,6 +210,7 @@ def _(rte_music, rte_nomusic, rte_to_rad):
     # Convert the data
     rad_music=rte_to_rad(rte_music)
     rad_nomusic = rte_to_rad(rte_nomusic)
+
     return rad_music, rad_nomusic
 
 
@@ -365,14 +384,39 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-    1. The analyses were conducted using non-parametric tests because the research question — *How does the presence of music affect time perception in a VR game?* — involves ordinal data that are not normally distributed, and population parameters could not be reliably estimated. Given that there are two independent groups (with-music vs. without-music), the **Mann–Whitney U test** was chosen to compare participants’ responses between conditions.
-    2. **H₀**: Music has no effect on time perception in VR games.<br>
-       **H₁**: Music affects time perception in VR games. <br>
-       **IV**; Condition: Music vs No Music <br>
-       **DV**; Time perception	Measured via RTE (Retrospective Time Estimation) and RAD (Relaxed Absolute Difference).
-    3. The p-values for both RTE and RAD were below 0.05 (RTE: p = 0.038; RAD: p = 0.008), indicating that the differences between the music and no-music conditions were statistically **significant**. 
-    4. Based on the results, **H₀ is rejected** for both measures.
-    5. Conclusion: The findings suggest that background music significantly influences time perception in VR games. Participants’ estimated durations (RTE) and their accuracy (RAD) differed between the music and no-music conditions, supporting the hypothesis that presence of music affects perceived time.
+    1.** Test Choice**
+
+            The analyses were conducted using **non-parametric** methods because the dependent variables (RTE and RAD) are ordinal and did not satisfy the assumption of normality. Visual inspection of the Q–Q plots for both RTE groups showed clear departures from the normality line, indicating skewed and non-normally distributed data. RAD, being an absolute deviation measure, is bounded at zero and inherently non-normal, which further supports the use of a non-parametric approach.
+        
+            Among the available non-parametric tests, the **Mann–Whitney U test** was the most appropriate because the study involved comparing two independent groups (music vs no-music). Other tests were unsuitable for this design: the Wilcoxon signed-rank test and the Friedman test require repeated-measures data; the one-sample sign test compares a sample to a known reference value; and the Kruskal–Wallis H test is intended for three or more independent groups. By contrast, the Mann–Whitney U test is specifically tailored for two independent samples and is robust to ordinal scales, skewed distributions, and tied observations. Therefore, it was the correct method for assessing whether time-perception scores differed between the two conditions.
+
+    2. **Hypotheses**
+   
+        **Null hypothesis (H₀):** The distribution of time-perception scores (RTE and RAD) is the same in the music and no-music conditions. In other words, background music has no effect on time perception in a VR game.
+
+        **Alternative hypothesis (H₁):** The distribution of time-perception scores differs between the two conditions. Thus, background music affects time perception in a VR game.
+   
+        **Independent variable:** Condition (Music vs No Music)
+    
+        **Dependent variables:**
+
+        RTE — Retrospective Time Estimation
+
+        RAD — Relaxed Absolute Difference (accuracy of estimation)
+
+    5. **Are the results of the test significant?**
+
+           Yes. The p-values for both measures were below the conventional α = 0.05 threshold (RTE: p = 0.038; RAD: p = 0.008), indicating statistically significant differences between the music and no-music conditions.
+
+   
+    6. **Would you reject the null hypothesis or not?**
+
+           Based on the results, H₀ is rejected for both RTE and RAD.
+
+   
+    7. **Conclusion:**
+
+           The findings indicate that background music significantly influences time perception in VR games. Participants’ estimated durations (RTE) and their accuracy (RAD) differed between the music and no-music conditions, supporting the conclusion that the presence of music affects perceived time during gameplay.
     """
     )
     return
