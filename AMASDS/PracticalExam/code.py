@@ -18,7 +18,10 @@ def _():
     import scipy.stats as stats
     from scipy.stats import shapiro
     from scipy.stats import mannwhitneyu
-    return mannwhitneyu, mo, pd, plt, shapiro, stats
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    from scipy.stats import spearmanr
+    return mannwhitneyu, mo, np, pd, plt, shapiro, sns, spearmanr, stats
 
 
 @app.cell
@@ -33,6 +36,43 @@ def _(pd):
 
 
     return evals, writers
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    RESEARCH QUESTIONS (RQ1 + RQ2)
+
+    This analysis investigates how AI assistance influences both writers' and readers' 
+    evaluations of short stories. The study is structured into one writer-focused RQ 
+    and one reader-focused RQ with three subcomponents.
+
+    RQ1 – Writers’ Self-Perceptions
+        Do writers who use AI evaluate their own stories differently from those who 
+        do not? (Mann–Whitney U tests on all self_* variables comparing writers who used AI 
+        versus those who did not.)
+
+    RQ2 – Readers’ Evaluations of Stories
+        RQ2a – Blind Pre-Disclosure Ratings:
+            Do readers rate AI-assisted stories differently before knowing whether 
+            AI was involved? (Mann–Whitney U tests on pre_* variables)
+
+        RQ2b – Post-Disclosure Judgements:
+            After readers learn which stories used AI, how does this affect their 
+            judgements of authorship, ownership, and contribution? (Mann–Whitney U)
+
+        RQ2c – Misattribution Bias:
+            Does the amount of AI involvement that readers *believe* a story had 
+            (0–100% ai_guess_percent) relate to the blind ratings they had previously 
+            given? (Spearman correlations between ai_guess_percent and pre_* variables)
+
+    Together, these analyses provide a full view of how AI assistance affects both 
+    the creators' and the evaluators' perceptions before and after AI involvement 
+    is revealed.
+    """
+    )
+    return
 
 
 @app.cell(hide_code=True)
@@ -264,6 +304,8 @@ def _(plt, rq1_clean, stats):
         stats.probplot(rq1_clean[var].dropna(), dist="norm", plot=plt)
         plt.title(f"Q–Q Plot: {var}", fontsize=9)
         plt.tight_layout()
+        plt.savefig("images/qqplots_all_rq1.png", dpi=300, bbox_inches="tight")
+
 
     plt.show()
 
@@ -404,7 +446,6 @@ def _(mo):
      Actual behaviour varies within conditions, so analysing both assigned
      conditions and real AI use provides a more accurate understanding of
      how AI affects writer self-perception.
-
     """
     )
     return
@@ -475,7 +516,153 @@ def _(mannwhitneyu, pd, rq1_ai):
         results_df = pd.DataFrame(results)
         return results_df
 
-    rq1_mannwhitneyu()
+    rq1_results = rq1_mannwhitneyu()
+    rq1_results
+    return (rq1_results,)
+
+
+@app.cell
+def _(mannwhitneyu, np, plt, rq1_ai, rq1_results, sns):
+    def rq1_plots(rq1_ai, rq1_results, alpha=0.05):
+
+        if isinstance(rq1_results, tuple):
+            rq1_results = rq1_results[0]
+
+        sns.set_style("whitegrid")
+
+        rq1_vars = [
+            "self_own_ideas",
+            "self_novel",
+            "self_original",
+            "self_rare",
+            "self_appropriate",
+            "self_feasible",
+            "self_publishable",
+            "self_enjoyed",
+            "self_badly_written",
+            "self_boring",
+            "self_funny",
+            "self_twist",
+            "self_future",
+        ]
+
+        pretty_names = {
+            "self_own_ideas": "Own ideas",
+            "self_novel": "Novel",
+            "self_original": "Original",
+            "self_rare": "Rare",
+            "self_appropriate": "Appropriate",
+            "self_feasible": "Feasible",
+            "self_publishable": "Publishable",
+            "self_enjoyed": "Enjoyed writing",
+            "self_badly_written": "Badly written",
+            "self_boring": "Boring",
+            "self_funny": "Funny",
+            "self_twist": "Has a twist",
+            "self_future": "Would read more",
+        }
+
+        # ------------------ recompute Cliff's delta ------------------
+        def cliffs_delta(x, y):
+            """Effect size for Mann–Whitney U: Cliff’s delta."""
+            nx, ny = len(x), len(y)
+            U, _ = mannwhitneyu(x, y, alternative="two-sided")
+            return (2 * U) / (nx * ny) - 1
+
+        df = rq1_results.copy()
+        deltas = []
+        for var in rq1_vars:
+            g0 = rq1_ai.loc[rq1_ai["ai_used_actual"] == 0, var].dropna()
+            g1 = rq1_ai.loc[rq1_ai["ai_used_actual"] == 1, var].dropna()
+            deltas.append(cliffs_delta(g1, g0))   # positive = AI > non-AI
+
+        df["cliffs_delta"] = deltas
+        df["label"] = df["variable"].map(pretty_names).fillna(df["variable"])
+        df["significant"] = df["p_value"] < alpha
+
+        # 1. EFFECT-SIZE FOREST PLOT
+        ef = df.sort_values("cliffs_delta")
+
+        plt.figure(figsize=(8, 6), dpi=150)
+        sns.barplot(
+            data=ef,
+            x="cliffs_delta",
+            y="label",
+            hue="significant",
+            dodge=False,
+        )
+        plt.axvline(0, color="black", linewidth=1)
+        plt.xlabel("Cliff's delta (AI users – non-AI users)")
+        plt.ylabel("")
+        plt.title(f"Self-ratings: effect sizes by item (RQ1, α = {alpha})")
+        plt.legend(title="Significant?")
+        plt.tight_layout()
+        plt.savefig("images/cliff_rq1.png", dpi=300, bbox_inches="tight")
+        plt.show()
+
+        # 2. MEDIAN COMPARISON BARPLOT
+        med = df.copy()
+
+        med_long = med.melt(
+            id_vars=["label"],
+            value_vars=["median_no_ai", "median_ai"],
+            var_name="group",
+            value_name="median_rating",
+        )
+        med_long["group"] = med_long["group"].map({
+            "median_no_ai": "No AI",
+            "median_ai": "AI used"
+        })
+
+        plt.figure(figsize=(10, 6), dpi=150)
+        sns.barplot(
+            data=med_long,
+            x="label",
+            y="median_rating",
+            hue="group",
+        )
+        plt.xticks(rotation=45, ha="right")
+        plt.xlabel("")
+        plt.ylabel("Median rating")
+        plt.title("Self-ratings by item and AI usage (RQ1)")
+        plt.tight_layout()
+        plt.savefig("images/medians_rq1.png", dpi=300, bbox_inches="tight")
+        plt.show()
+
+        # 3. GRID OF BOXPLOTS
+        vars_list = rq1_vars
+        n = len(vars_list)
+        n_cols = 4
+        n_rows = int(np.ceil(n / n_cols))
+
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=(14, 9), dpi=150)
+        axes = axes.flatten()
+
+        for ax, var in zip(axes, vars_list):
+            sns.boxplot(
+                data=rq1_ai,
+                x="ai_used_actual",
+                y=var,
+                ax=ax,
+            )
+            ax.set_title(pretty_names.get(var, var), fontsize=9)
+            ax.set_xticks([0, 1])
+            ax.set_xticklabels(["No AI", "AI"], fontsize=8)
+            ax.set_xlabel("")
+            ax.set_ylabel("")
+
+        for i in range(len(vars_list), len(axes)):
+            axes[i].axis("off")
+
+        plt.suptitle("Self-ratings for own stories (AI vs No AI)", fontsize=14)
+        plt.tight_layout()
+        plt.savefig("images/boxplots_rq1.png", dpi=300, bbox_inches="tight")
+        plt.subplots_adjust(top=0.92)
+        plt.show()
+
+
+    rq1_plots(rq1_ai, rq1_results)
+
     return
 
 
@@ -484,14 +671,19 @@ def _(mo):
     mo.md(
         r"""
     ##RQ1: Mann-Whitney U Test Conclusion
-    A set of Mann–Whitney U tests compared self-perception ratings between writers who actually used AI (n = 141) and those who did not (n = 154). Most creativity-related evaluations — including novelty, originality, rarity, feasibility, publishability, and stylistic ratings — did not differ significantly between the groups (all p > .05).
+    Self-ratings were compared between writers who used AI (n = 141) and those who did not (n = 154). Across most creativity-related dimensions — including novelty, originality, rarity, feasibility, publishability, enjoyment, humour, and twist — the two groups evaluated their own stories similarly. This is reflected in the median barplot and the boxplots, where the distributions for AI and non-AI participants overlap closely, and in the effect-size plot, where most Cliff’s delta values cluster near zero (all p > .05).
 
-    Three variables showed statistically significant differences. Writers who used AI reported slightly lower authorship (U = 12,437, p = .028), consistent with the idea that AI involvement reduces perceived personal ownership of the story. They also rated their stories as more appropriate for the task (U = 9,299, p = .028), suggesting that AI guidance helped align their writing with the expected genre or constraints. Finally, AI users scored lower on the item measuring whether their story changed what they expect of future stories they will read (U = 12,294, p = .045). This indicates that AI-assisted writing felt less personally meaningful or expectation-shifting, reducing the sense of narrative impact writers derived from their own work.
+    Three variables showed statistically significant differences.
+    First, writers who used AI reported lower authorship of ideas (U = 12,437, p = .028), consistent with the effect seen in RQ2b: authors using AI felt that fewer of the story’s ideas originated from themselves. Secondly, AI users gave higher ratings for appropriateness (U = 9,299, p = .028), suggesting that AI guidance may have helped align their writing more closely to the expected task, genre, or constraints. Finally, AI users scored lower on the ‘future expectations’ item (U = 12,294, p = .045), indicating that their AI-assisted stories felt less personally meaningful or less likely to influence what they expect from future stories they will read.
 
-    Overall, AI use had selective rather than global effects: it influenced perceptions of authorship, appropriateness, and narrative impact, but did not meaningfully alter broader creativity or enjoyment evaluations.
+    One variable should be interpreted cautiously: “badly written.”
+    Although the dataset included an item labelled self_badly_written, participant-facing materials instead displayed the item as “well written.” Because this reverses the conceptual direction, it is uncertain whether higher scores indicate better writing or worse writing. For this reason, and consistent with RQ2a, this item is excluded from substantive interpretation.
 
-    ##Decision: H₀ is partially rejected: 
-    AI use affected only a small subset of self-perception variables, not the majority (3 significant out of 13 tested). Most aspects of writers’ self-evaluated creativity did not differ between AI and non-AI users, but authorship, appropriateness, and future-expectation impact did show significant effects.
+    Overall, the visualisations and statistical tests together indicate that AI use had selective rather than widespread effects on self-perception. Participants who used AI differed meaningfully from non-AI writers only on authorship, appropriateness, and future-expectation impact. Broader evaluations of creativity, stylistic quality, and enjoyment were largely unaffected.
+
+    ##Decision: H₀ is partially rejected
+    AI use produced significant differences in 3 out of 12 self-perception variables. ("Badly-written ignored")
+    Most aspects of writers’ self-evaluated creativity and stylistic quality did not differ between groups, but authorship, appropriateness, and perceived future-impact showed reliable effects. This indicates a narrow and specific, rather than general, influence of AI assistance on how writers evaluate their own work.
     """
     )
     return
@@ -733,8 +925,6 @@ def _(mo):
     The evaluator dataset contained 3,543 blind (pre-disclosure) story ratings, with no missing values across any creativity or stylistic variables. Evaluations were well distributed between stories written without AI (1,860 ratings) and those written with AI assistance (1,683 ratings), providing balanced groups for comparison. Group-wise descriptive statistics indicated that median scores were broadly similar across AI and non-AI stories, with only modest differences in means that required formal inferential testing. These checks confirmed that the dataset was complete, coherent, and suitable for non-parametric analysis.
 
     Because the dependent variables (e.g., novelty, originality, publishability, enjoyment) are measured on 1–9 Likert scales, they are ordinal and do not meet parametric assumptions such as normality. Accordingly, the Mann–Whitney U test was selected to compare readers’ blind evaluations of stories written with versus without actual AI usage.
-
-
     """
     )
     return
@@ -781,18 +971,130 @@ def _(mannwhitneyu, pd, rq2a):
                 "cliffs_delta": delta
             })
     
-        return pd.DataFrame(results)
+        return pd.DataFrame(results), 
 
 
     results_df = rq2_mannwhitneyu(rq2a)
     results_df
 
-    return
+    return (results_df,)
 
 
 @app.cell(hide_code=True)
-def _(mo):
-    mo.md(r"""##RQ2a: Mann-Whitney U Test Conclusion""")
+def _(np, plt, results_df, rq2a, sns):
+    def rq2_plots(rq2a, results_df, alpha=0.05):
+
+        # Tuple issue fix
+        if isinstance(results_df, tuple):
+            results_df = results_df[0]
+
+        sns.set_style("whitegrid")
+
+        pretty_names = {
+            "pre_novel": "Novel",
+            "pre_original": "Original",
+            "pre_rare": "Rare",
+            "pre_appropriate": "Appropriate",
+            "pre_feasible": "Feasible",
+            "pre_publishable": "Publishable",
+            "pre_tt_enjoyed": "Enjoyed",
+            "pre_tt_badly_written": "Badly written",
+            "pre_tt_boring": "Boring",
+            "pre_tt_funny": "Funny",
+            "pre_tt_twist": "Twist",
+            "pre_tt_future": "Would read more",
+        }
+
+
+        # 1. EFFECT-SIZE (CLIFF’S DELTA) PLOT
+        ef = results_df.copy()
+        ef["label"] = ef["variable"].map(pretty_names).fillna(ef["variable"])
+        ef["significant"] = ef["p_value"] < alpha
+        ef = ef.sort_values("cliffs_delta")
+
+        plt.figure(figsize=(8, 6), dpi=150)
+        sns.barplot(
+            data=ef,
+            x="cliffs_delta",
+            y="label",
+            hue="significant",
+            dodge=False
+        )
+        plt.axvline(0, color="black", linewidth=1)
+        plt.xlabel("Cliff's delta (AI users – non-AI users)")
+        plt.ylabel("")
+        plt.title(f"Effect sizes per item (Mann–Whitney U, α={alpha})")
+        plt.legend(title="Significant?")
+        plt.tight_layout()
+        plt.savefig("images/cliff_rq2a.png", dpi=300, bbox_inches="tight")
+        plt.show()
+
+        # 2. MEDIAN BARPLOT
+        med = results_df.copy()
+        med["label"] = med["variable"].map(pretty_names).fillna(med["variable"])
+
+        med_long = med.melt(
+            id_vars=["label"],
+            value_vars=["median_no_ai", "median_ai"],
+            var_name="group",
+            value_name="median_rating"
+        )
+        med_long["group"] = med_long["group"].map({
+            "median_no_ai": "No AI",
+            "median_ai": "AI used"
+        })
+
+        plt.figure(figsize=(10, 6), dpi=150)
+        sns.barplot(
+            data=med_long,
+            x="label",
+            y="median_rating",
+            hue="group"
+        )
+        plt.xticks(rotation=45, ha="right")
+        plt.xlabel("")
+        plt.ylabel("Median rating")
+        plt.title("Median ratings by item and AI usage")
+        plt.tight_layout()
+        plt.savefig("images/median_rq2a.png", dpi=300, bbox_inches="tight")
+        plt.show()
+
+        # 3. GRID OF  BOXPLOTS FOR ALL ITEMS
+
+        vars_list = results_df["variable"].tolist()
+        n = len(vars_list)
+
+        n_cols = 4
+        n_rows = int(np.ceil(n / n_cols))
+
+        fig, axes = plt.subplots(n_rows, n_cols, figsize=(14, 9), dpi=150)
+        axes = axes.flatten()
+
+        for ax, var in zip(axes, vars_list):
+            sns.boxplot(
+                data=rq2a,
+                x="ai_used_actual",
+                y=var,
+                ax=ax
+            )
+            ax.set_title(pretty_names.get(var, var), fontsize=9)
+            ax.set_xlabel("")
+            ax.set_ylabel("")
+            ax.set_xticks([0, 1])
+            ax.set_xticklabels(["No AI", "AI"], fontsize=8)
+
+        # Hiding empty subplots
+        for i in range(len(vars_list), len(axes)):
+            axes[i].axis("off")
+
+        plt.suptitle("Distribution of ratings across all items (AI vs No AI)", fontsize=14)
+        plt.tight_layout()
+        plt.savefig("images/boxplots_rq2a.png", dpi=300, bbox_inches="tight")
+        plt.subplots_adjust(top=0.93)
+        plt.show()
+
+    rq2_plots(rq2a, results_df)
+
     return
 
 
@@ -800,12 +1102,19 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-    Blind evaluations showed that AI-assisted stories were rated significantly higher than human-only stories on almost all creativity and stylistic dimensions. Mann–Whitney U tests revealed small but consistent advantages for AI on novelty, originality, rarity, appropriateness, feasibility, publishability, and overall enjoyment (all p < .01). AI-written stories were also judged less “badly written” and contained stronger narrative twists. Only boredom and humour showed no differences. These findings suggest that—when readers do not know who authored the text—AI assistance tends to improve the perceived quality of creative writing.
+    ##RQ2a: Mann-Whitney U Test Conclusion
+    Blind evaluations showed that AI-assisted stories were generally rated more favourably than human-only stories across a wide range of creativity and stylistic dimensions. Mann–Whitney U tests revealed small but consistent advantages for the AI group on novelty, originality, rarity, appropriateness, feasibility, publishability, enjoyment, and perceived narrative twist (most p < .01). Descriptively, the largest median differences appeared for the “twist”, “feasible”, and “rare” items, where AI-assisted stories received noticeably higher central ratings — a pattern also reflected in the boxplots.
+
+    Two variables—boring and funny—showed no meaningful differences between groups, indicating that AI assistance neither enhanced nor reduced the perceived humour or dullness of the texts.
+
+    One additional variable requires caution: “badly written.”
+    Although the dataset included an item labelled pre_tt_badly_written, the survey materials shown to participants used the wording “well written.” Because of this mismatch, it is unclear whether higher scores indicate better or worse writing quality. This variable is therefore excluded from interpretation.
 
     ##Decision: H₀ is largely rejected.
-    Evaluators rated AI-assisted stories significantly higher on 10 out of 12 quality dimensions before knowing AI was involved. Only “boring” and “funny” showed no significant difference.
+    The null hypothesis of no difference between groups is rejected for 9 out of the 11 interpretable dimensions ("Badly-written ignored").
+    Evaluators rated AI-assisted stories significantly higher on the majority of quality measures, with only boring and funny showing no significant group differences.
 
-    This pattern indicates that AI-assisted stories were systematically judged as higher quality across most dimensions during blind evaluation.
+    This pattern indicates that AI assistance systematically enhances perceived creative writing quality in blind evaluations.
     """
     )
     return
@@ -827,7 +1136,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(evals_full):
     # RQ2b Data Prep
     def rq2b_dataprep(evals_full):
@@ -857,7 +1166,7 @@ def _(evals_full):
     return (rq2b,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(rq2b):
     # RQ2b Data Check
 
@@ -906,7 +1215,6 @@ def _(mannwhitneyu, pd, rq2b):
         post_vars = [
             "post_authors_ideas",
             "post_ownership",
-            "post_profit",
         ]
     
         def cliffs_delta(x, y):
@@ -946,6 +1254,101 @@ def _(mannwhitneyu, pd, rq2b):
     rq2b_results = rq2b_mannwhitneyu(rq2b)
     rq2b_results
 
+    return (rq2b_results,)
+
+
+@app.cell(hide_code=True)
+def _(plt, rq2b, rq2b_results, sns):
+
+    def rq2b_plots(rq2b, results_df, alpha=0.05):
+        if isinstance(results_df, tuple):
+            results_df = results_df[0]
+
+        sns.set_style("whitegrid")
+
+        pretty_names = {
+            "post_authors_ideas": "Authors' ideas (perceived source)",
+            "post_ownership": "Ownership of ideas",
+        }
+
+        # 1. EFFECT-SIZE PLOT (Cliff’s delta)
+
+        ef = results_df.copy()
+        ef["label"] = ef["variable"].map(pretty_names)
+        ef["significant"] = ef["p_value"] < alpha
+
+        plt.figure(figsize=(6, 4), dpi=150)
+        sns.barplot(
+            data=ef,
+            x="cliffs_delta",
+            y="label",
+            hue="significant",
+            dodge=False
+        )
+        plt.axvline(0, color="black", linewidth=1)
+        plt.xlabel("Cliff's delta (AI users – non-AI users)")
+        plt.ylabel("")
+        plt.title("Effect sizes for authorship + ownership judgements (RQ2b)")
+        plt.savefig("images/cliff_rq2b.png", dpi=300, bbox_inches="tight")
+        plt.tight_layout()
+        plt.show()
+
+        # 2. MEDIAN COMPARISON BARPLOT
+
+        med = results_df.copy()
+        med["label"] = med["variable"].map(pretty_names)
+
+        med_long = med.melt(
+            id_vars=["label"],
+            value_vars=["median_no_ai", "median_ai"],
+            var_name="group",
+            value_name="median_rating",
+        )
+        med_long["group"] = med_long["group"].map({
+            "median_no_ai": "No AI",
+            "median_ai": "AI used"
+        })
+
+        plt.figure(figsize=(6, 4), dpi=150)
+        sns.barplot(
+            data=med_long,
+            x="label",
+            y="median_rating",
+            hue="group"
+        )
+        plt.xticks(rotation=0)
+        plt.xlabel("")
+        plt.ylabel("Median rating")
+        plt.title("Median ratings by AI usage (RQ2b)")
+        plt.tight_layout()
+        plt.savefig("images/median_rq2b.png", dpi=300, bbox_inches="tight")
+        plt.show()
+
+        # 3. BOXPLOTS SIDE-BY-SIDE
+
+        fig, axes = plt.subplots(1, 2, figsize=(10, 4), dpi=150)
+
+        for ax, var in zip(axes, results_df["variable"]):
+            sns.boxplot(
+                data=rq2b,
+                x="ai_used_actual",
+                y=var,
+                ax=ax
+            )
+            ax.set_title(pretty_names[var], fontsize=10)
+            ax.set_xticks([0, 1])
+            ax.set_xticklabels(["No AI", "AI"], fontsize=9)
+            ax.set_xlabel("")
+            ax.set_ylabel("Rating")
+
+        plt.tight_layout()
+        plt.savefig("images/boxplots_rq2b.png", dpi=300, bbox_inches="tight")
+        plt.show()
+
+
+
+    rq2b_plots(rq2b, rq2b_results)
+
     return
 
 
@@ -955,25 +1358,215 @@ def _(mo):
         r"""
     ## RQ2b: Mann-Whitney U Test Conclusion
 
-    Once evaluators were informed whether a story had been written with AI assistance, their assessments shifted sharply. AI-assisted authors were judged to have contributed substantially fewer ideas to the story and to hold weaker ownership claims. Mann–Whitney U tests revealed very large and highly significant reductions in both perceived author contribution and ownership for AI-assisted stories (all p < 10⁻¹³⁰), indicating a strong and consistent penalty applied to human authors once AI involvement became known.
+    Once evaluators were informed whether a story had been written with AI assistance, they were asked additional questions about the perceived authorship and ownership of the ideas. These post-disclosure judgements showed clear and systematic differences between the AI and non-AI groups.
+    Both the median comparison plot and the boxplots show the same strong pattern:
+    stories written with AI assistance were attributed substantially fewer ideas and were judged to involve weaker ownership by their human authors. Median ratings dropped from 8 to 5 for authors’ ideas and from 8 to 6 for ownership, with noticeably lower distributions across the full range of responses. These graphical patterns mirror the inferential outcomes.
 
-    The profit-sharing variable was excluded from inferential analysis. Although the question asked evaluators to allocate story profit between the author and the AI tool, responses were highly inconsistent: many participants assigned 0% to the author even for stories with no AI involvement, while others gave widely varying allocations. This pattern suggests that the question was interpreted in heterogeneous ways (e.g., entering 0% to indicate “AI deserves nothing”) and therefore does not provide a valid basis for comparing AI and non-AI stories. The authorship and ownership items, by contrast, showed coherent and interpretable distributions.
-    CHECK IF IT EXISTED FOR NON-AI AT ALL IF NO THEN REWRITE
+    The Mann–Whitney U tests confirmed this visually observed effect. Both variables showed very large and highly significant differences between groups (all p < 10⁻¹³⁰), indicating a strong evaluative penalty applied to authors who used AI. Cliff’s delta values were correspondingly large and negative, reflecting a consistent downward shift in judgements for the AI-assisted group.
 
-    Decision: H₀ is fully rejected.
-    Across all valid post-disclosure measures (authors’ ideas and ownership), evaluators attributed significantly less creative credit to writers who used AI. The effects were large, robust, and directionally consistent, demonstrating that AI disclosure—not the story’s content—drives a substantial reduction in perceived human authorship and entitlement.
+    The profit-sharing variable was excluded from inferential analysis for two reasons. First, the profit question was displayed only for stories whose authors used AI, leaving no comparable data for human-only stories. Second, even within the AI group, responses were highly inconsistent and often conceptually contradictory, with some participants entering 0% to signal that the AI deserved no credit rather than to specify the human author’s share. For these reasons, the variable is considered statistically unreliable and conceptually ambiguous.
+
+    ##Decision: H₀ is fully rejected.
+    Across both valid post-disclosure measures—authors’ ideas and ownership—evaluators assigned significantly lower creative credit to authors who used AI. The effects were large, consistent across visual and inferential analyses, and unidirectional. These findings demonstrate that disclosing AI involvement prompts evaluators to substantially downgrade the human author’s perceived contribution and ownership of ideas.
     """
     )
     return
 
 
 @app.cell
-def _():
-    #test
-    #test conclusion
-    #RQ2b data prep,cleaning, test choice
-    #test
-    #test conclusion
+def _(mo):
+    mo.md(
+        r"""
+    #RQ2c - Does the belief or suspicion that a story involved AI predict lower story ratings, even before readers are told anything? (Effect of AI Suspicion on Blind Ratings)
+
+    Null hypothesis (H₀)
+    The analysis assumes that evaluators’ assumed level of AI involvement (ai_guess_percent) has no meaningful association with the blind pre-disclosure creativity and quality ratings (pre_* variables).
+    Formally, across all correlations computed in rq2c_spearman, Spearman’s ρ = 0.
+    Any observed correlations are expected to be trivially small and reflect sampling noise rather than genuine misattribution bias.
+
+    Alternative hypothesis (H₁)
+    The analysis proposes that evaluators’ assumptions about AI involvement (ai_guess_percent) are associated with the blind pre-disclosure ratings they assigned. If this were true, stories suspected of heavier AI use would show systematically higher or lower pre-ratings.
+    Formally, at least one of the Spearman correlations computed in rq2c_spearman is non-zero.
+    """
+    )
+    return
+
+
+@app.cell
+def _(evals_full, pd):
+    def rq2c_dataprep(evals_full: pd.DataFrame) -> pd.DataFrame:
+
+        df = evals_full.copy()
+
+        # Alias for the 0–100% AI guess
+        if "post_ai_assist" not in df.columns:
+            raise KeyError("Column 'post_ai_assist' not found in evals_full.")
+        df["ai_guess_percent"] = df["post_ai_assist"]
+
+        pre_vars = [
+            "pre_novel", "pre_original", "pre_rare",
+            "pre_appropriate", "pre_feasible", "pre_publishable",
+            "pre_tt_enjoyed", "pre_tt_badly_written",
+            "pre_tt_boring", "pre_tt_funny",
+            "pre_tt_twist", "pre_tt_future",
+        ]
+
+        base_cols = [
+            "story_id",
+            "evaluator_code",
+            "condition",
+            "ai_used_actual",
+            "ai_guess_percent",
+        ]
+
+        cols = [c for c in base_cols + pre_vars if c in df.columns]
+
+        rq2c = df[cols].copy()
+
+        # Drop rows without an AI guess
+        rq2c = rq2c.dropna(subset=["ai_guess_percent"])
+
+        return rq2c
+
+    rq2c = rq2c_dataprep(evals_full)
+    rq2c.to_csv("data/rq2c_clean.csv", index=False)
+    rq2c.head()
+    return (rq2c,)
+
+
+@app.cell
+def _(pd, rq2c):
+    def rq2c_datacheck(rq2c: pd.DataFrame) -> None:
+        print("rq2c shape:", rq2c.shape)
+        print("\nMissing values per column:")
+        print(rq2c.isna().sum())
+
+        print("\nAI guess (ai_guess_percent) summary:")
+        print(rq2c["ai_guess_percent"].describe())
+
+        # Check range of AI guess is within 0–100
+        min_guess = rq2c["ai_guess_percent"].min()
+        max_guess = rq2c["ai_guess_percent"].max()
+        print(f"\nAI guess range: {min_guess:.1f} to {max_guess:.1f}")
+
+    rq2c_datacheck(rq2c)
+
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    #RQ2c: Data Cleaning, Descriptive Statistics Checks, and Test Choice
+    The RQ2c dataset contained 3,543 pre-disclosure story evaluations, each paired with the evaluator’s later estimate of how much AI assistance they believed had been used (0–100%). All variables relevant to this analysis were fully complete, with no missing values across the AI-guess measure or any of the pre-disclosure creativity and stylistic ratings. This ensured that all cases could be included in the correlation analysis without imputation or casewise deletion.
+
+    Descriptive statistics for the AI-guess variable indicated a wide and well-distributed range of perceived AI involvement (M = 46.24, SD = 31.29, range 0–100). The distribution showed substantial variability across evaluators, with the interquartile range spanning from 20% to 75%. This variation is crucial for RQ2c, as it demonstrates that participants did not uniformly assume stories were human-written or AI-written; instead, they expressed diverse levels of suspicion, providing sufficient spread to test for misattribution effects.
+
+    Because the dependent variables (e.g., pre-novel, pre-original, pre-feasible, pre-twist) are measured on ordinal 1–9 Likert scales, they do not satisfy parametric assumptions such as normality or interval-level measurement. In addition, the AI-guess variable is continuous but non-normally distributed, a common property of subjective probability estimates. Accordingly, Spearman’s rank-order correlation was chosen as the appropriate inferential method. This non-parametric test evaluates whether higher perceived AI involvement is associated with systematic differences in blind creativity and quality ratings, without assuming linearity or homoscedasticity.
+
+    This combination of complete data, broad variability in AI guesses, and ordinal outcome measures confirms that the dataset is suitable for a non-parametric correlation-based approach to assess misattribution bias.
+    """
+    )
+    return
+
+
+@app.cell
+def _(pd, rq2c, spearmanr):
+    def rq2c_spearman(rq2c: pd.DataFrame) -> pd.DataFrame:
+        if "ai_guess_percent" not in rq2c.columns:
+            raise KeyError("Expected column 'ai_guess_percent' in rq2c.")
+
+        pre_vars = [c for c in rq2c.columns if c.startswith("pre_")]
+
+        results = []
+        for var in pre_vars:
+            rho, p = spearmanr(
+                rq2c[var],
+                rq2c["ai_guess_percent"],
+                nan_policy="omit"
+            )
+            results.append({
+                "variable": var,
+                "spearman_rho": rho,
+                "p_value": p,
+            })
+
+        rq2c_results = pd.DataFrame(results)
+        return rq2c_results
+
+    rq2c_results = rq2c_spearman(rq2c)
+    rq2c_results
+    return (rq2c_results,)
+
+
+@app.cell
+def _(pd, plt, rq2c_results, sns):
+    def rq2c_plots(rq2c_results: pd.DataFrame, alpha: float = 0.05) -> None:
+        sns.set_style("whitegrid")
+
+        pretty_names = {
+            "pre_novel": "Novel",
+            "pre_original": "Original",
+            "pre_rare": "Rare",
+            "pre_appropriate": "Appropriate",
+            "pre_feasible": "Feasible",
+            "pre_publishable": "Publishable",
+            "pre_tt_enjoyed": "Enjoyed",
+            "pre_tt_badly_written": "Badly written",
+            "pre_tt_boring": "Boring",
+            "pre_tt_funny": "Funny",
+            "pre_tt_twist": "Twist",
+            "pre_tt_future": "Would read more",
+        }
+
+        df = rq2c_results.copy()
+        df["label"] = df["variable"].map(pretty_names).fillna(df["variable"])
+        df["significant"] = df["p_value"] < alpha
+        df = df.sort_values("spearman_rho")
+
+        plt.figure(figsize=(7, 6), dpi=150)
+        sns.barplot(
+            data=df,
+            x="spearman_rho",
+            y="label",
+            hue="significant",
+            dodge=False,
+        )
+        plt.axvline(0, color="black", linewidth=1)
+        plt.xlabel("Spearman correlation (rho)")
+        plt.ylabel("")
+        plt.title("RQ2c: AI guess (%) vs pre-disclosure ratings")
+        plt.legend(title=f"Significant (p < {alpha})?")
+        plt.tight_layout()
+        plt.savefig("images/spearman_rq2c.png", dpi=300, bbox_inches="tight")
+
+        plt.show()
+
+    rq2c_plots(rq2c_results)
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ##RQ2c: Spearman’s rank-order correlation Conclusion
+    For RQ2c, the analysis tested whether evaluators’ assumptions about AI involvement were associated with the creativity and quality ratings they provided before learning whether a story had been written with AI assistance. After the disclosure phase, each evaluator indicated the extent to which they believed AI had contributed to the story (0–100%). This value was stored in the dataset as post_ai_assist and standardised as ai_guess_percent during data preparation (rq2c_dataprep).
+
+    The key question was whether this AI-guess variable predicted earlier (blind) pre-disclosure ratings such as pre_novel, pre_original, pre_publishable, and related variables. To test this, the script rq2c_spearman computed a series of Spearman rank-order correlations between ai_guess_percent and all pre-disclosure rating variables. These correlations were then visualised in the rq2c_plots function using a forest-style barplot.
+
+    The forest plot revealed a coherent but extremely small pattern. Across most creativity and stylistic dimensions—including novelty, originality, rarity, appropriateness, feasibility, enjoyment, narrative twist, and publishability—higher assumed AI involvement was associated with slightly lower pre-disclosure ratings. Several of these correlations were statistically significant (p < .05), but the effect sizes were tiny, with Spearman’s ρ values ranging from approximately –.10 to –.02. In practical terms, such values are negligible: a correlation of –0.05, for example, implies that even a 100-point difference in AI guess would alter the predicted creativity rating by less than one-tenth of a point on a 9-point scale. Thus, while the script detects these patterns numerically, they are too small to have any real-world interpretive value.
+
+    The only variable showing a positive correlation was pre_tt_boring, where stories rated as more boring were slightly more likely to be subsequently misattributed to AI. Again, the effect was statistically detectable but too small to constitute meaningful bias.
+
+    One item required the same caution applied in earlier analyses: pre_tt_badly_written. Although recorded under that name in the dataset, participants saw the opposite phrasing (“well written”) in the survey interface. Because of this mismatch, its scale direction cannot be interpreted with confidence. The value was included in the dataset for completeness but excluded from substantive conclusions.
+    Overall, the statistical output (rq2c_results) and the visualisations confirm that evaluators’ later beliefs about AI involvement did not meaningfully influence the earlier blind ratings they provided. Pre-disclosure judgements appear to reflect genuine perceptions of story quality rather than hidden expectations about AI authorship. The presence of many statistically significant p-values is explained by the very large sample size (N = 3,543), which makes even microscopic effects detectable; however, their magnitude indicates that they are not practically significant.
+
+    ##Decision: H₀ is retained
+    Assumed AI involvement had no meaningful effect on blind creativity evaluations. Although the code identified several small correlations, all were trivial in size, and therefore do not support the presence of misattribution bias. Evaluative penalties only emerged after authorship was revealed (RQ2b), not during the initial blind evaluation phase.
+    """
+    )
     return
 
 
