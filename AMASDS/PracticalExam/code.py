@@ -501,7 +501,7 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-    #RQ2 — Reader Evaluation of AI-Influenced Stories
+    #RQ2: Reader Evaluation of AI-Influenced Stories
     RQ2a — Do readers evaluate AI-assisted stories differently before knowing AI was used? (Blind Quality Judgement)
 
     RQ2b — Does disclosure that a story used AI change evaluators' perceptions of authorship and ownership? (Impact of AI Disclosure on Ownership Judgement)
@@ -632,11 +632,11 @@ def _(evals, pd, rq1_clean):
     return (evals_full,)
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
-    #RQ2a — Do readers evaluate AI-assisted stories differently before knowing AI was used? (Blind Quality Judgement)
+    #RQ2a: Do readers evaluate AI-assisted stories differently before knowing AI was used? (Blind Quality Judgement)
 
     Null Hypothesis (H₀):
     The distribution of each pre-disclosure story-quality rating is equal between AI-assisted and non-AI stories.
@@ -728,7 +728,7 @@ def _(rq2a):
 def _(mo):
     mo.md(
         r"""
-    ##Data Cleaning, Descriptive Statistics Checks, and Test Choice (RQ2a)
+    ##RQ2a: Data Cleaning, Descriptive Statistics Checks, and Test Choice
 
     The evaluator dataset contained 3,543 blind (pre-disclosure) story ratings, with no missing values across any creativity or stylistic variables. Evaluations were well distributed between stories written without AI (1,860 ratings) and those written with AI assistance (1,683 ratings), providing balanced groups for comparison. Group-wise descriptive statistics indicated that median scores were broadly similar across AI and non-AI stories, with only modest differences in means that required formal inferential testing. These checks confirmed that the dataset was complete, coherent, and suitable for non-parametric analysis.
 
@@ -740,7 +740,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mannwhitneyu, pd, rq2a):
     def rq2_mannwhitneyu(rq2a):
 
@@ -790,13 +790,13 @@ def _(mannwhitneyu, pd, rq2a):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(r"""##RQ2a: Mann-Whitney U Test Conclusion""")
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
@@ -811,7 +811,7 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
@@ -889,7 +889,7 @@ def _(rq2b):
 def _(mo):
     mo.md(
         r"""
-    ##Data Cleaning, Descriptive Statistics Checks, and Test Choice (RQ2b)
+    ##RQ2b: Data Cleaning, Descriptive Statistics Checks, and Test Choice 
 
     The post-disclosure evaluator dataset contained 3,543 authorship-related ratings, evenly split between stories written without AI (1,860 evaluations) and those written with AI assistance (1,683 evaluations). No missing values were present in the key post-disclosure variables (post_authors_ideas, post_ownership, post_profit, post_ai_assist). Group-wise descriptive statistics showed substantial downward shifts for AI-assisted stories in perceived author contribution and ownership, while the perceived AI contribution increased as expected. These patterns suggested that disclosure of AI involvement may meaningfully alter evaluators’ credit attribution judgements.
 
@@ -899,10 +899,8 @@ def _(mo):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mannwhitneyu, pd, rq2b):
-    # RQ2b: Mann–Whitney U tests for post-disclosure evaluator judgements
-
     def rq2b_mannwhitneyu(rq2b):
 
         post_vars = [
@@ -951,15 +949,16 @@ def _(mannwhitneyu, pd, rq2b):
     return
 
 
-@app.cell
+@app.cell(hide_code=True)
 def _(mo):
     mo.md(
         r"""
-    # RQ2b — Post-disclosure Judgement of Authorship and Ownership**
+    ## RQ2b: Mann-Whitney U Test Conclusion
 
     Once evaluators were informed whether a story had been written with AI assistance, their assessments shifted sharply. AI-assisted authors were judged to have contributed substantially fewer ideas to the story and to hold weaker ownership claims. Mann–Whitney U tests revealed very large and highly significant reductions in both perceived author contribution and ownership for AI-assisted stories (all p < 10⁻¹³⁰), indicating a strong and consistent penalty applied to human authors once AI involvement became known.
 
     The profit-sharing variable was excluded from inferential analysis. Although the question asked evaluators to allocate story profit between the author and the AI tool, responses were highly inconsistent: many participants assigned 0% to the author even for stories with no AI involvement, while others gave widely varying allocations. This pattern suggests that the question was interpreted in heterogeneous ways (e.g., entering 0% to indicate “AI deserves nothing”) and therefore does not provide a valid basis for comparing AI and non-AI stories. The authorship and ownership items, by contrast, showed coherent and interpretable distributions.
+    CHECK IF IT EXISTED FOR NON-AI AT ALL IF NO THEN REWRITE
 
     Decision: H₀ is fully rejected.
     Across all valid post-disclosure measures (authors’ ideas and ownership), evaluators attributed significantly less creative credit to writers who used AI. The effects were large, robust, and directionally consistent, demonstrating that AI disclosure—not the story’s content—drives a substantial reduction in perceived human authorship and entitlement.
