@@ -232,7 +232,7 @@ def _(rq1_clean, shapiro):
     
         print("\nInterpretation:")
         print("All variables returned p < 0.05, indicating significant deviation from normality.\n"
-              "This supports the use of non-parametric tests (Kruskal–Wallis + Dunn post-hoc).")
+              "This supports the use of non-parametric tests.")
 
     rq1_normality()
     return
@@ -415,15 +415,19 @@ def _(mo):
     mo.md(
         r"""
     ##RQ1 Test Choice:
-    The dependent variables in this analysis (e.g., authorship, novelty, originality) were measured on 1–9 Likert scales. These ratings are ordinal and do not meet the assumptions of normality required for parametric tests such as ANOVA.
-    Because there are three independent writing conditions (human, human_1AI, human_5AI) and multiple ordinal ourtcome variables. the appropriate non-parametric alternative is the Kruskal–Wallis H test. This test determines whether the distributions of the self-perception scores differ across the three groups, without assuming normality or equal variances.
-    When the Kruskal–Wallis test indicates a significant effect, Dunn post-hoc tests with Bonferroni correction are used to identify which specific pairs of conditions differ.
+    The dependent variables in this analysis (e.g., authorship, novelty, originality, enjoyment) were measured on 1–9 Likert scales. These data are ordinal, discretised, and—based on Shapiro–Wilk tests and Q–Q plot inspection—clearly violate the normality assumptions required for parametric tests such as ANOVA.
 
-    Because writer self-perception was assessed through multiple Likert-scale items capturing different aspects of creativity and authorship, I conducted separate Kruskal–Wallis tests for each dependent variable. These tests examine whether at least one experimental condition differs from another. The global hypothesis was that AI exposure would affect at least one dimension of writer self-perception.
+    Although the study originally included three assigned writing conditions (human, human_1AI, human_5AI), descriptive analyses showed substantial variability in whether participants actually used AI when it was available. For example, 44% of writers in the 1AI condition and 15% in the 5AI condition chose not to use AI at all, while two writers in the human-only condition reported or showed evidence of AI assistance. Because AI availability did not reliably correspond to AI behaviour, analysing differences across the three conditions would not accurately capture the true contrast of interest.
 
-    Null Hypothesis (H₀): The distributions of each self-perception variable are equal for human, human_1AI, and human_5AI groups.
+    If we had analysed the three pre-assigned groups, the appropriate non-parametric omnibus test would have been the Kruskal–Wallis H test, followed by Dunn post-hoc comparisons where necessary. However, since RQ1 focuses on actual AI usage (AI used vs. not used), the comparison involves two independent groups. Therefore, the correct non-parametric test is the Mann–Whitney U test, which was applied separately to each self-perception variable.
 
-    Alternative Hypothesis (H₁): At least one condition differs from the others in the distribution of the self-perception variable.
+    Null Hypothesis (H₀):
+    The distribution of each self-perception variable is equal for writers who used AI and writers who did not.
+
+    Alternative Hypothesis (H₁):
+    The distribution of each self-perception variable differs between writers who used AI and those who did not.
+
+    This behaviour-based analytical approach provides a more valid and robust assessment of how AI involvement influences writers’ self-perception.
     """
     )
     return
@@ -482,30 +486,61 @@ def _(mo):
     ##RQ1: Mann-Whitney U Test Conclusion
     A set of Mann–Whitney U tests compared self-perception ratings between writers who actually used AI (n = 141) and those who did not (n = 154). Most creativity-related evaluations — including novelty, originality, rarity, feasibility, publishability, and stylistic ratings — did not differ significantly between the groups (all p > .05).
 
-    Three variables showed statistically significant differences. Writers who used AI reported slightly lower authorship (U = 12437, p = .028), consistent with the idea that AI involvement reduces perceived ownership. They also rated their stories as more appropriate for the task (U = 9299, p = .028), suggesting AI guidance helped align their writing with the expected genre or constraints. Finally, AI users scored lower on the item measuring whether their story changed what they expect of future stories they will read (U = 12,294, p = .045). This suggests that AI-assisted writing felt less personally meaningful or expectation-shifting, reducing the sense of narrative impact that writers derived from their own work.
+    Three variables showed statistically significant differences. Writers who used AI reported slightly lower authorship (U = 12,437, p = .028), consistent with the idea that AI involvement reduces perceived personal ownership of the story. They also rated their stories as more appropriate for the task (U = 9,299, p = .028), suggesting that AI guidance helped align their writing with the expected genre or constraints. Finally, AI users scored lower on the item measuring whether their story changed what they expect of future stories they will read (U = 12,294, p = .045). This indicates that AI-assisted writing felt less personally meaningful or expectation-shifting, reducing the sense of narrative impact writers derived from their own work.
 
-    Overall, AI use had selective rather than global effects: it influenced perceptions of authorship and appropriateness but did not meaningfully alter broader creativity or enjoyment evaluations.
+    Overall, AI use had selective rather than global effects: it influenced perceptions of authorship, appropriateness, and narrative impact, but did not meaningfully alter broader creativity or enjoyment evaluations.
+
+    ##Decision: H₀ is partially rejected: 
+    AI use affected only a small subset of self-perception variables, not the majority (3 significant out of 13 tested). Most aspects of writers’ self-evaluated creativity did not differ between AI and non-AI users, but authorship, appropriateness, and future-expectation impact did show significant effects.
     """
     )
     return
 
 
-@app.cell
-def _(evals, pd, writers):
-    #Building long format table
-    #One row = one evaluation of story (pre/post)
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    #RQ2 — Reader Evaluation of AI-Influenced Stories
+    RQ2a — Do readers evaluate AI-assisted stories differently before knowing AI was used? (Blind Quality Judgement)
+
+    RQ2b — Does disclosure that a story used AI change evaluators' perceptions of authorship and ownership? (Impact of AI Disclosure on Ownership Judgement)
+
+    RQ2c - Does the belief or suspicion that a story involved AI predict lower story ratings, even before readers are told anything? (Effect of AI Suspicion on Blind Ratings)
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(r"""A small number of story IDs present in the evaluator dataset did not appear in the writers dataset (5 unique stories, 50+ evaluations). These likely correspond to excluded or pilot stories. Because no writer-level information (condition, AI usage) was available for them, all evaluations of these stories were removed from the analysis""")
+    return
+
+
+@app.cell(hide_code=True)
+def _(evals, pd, rq1_clean):
+    # RQ2: Dataset Prep
+
     def build_evals_full(evals_df: pd.DataFrame, writers_df: pd.DataFrame) -> pd.DataFrame:
+    
         writers2 = writers_df.copy()
+
+        # actual AI use (as before)
+        idea_cols = ["assist_idea0", "assist_idea1", "assist_idea2", "assist_idea3", "assist_idea4"]
+        writers2["ai_used_actual"] = (
+            (writers2["self_used_ai"] == 1) |
+            (writers2[idea_cols].notna().any(axis=1))
+        ).astype(int)
 
         rows = []
 
-        # each evaluator row can have up to 10 stories: evaluator.1 ... evaluator.10
         for k in range(1, 11):
             pre = f"evaluator.{k}.player."
             post = f"evaluator_p2.{k}.player."
 
-            candidates = [
-                "participant.code",              
+            fields = [
+                "participant.code",
                 pre + "story_id",
                 pre + "topic",
                 pre + "novel",
@@ -521,8 +556,7 @@ def _(evals, pd, writers):
                 pre + "tt_funny",
                 pre + "tt_twist",
                 pre + "tt_future",
-                # phase 2 (post-disclosure) columns
-                post + "condition",
+                # phase 2
                 post + "ai_usage",
                 post + "ai_assist",
                 post + "authors_ideas",
@@ -530,78 +564,417 @@ def _(evals, pd, writers):
                 post + "profit",
             ]
 
-            # keep only columns that actually exist in this export
-            avail = [c for c in candidates if c in evals_df.columns]
+            avail = [c for c in fields if c in evals_df.columns]
             if not avail:
                 continue
 
             sub = evals_df[avail].copy()
 
-            # rename to clean names: story_id, evaluator_code, pre_*, post_*
-            rename_map = {}
-
-            if pre + "story_id" in avail:
-                rename_map[pre + "story_id"] = "story_id"
+            rename = {}
             if "participant.code" in avail:
-                rename_map["participant.code"] = "evaluator_code"
+                rename["participant.code"] = "evaluator_code"
+            if pre + "story_id" in avail:
+                rename[pre + "story_id"] = "story_id"
             if pre + "topic" in avail:
-                rename_map[pre + "topic"] = "topic"
+                rename[pre + "topic"] = "topic"
 
-            # phase 1 metrics
-            for name in [
-                "novel",
-                "original",
-                "rare",
-                "appropriate",
-                "feasible",
-                "publishable",
-                "profit",
-                "tt_enjoyed",
-                "tt_badly_written",
-                "tt_boring",
-                "tt_funny",
-                "tt_twist",
-                "tt_future",
-            ]:
-                col = pre + name
+            metrics = [
+                "novel", "original", "rare", "appropriate",
+                "feasible", "publishable", "profit",
+                "tt_enjoyed", "tt_badly_written", "tt_boring",
+                "tt_funny", "tt_twist", "tt_future",
+            ]
+            for m in metrics:
+                col = pre + m
                 if col in avail:
-                    rename_map[col] = "pre_" + name
+                    rename[col] = "pre_" + m
 
-            #phase 2 metrics
             post_map = {
-                "condition": "post_condition",
                 "ai_usage": "post_ai_usage",
                 "ai_assist": "post_ai_assist",
                 "authors_ideas": "post_authors_ideas",
                 "ownership": "post_ownership",
                 "profit": "post_profit",
             }
-            for key, new in post_map.items():
-                col = post + key
+            for old, new in post_map.items():
+                col = post + old
                 if col in avail:
-                    rename_map[col] = new
+                    rename[col] = new
 
-            sub = sub.rename(columns=rename_map)
+            sub = sub.rename(columns=rename)
 
-            # keep only rows that have an actual story_id for this slot
             if "story_id" in sub.columns:
                 sub = sub.dropna(subset=["story_id"])
                 rows.append(sub)
 
-        # long table
         full = pd.concat(rows, ignore_index=True)
 
-        # merge writer info on story_id
-        merged = full.merge(writers2, on="story_id", how="left")
+        # merging
+        merged = full.merge(
+            writers2[["story_id", "condition", "ai_used_actual"]],
+            on="story_id",
+            how="left"
+        )
+
+        # Dropping evaluations without an attached story in writers.csv
+        n_before = merged.shape[0]
+        merged = merged.dropna(subset=["condition"])
+        n_after = merged.shape[0]
+        print(f"Dropped {n_before - n_after} evaluations with no matching writer record.")
 
         return merged
 
-
-    evals_full = build_evals_full(evals, writers)
-
+    evals_full = build_evals_full(evals, rq1_clean)
+    evals_full.to_csv("data/rq2_evals_full.csv", index=False)
     print("evals_full shape:", evals_full.shape)
-    print(evals_full.iloc[0, :25])
 
+    evals_full
+    return (evals_full,)
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    #RQ2a — Do readers evaluate AI-assisted stories differently before knowing AI was used? (Blind Quality Judgement)
+
+    Null Hypothesis (H₀):
+    The distribution of each pre-disclosure story-quality rating is equal between AI-assisted and non-AI stories.
+
+    Alternative Hypothesis (H₁):
+    The distribution of at least one pre-disclosure story-quality rating differs between AI-assisted and non-AI stories.
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(evals_full):
+    # RQ2a: Blind story quality Data Prep
+    def prepare_rq2a(evals_full):
+        quality_vars = [
+            "pre_novel",
+            "pre_original",
+            "pre_rare",
+            "pre_appropriate",
+            "pre_feasible",
+            "pre_publishable",
+            "pre_tt_enjoyed",
+            "pre_tt_badly_written",
+            "pre_tt_boring",
+            "pre_tt_funny",
+            "pre_tt_twist",
+            "pre_tt_future",
+        ]
+
+        cols = ["story_id", "evaluator_code", "ai_used_actual"] + quality_vars
+        rq2a = evals_full[cols].copy()
+
+        return rq2a
+
+
+    rq2a = prepare_rq2a(evals_full)
+    print("rq2a shape:", rq2a.shape)
+    rq2a.head()
+
+    return (rq2a,)
+
+
+@app.cell(hide_code=True)
+def _(rq2a):
+    # RQ2a: Blind story quality Data Check
+    def rq2a_datacheck(rq2a):
+        print("RQ2a dataset shape:", rq2a.shape)
+
+        # Group sizes
+        print("\nEvaluations per AI-usage group:")
+        print(rq2a["ai_used_actual"].value_counts(dropna=False))
+
+        # Missing values
+        quality_vars = [c for c in rq2a.columns if c.startswith("pre_")]
+        print("\nMissing values in pre-quality variables:")
+        print(rq2a[quality_vars].isna().sum())
+
+        # Summary statistics for all evaluations
+        print("\nSummary statistics (all evaluations):")
+        print(rq2a[quality_vars].describe())
+
+        # Group descriptive statistics
+        quality_vars = [
+            "pre_novel", "pre_original", "pre_rare",
+            "pre_appropriate", "pre_feasible", "pre_publishable",
+            "pre_tt_enjoyed", "pre_tt_badly_written",
+            "pre_tt_boring", "pre_tt_funny",
+            "pre_tt_twist", "pre_tt_future"
+        ]
+
+        group_desc = (
+            rq2a.groupby("ai_used_actual")[quality_vars]
+                 .agg(["mean", "std", "median", "count"])
+        )
+
+        print("\nGroup-wise descriptive statistics (AI used vs No AI):")
+        print(group_desc)
+
+        return group_desc
+
+
+    group_desc = rq2a_datacheck(rq2a)
+
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    ##Data Cleaning, Descriptive Statistics Checks, and Test Choice (RQ2a)
+
+    The evaluator dataset contained 3,543 blind (pre-disclosure) story ratings, with no missing values across any creativity or stylistic variables. Evaluations were well distributed between stories written without AI (1,860 ratings) and those written with AI assistance (1,683 ratings), providing balanced groups for comparison. Group-wise descriptive statistics indicated that median scores were broadly similar across AI and non-AI stories, with only modest differences in means that required formal inferential testing. These checks confirmed that the dataset was complete, coherent, and suitable for non-parametric analysis.
+
+    Because the dependent variables (e.g., novelty, originality, publishability, enjoyment) are measured on 1–9 Likert scales, they are ordinal and do not meet parametric assumptions such as normality. Accordingly, the Mann–Whitney U test was selected to compare readers’ blind evaluations of stories written with versus without actual AI usage.
+
+
+    """
+    )
+    return
+
+
+@app.cell
+def _(mannwhitneyu, pd, rq2a):
+    def rq2_mannwhitneyu(rq2a):
+
+        rq2a_vars = [
+            "pre_novel", "pre_original", "pre_rare",
+            "pre_appropriate", "pre_feasible", "pre_publishable",
+            "pre_tt_enjoyed", "pre_tt_badly_written",
+            "pre_tt_boring", "pre_tt_funny",
+            "pre_tt_twist", "pre_tt_future"
+        ]
+    
+        def cliffs_delta(x, y):
+            """Effect size for Mann–Whitney U: Cliff's delta."""
+            nx, ny = len(x), len(y)
+            U, _ = mannwhitneyu(x, y, alternative="two-sided")
+            delta = (2*U)/(nx*ny) - 1
+            return delta
+    
+        results = []
+    
+        for var in rq2a_vars:
+            g0 = rq2a.loc[rq2a["ai_used_actual"] == 0, var].dropna()
+            g1 = rq2a.loc[rq2a["ai_used_actual"] == 1, var].dropna()
+        
+            U, p = mannwhitneyu(g0, g1, alternative="two-sided")
+            delta = cliffs_delta(g1, g0)   # positive = AI > non-AI
+        
+            results.append({
+                "variable": var,
+                "U_stat": U,
+                "p_value": p,
+                "median_no_ai": g0.median(),
+                "median_ai": g1.median(),
+                "mean_no_ai": g0.mean(),
+                "mean_ai": g1.mean(),
+                "n_no_ai": len(g0),
+                "n_ai": len(g1),
+                "cliffs_delta": delta
+            })
+    
+        return pd.DataFrame(results)
+
+
+    results_df = rq2_mannwhitneyu(rq2a)
+    results_df
+
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""##RQ2a: Mann-Whitney U Test Conclusion""")
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    Blind evaluations showed that AI-assisted stories were rated significantly higher than human-only stories on almost all creativity and stylistic dimensions. Mann–Whitney U tests revealed small but consistent advantages for AI on novelty, originality, rarity, appropriateness, feasibility, publishability, and overall enjoyment (all p < .01). AI-written stories were also judged less “badly written” and contained stronger narrative twists. Only boredom and humour showed no differences. These findings suggest that—when readers do not know who authored the text—AI assistance tends to improve the perceived quality of creative writing.
+
+    ##Decision: H₀ is largely rejected.
+    Evaluators rated AI-assisted stories significantly higher on 10 out of 12 quality dimensions before knowing AI was involved. Only “boring” and “funny” showed no significant difference.
+
+    This pattern indicates that AI-assisted stories were systematically judged as higher quality across most dimensions during blind evaluation.
+    """
+    )
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    #RQ2b — Does disclosure that a story used AI change evaluators' perceptions of authorship and ownership? (Impact of AI Disclosure on Ownership Judgement)
+
+    Null Hypothesis (H₀):
+    The distribution of each post-disclosure evaluative variable (authors’ ideas, ownership, profit attribution) is equal for AI-assisted and non-AI stories.
+
+    Alternative Hypothesis (H₁):
+    At least one post-disclosure variable differs between AI-assisted and non-AI stories, indicating that learning about AI involvement affects evaluators’ perceptions of authorship or ownership.
+    """
+    )
+    return
+
+
+@app.cell
+def _(evals_full):
+    # RQ2b Data Prep
+    def rq2b_dataprep(evals_full):
+        # Keep only rows with post-disclosure variables
+        post_vars = ["post_authors_ideas", "post_ownership", "post_profit", "post_ai_assist"]
+    
+        rq2b = evals_full.copy()
+    
+        # Keep rows where at least one post variable exists
+        rq2b = rq2b.dropna(subset=post_vars, how="all")
+    
+        # Ensure ai_used_actual exists
+        rq2b = rq2b.dropna(subset=["ai_used_actual"])
+    
+        # Convert ai_used_actual to int for grouping clarity
+        rq2b["ai_used_actual"] = rq2b["ai_used_actual"].astype(int)
+    
+        return rq2b[["story_id", "ai_used_actual", "evaluator_code"] + post_vars].copy()
+
+
+    rq2b = rq2b_dataprep(evals_full)
+    rq2b.to_csv("data/rq2b_clean.csv", index=False)
+
+    print("RQ2b dataset shape:", rq2b.shape)
+    rq2b.head()
+
+    return (rq2b,)
+
+
+@app.cell
+def _(rq2b):
+    # RQ2b Data Check
+
+    def rq2b_datacheck(rq2b):
+        print("Shape:", rq2b.shape)
+    
+        # Group sizes
+        print("\nEvaluations per AI-usage group:")
+        print(rq2b["ai_used_actual"].value_counts())
+    
+        # Missingness
+        post_vars = ["post_authors_ideas", "post_ownership", "post_profit", "post_ai_assist"]
+        print("\nMissing values:")
+        print(rq2b[post_vars].isna().sum())
+    
+        # Descriptive statistics by group
+        print("\nGroup-wise descriptive statistics:")
+        print(
+            rq2b.groupby("ai_used_actual")[post_vars]
+                .agg(["mean", "std", "median", "count"])
+        )
+
+    rq2b_datacheck(rq2b)
+
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    ##Data Cleaning, Descriptive Statistics Checks, and Test Choice (RQ2b)
+
+    The post-disclosure evaluator dataset contained 3,543 authorship-related ratings, evenly split between stories written without AI (1,860 evaluations) and those written with AI assistance (1,683 evaluations). No missing values were present in the key post-disclosure variables (post_authors_ideas, post_ownership, post_profit, post_ai_assist). Group-wise descriptive statistics showed substantial downward shifts for AI-assisted stories in perceived author contribution and ownership, while the perceived AI contribution increased as expected. These patterns suggested that disclosure of AI involvement may meaningfully alter evaluators’ credit attribution judgements.
+
+    Because all dependent variables are Likert-type ordinal ratings and exhibit non-normal distributions, non-parametric testing is required. Accordingly, the Mann–Whitney U test was selected to compare post-disclosure authorship and ownership assessments between AI-assisted and non-AI stories.
+    """
+    )
+    return
+
+
+@app.cell
+def _(mannwhitneyu, pd, rq2b):
+    # RQ2b: Mann–Whitney U tests for post-disclosure evaluator judgements
+
+    def rq2b_mannwhitneyu(rq2b):
+
+        post_vars = [
+            "post_authors_ideas",
+            "post_ownership",
+            "post_profit",
+        ]
+    
+        def cliffs_delta(x, y):
+            """Effect size for Mann–Whitney U: Cliff’s delta."""
+            nx, ny = len(x), len(y)
+            U, _ = mannwhitneyu(x, y, alternative="two-sided")
+            delta = (2 * U) / (nx * ny) - 1
+            return delta
+    
+        results = []
+    
+        for var in post_vars:
+            g0 = rq2b.loc[rq2b["ai_used_actual"] == 0, var].dropna()
+            g1 = rq2b.loc[rq2b["ai_used_actual"] == 1, var].dropna()
+        
+            U, p = mannwhitneyu(g0, g1, alternative="two-sided")
+            delta = cliffs_delta(g1, g0)   # positive = AI > non-AI
+        
+            results.append({
+                "variable": var,
+                "U_stat": U,
+                "p_value": p,
+                "median_no_ai": g0.median(),
+                "median_ai": g1.median(),
+                "mean_no_ai": g0.mean(),
+                "mean_ai": g1.mean(),
+                "n_no_ai": len(g0),
+                "n_ai": len(g1),
+                "cliffs_delta": delta,
+            })
+    
+        results_df = pd.DataFrame(results)
+        results_df.to_csv("data/rq2b_results.csv", index=False)
+        return results_df
+
+
+    rq2b_results = rq2b_mannwhitneyu(rq2b)
+    rq2b_results
+
+    return
+
+
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # RQ2b — Post-disclosure Judgement of Authorship and Ownership**
+
+    Once evaluators were informed whether a story had been written with AI assistance, their assessments shifted sharply. AI-assisted authors were judged to have contributed substantially fewer ideas to the story and to hold weaker ownership claims. Mann–Whitney U tests revealed very large and highly significant reductions in both perceived author contribution and ownership for AI-assisted stories (all p < 10⁻¹³⁰), indicating a strong and consistent penalty applied to human authors once AI involvement became known.
+
+    The profit-sharing variable was excluded from inferential analysis. Although the question asked evaluators to allocate story profit between the author and the AI tool, responses were highly inconsistent: many participants assigned 0% to the author even for stories with no AI involvement, while others gave widely varying allocations. This pattern suggests that the question was interpreted in heterogeneous ways (e.g., entering 0% to indicate “AI deserves nothing”) and therefore does not provide a valid basis for comparing AI and non-AI stories. The authorship and ownership items, by contrast, showed coherent and interpretable distributions.
+
+    Decision: H₀ is fully rejected.
+    Across all valid post-disclosure measures (authors’ ideas and ownership), evaluators attributed significantly less creative credit to writers who used AI. The effects were large, robust, and directionally consistent, demonstrating that AI disclosure—not the story’s content—drives a substantial reduction in perceived human authorship and entitlement.
+    """
+    )
+    return
+
+
+@app.cell
+def _():
+    #test
+    #test conclusion
+    #RQ2b data prep,cleaning, test choice
+    #test
+    #test conclusion
     return
 
 
