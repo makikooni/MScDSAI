@@ -1,0 +1,1029 @@
+COUNTRY_CODE,COUNTRY,CITY,INCOME_GROUP,CLIMATE_CODE,pdi,idv,mas,uai,ltowvs,ivr
+,,"Ilam, Iran",,Csa,,,,,,
+,,"León, Spain",,Csb,,,,,,
+,,"Lorca, Spain",,BWk,,,,,,
+,Adygea,Maykop,,Cfa,,,,,,
+AF,Afghanistan,Bamyan,Low income,BWk,,,,,,
+AF,Afghanistan,Ghazni,Low income,Dfa,,,,,,
+AF,Afghanistan,Herat,Low income,BSk,,,,,,
+AF,Afghanistan,Kabul,Low income,BSk,,,,,,
+AF,Afghanistan,Kandahar,Low income,BSh,,,,,,
+AF,Afghanistan,Lashkargah,Low income,BWh,,,,,,
+AF,Afghanistan,Maymana,Low income,Csa,,,,,,
+AF,Afghanistan,North Salang,Low income,ET,,,,,,
+AF,Afghanistan,Qarabolaq,Low income,ET,,,,,,
+,Aichi,Nagoya,,Cfa,,,,,,
+AL,Albania,Korçë,Upper middle income,Csb,90.0,20.0,80.0,70.0,61.0,15.0
+AL,Albania,Pogradec,Upper middle income,Dfa,90.0,20.0,80.0,70.0,61.0,15.0
+AL,Albania,Shkodër,Upper middle income,Csa,90.0,20.0,80.0,70.0,61.0,15.0
+AL,Albania,Tirana,Upper middle income,Cfa,90.0,20.0,80.0,70.0,61.0,15.0
+AL,Albania,Tropojë,Upper middle income,Cfb,90.0,20.0,80.0,70.0,61.0,15.0
+,Alberta,Calgary,,Dfb,,,,,,
+,Alberta,Edmonton,,Dfb,,,,,,
+,Alberta,Fort McMurray,,Dfc,,,,,,
+,Alberta,Lethbridge,,BSk,,,,,,
+,Alberta,Medicine Hat,,BSk,,,,,,
+DZ,Algeria,Algiers,Upper middle income,Csa,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Batna,Upper middle income,BSk,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Biskra,Upper middle income,BWh,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Djelfa,Upper middle income,BSk,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Naâma,Upper middle income,BWk,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Setif,Upper middle income,BSk,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Tamanrasset,Upper middle income,BWh,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Tlemcen,Upper middle income,BSh,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Tlemcen,Upper middle income,Csa,80.0,35.0,35.0,70.0,26.0,32.0
+DZ,Algeria,Tébessa,Upper middle income,Cfa,80.0,35.0,35.0,70.0,26.0,32.0
+,Amur Oblast,Blagoveshchensk,,Dfa,,,,,,
+,Andalusia,Almería,,BWh,,,,,,
+,Andhra Pradesh,Kurnool,,BSh,,,,,,
+AD,Andorra,Andorra la Vella,High income,Cfb,,,,,,
+AD,Andorra,El Pas de la Casa,High income,Dfb,,,,,,
+AO,Angola,Luanda,Lower middle income,BSh,83.0,18.0,20.0,60.0,15.0,83.0
+AO,Angola,Malanje,Lower middle income,Aw,83.0,18.0,20.0,60.0,15.0,83.0
+AO,Angola,Moçâmedes,Lower middle income,BWh,83.0,18.0,20.0,60.0,15.0,83.0
+AQ,Antarctica,Amundsen–Scott Station,,EF,,,,,,
+AQ,Antarctica,Bernardo O'Higgins Base,,ET,,,,,,
+AQ,Antarctica,Casey Station,,EF,,,,,,
+AQ,Antarctica,Davis Station,,ET,,,,,,
+AQ,Antarctica,Esperanza Base,,ET,,,,,,
+AQ,Antarctica,Marambio Base,,EF,,,,,,
+AQ,Antarctica,McMurdo Station,,EF,,,,,,
+AQ,Antarctica,Palmer Station,,ET,,,,,,
+AQ,Antarctica,Vostok Station,,EF,,,,,,
+,Aomori Prefecture,Mutsu,,Dfb,,,,,,
+,Araucanía Region,Lonquimay,,Csb,,,,,,
+AR,Argentina,Buenos Aires,Upper middle income,Cfa,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Catamarca,Upper middle income,BSh,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Chilecito,Upper middle income,BWh,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Comodoro Rivadavia,Upper middle income,BSk,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,El Aguilar,Upper middle income,ET,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,La Plata,Upper middle income,Cfa,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Mar del Plata,Upper middle income,Cfb,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Neuquén,Upper middle income,BWk,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Rosario,Upper middle income,Cfa,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,"Río Grande, Tierra del Fuego",Upper middle income,Cfc,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,"Río Turbio, Santa Cruz Province",Upper middle income,Cfc,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,San Carlos de Bariloche,Upper middle income,Csb,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Santiago del Estero,Upper middle income,BSh,49.0,46.0,56.0,86.0,20.0,62.0
+AR,Argentina,Viedma,Upper middle income,BSk,49.0,46.0,56.0,86.0,20.0,62.0
+,Arizona,Tucson,,BWh,,,,,,
+,Arkhangai Province,Tsetserleg,,Dfc,,,,,,
+AM,Armenia,Vanadzor,Upper middle income,Dfb,85.0,22.0,50.0,88.0,61.0,25.0
+AM,Armenia,Yerevan,Upper middle income,BSk,85.0,22.0,50.0,88.0,61.0,25.0
+,Austral Islands,Tubuai,,Af,,,,,,
+AU,Australia,Adelaide,High income,Csa,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Albany, Western Australia",High income,Csb,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Broome, Western Australia",High income,BSh,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,Christmas Island,High income,Am,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,Coober Pedy,High income,BWh,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Darwin, Northern Territory",High income,Aw,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Innisfail, Queensland",High income,Af,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,Liawenee,High income,Csc,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Lithgow, New South Wales",High income,Cfb,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Miena, Tasmania",High income,Cfc,38.0,90.0,61.0,51.0,21.0,71.0
+AU,Australia,"Mount Buller, Victoria",High income,Dfb,38.0,90.0,61.0,51.0,21.0,71.0
+,Australian Capital Territory,Canberra,,Cfb,,,,,,
+AT,Austria,Graz,High income,Cfb,11.0,55.0,79.0,70.0,60.0,63.0
+AT,Austria,Innsbruck,High income,Dfb,11.0,55.0,79.0,70.0,60.0,63.0
+AT,Austria,Klagenfurt am Wörthersee,High income,Dfb,11.0,55.0,79.0,70.0,60.0,63.0
+AT,Austria,Obergurgl,High income,Dfc,11.0,55.0,79.0,70.0,60.0,63.0
+AT,Austria,Salzburg,High income,Cfb,11.0,55.0,79.0,70.0,60.0,63.0
+AT,Austria,Vienna,High income,Cfa,11.0,55.0,79.0,70.0,60.0,63.0
+AZ,Azerbaijan,Baku,Upper middle income,BSk,85.0,22.0,50.0,88.0,61.0,22.0
+AZ,Azerbaijan,Qabala,Upper middle income,Dfa,85.0,22.0,50.0,88.0,61.0,22.0
+AZ,Azerbaijan,Shamakhi,Upper middle income,Dfa,85.0,22.0,50.0,88.0,61.0,22.0
+AZ,Azerbaijan,Zaqatala,Upper middle income,Cfa,85.0,22.0,50.0,88.0,61.0,22.0
+,Badakhshan,Fayzabad,,Dfa,,,,,,
+BH,Bahrain,Manama,High income,BWh,,,,,,
+,Baja California,Mexicali,,BWh,,,,,,
+,Baja California,Tecate,,Csa,,,,,,
+,Balearic Islands,Menorca,,Csa,,,,,,
+,Bali,Denpasar,,Aw,,,,,,
+,Balkh,Mazar-i-Sharif,,BSk,,,,,,
+,Balochistan,Quetta,,BSk,,,,,,
+BD,Bangladesh,Chittagong,Lower middle income,Am,80.0,20.0,55.0,60.0,47.0,20.0
+BD,Bangladesh,Dhaka,Lower middle income,Aw,80.0,20.0,55.0,60.0,47.0,20.0
+BD,Bangladesh,Jashore,Lower middle income,Aw,80.0,20.0,55.0,60.0,47.0,20.0
+BD,Bangladesh,Khulna,Lower middle income,Aw,80.0,20.0,55.0,60.0,47.0,20.0
+BD,Bangladesh,Sylhet,Lower middle income,Am,80.0,20.0,55.0,60.0,47.0,20.0
+BD,Bangladesh,Tangail,Lower middle income,Aw,80.0,20.0,55.0,60.0,47.0,20.0
+BB,Barbados,Bridgetown,High income,Aw,,,,,,
+,Bavaria,Augsburg,,Dfb,,,,,,
+,Bavaria,Munich,,Cfb,,,,,,
+,Bavaria,Regensburg,,Dfb,,,,,,
+BY,Belarus,Minsk,Upper middle income,Dfb,95.0,25.0,20.0,95.0,81.0,15.0
+BE,Belgium,Brussels,High income,Cfb,65.0,75.0,54.0,94.0,82.0,57.0
+BZ,Belize,Belmopan,Upper middle income,Am,,,,,,
+BJ,Benin,Cotonou,Lower middle income,Aw,,,,,,
+BJ,Benin,Porto-Novo,Lower middle income,Aw,,,,,,
+BT,Bhutan,Phuntsholing,Lower middle income,Am,,,,,,
+BO,"Bolivia, Plurinational State of",Cochabamba,Lower middle income,BSk,,,,,,
+BO,"Bolivia, Plurinational State of",El Alto,Lower middle income,ET,,,,,,
+BO,"Bolivia, Plurinational State of",Oruro,Lower middle income,Cfb,,,,,,
+BO,"Bolivia, Plurinational State of",Santa Cruz de la Sierra,Lower middle income,Aw,,,,,,
+BO,"Bolivia, Plurinational State of",Tarija,Lower middle income,BSk,,,,,,
+BO,"Bolivia, Plurinational State of",Trinidad,Lower middle income,Am,,,,,,
+BO,"Bolivia, Plurinational State of",Villa Tunari,Lower middle income,Af,,,,,,
+BA,Bosnia and Herzegovina,Livno,Upper middle income,Dfb,,,,,,
+BA,Bosnia and Herzegovina,Mostar,Upper middle income,Cfa,,,,,,
+BA,Bosnia and Herzegovina,Sarajevo,Upper middle income,Cfb,,,,,,
+BW,Botswana,Gaborone,Upper middle income,BSh,,,,,,
+BR,Brazil,Aracaju,Upper middle income,Am,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,Belo Horizonte,Upper middle income,Aw,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,Brasília,Upper middle income,Aw,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,Maceió,Upper middle income,Am,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,Manaus,Upper middle income,Af,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,Rio de Janeiro,Upper middle income,Aw,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,"Salvador, Bahia",Upper middle income,Af,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,Santos,Upper middle income,Af,69.0,38.0,49.0,76.0,44.0,59.0
+BR,Brazil,São Paulo,Upper middle income,Cfa,69.0,38.0,49.0,76.0,44.0,59.0
+,British Columbia,Kamloops,,BSk,,,,,,
+,British Columbia,Nanaimo,,Csb,,,,,,
+,British Columbia,Vancouver,,Cfb,,,,,,
+VG,British Virgin Islands,Road Town,High income,Am,,,,,,
+BN,Brunei Darussalam,Bandar Seri Begawan,High income,Af,,,,,,
+BG,Bulgaria,Kardzhali,High income,Csa,70.0,30.0,40.0,85.0,69.0,16.0
+BG,Bulgaria,Pleven,High income,Dfa,70.0,30.0,40.0,85.0,69.0,16.0
+BG,Bulgaria,Smolyan,High income,Dfb,70.0,30.0,40.0,85.0,69.0,16.0
+BG,Bulgaria,Sofia,High income,Dfb,70.0,30.0,40.0,85.0,69.0,16.0
+BF,Burkina Faso,Bobo-Dioulasso,Low income,Aw,70.0,15.0,50.0,55.0,27.0,18.0
+BF,Burkina Faso,Ouagadougou,Low income,BSh,70.0,15.0,50.0,55.0,27.0,18.0
+BI,Burundi,Bujumbura,Low income,Aw,,,,,,
+,Buryatia,Ulan-Ude,,BSk,,,,,,
+,California,Los Angeles,,Csa,,,,,,
+,California,San Diego,,BSh,,,,,,
+,California,San Francisco,,Csb,,,,,,
+KH,Cambodia,Phnom Penh,Lower middle income,Aw,,,,,,
+KH,Cambodia,Sihanoukville,Lower middle income,Am,,,,,,
+CM,Cameroon,Douala,Lower middle income,Am,,,,,,
+CM,Cameroon,Maroua,Lower middle income,BSh,,,,,,
+CM,Cameroon,Yaoundé,Lower middle income,Aw,,,,,,
+CA,Canada,"Alert, Nunavut",High income,ET,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Atlin, British Columbia",High income,Dfc,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Castlegar, British Columbia",High income,Dfb,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Hamilton, Ontario",High income,Dfa,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Lytton, British Columbia",High income,Dfa,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Prince Rupert, British Columbia",High income,Cfb,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Victoria, British Columbia",High income,Csb,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Windsor, Ontario",High income,Dfa,39.0,80.0,52.0,48.0,36.0,68.0
+CA,Canada,"Yarmouth, Nova Scotia",High income,Cfb,39.0,80.0,52.0,48.0,36.0,68.0
+,Canary Islands,Arrecife,,BWh,,,,,,
+,Canary Islands,Puerto del Rosario,,BWh,,,,,,
+CV,Cape Verde,Praia,,BWh,75.0,20.0,15.0,40.0,12.0,83.0
+CF,Central African Republic,Bangui,Low income,Aw,,,,,,
+TD,Chad,Faya-Largeau,Low income,BWh,,,,,,
+TD,Chad,Moundou,Low income,Aw,,,,,,
+TD,Chad,N'Djamena,Low income,BSh,,,,,,
+,Chihuahua,Ciudad Juárez,,BWk,,,,,,
+CL,Chile,Antofagasta,High income,BWk,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Arica,High income,BWh,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Iquique,High income,BWh,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Melipilla,High income,Csa,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Puerto Natales,High income,Cfb,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Puerto Williams,High income,ET,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Punta Arenas,High income,Cfc,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Putre,High income,ET,63.0,23.0,28.0,86.0,31.0,68.0
+CL,Chile,Santiago,High income,BSk,63.0,23.0,28.0,86.0,31.0,68.0
+CN,China,Beijing,Upper middle income,Dfa,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Chongqing,Upper middle income,Cfa,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,"Dongfang, Hainan",Upper middle income,Aw,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Phari,Upper middle income,ET,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Qionghai,Upper middle income,Am,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Shanghai,Upper middle income,Cfa,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Tianjin,Upper middle income,BSk,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Wanning,Upper middle income,Am,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,Wenchang,Upper middle income,Am,80.0,20.0,66.0,30.0,87.0,24.0
+CN,China,"Yushu City, Qinghai",Upper middle income,Dfc,80.0,20.0,66.0,30.0,87.0,24.0
+,Chubut Province,Alto Río Senguer,,Dfb,,,,,,
+,Chukotka,Anadyr,,Dfc,,,,,,
+,Chukotka,Mys Shmidta,,ET,,,,,,
+CO,Colombia,Barrancabermeja,Upper middle income,Am,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Barranquilla,Upper middle income,Aw,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Bogotá,Upper middle income,Cfb,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Buenaventura,Upper middle income,Af,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Cali,Upper middle income,Am,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Ipiales,Upper middle income,Csb,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Manizales,Upper middle income,Cfb,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Quibdó,Upper middle income,Af,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Tunja,Upper middle income,Cfb,67.0,13.0,64.0,80.0,13.0,83.0
+CO,Colombia,Vetas,Upper middle income,ET,67.0,13.0,64.0,80.0,13.0,83.0
+,Colorado,Denver,,BSk,,,,,,
+CK,Cook Islands,Avarua,,Af,,,,,,
+HR,Croatia,Dubrovnik,High income,Csa,73.0,33.0,40.0,80.0,58.0,33.0
+HR,Croatia,Gospić,High income,Dfb,73.0,33.0,40.0,80.0,58.0,33.0
+HR,Croatia,Rijeka,High income,Cfa,73.0,33.0,40.0,80.0,58.0,33.0
+HR,Croatia,Zagreb,High income,Cfb,73.0,33.0,40.0,80.0,58.0,33.0
+CU,Cuba,Havana,Upper middle income,Aw,,,,,,
+CU,Cuba,Santiago de Cuba,Upper middle income,Aw,,,,,,
+,Curaçao,Willemstad,High income,BSh,,,,,,
+CY,Cyprus,Nicosia,High income,BSh,,,,,,
+CZ,Czechia,Brno,High income,Dfb,,,,,,
+CZ,Czechia,Horská Kvilda,High income,Dfc,,,,,,
+CZ,Czechia,Prague,High income,Cfb,,,,,,
+,Dalarna,Falun,,Dfb,,,,,,
+,Democratic Republic of Congo,Kinshasa,,Aw,,,,,,
+,Democratic Republic of the Congo,Boende,,Af,,,,,,
+,Democratic Republic of the Congo,Kisangani,,Am,,,,,,
+DK,Denmark,Bornholm,High income,Cfb,18.0,74.0,16.0,23.0,35.0,70.0
+DK,Denmark,Copenhagen,High income,Cfb,18.0,74.0,16.0,23.0,35.0,70.0
+DK,Denmark,Skagen,High income,Cfb,18.0,74.0,16.0,23.0,35.0,70.0
+DJ,Djibouti,Airolaf,Lower middle income,BSh,,,,,,
+DJ,Djibouti,Djibouti City,Lower middle income,BWh,,,,,,
+DM,Dominica,Roseau,Upper middle income,Am,,,,,,
+DO,Dominican Republic,Higüey,Upper middle income,Af,,,,,,
+DO,Dominican Republic,Santo Domingo,Upper middle income,Am,,,,,,
+,East Timor,Dili,,Aw,,,,,,
+,Easter Island,Hanga Roa,,Af,,,,,,
+EC,Ecuador,Guayaquil,Upper middle income,Aw,,,,,,
+EC,Ecuador,Portoviejo,Upper middle income,BSh,,,,,,
+EC,Ecuador,Puyo,Upper middle income,Af,,,,,,
+EC,Ecuador,Riobamba,Upper middle income,Cfb,,,,,,
+EC,Ecuador,San Cristóbal Island,Upper middle income,Aw,,,,,,
+EC,Ecuador,Tulcán,Upper middle income,Csb,,,,,,
+EG,Egypt,Alexandria,,BSh,70.0,25.0,45.0,80.0,7.0,4.0
+EG,Egypt,Cairo,,BWh,70.0,25.0,45.0,80.0,7.0,4.0
+EG,Egypt,Luxor,,BWh,70.0,25.0,45.0,80.0,7.0,4.0
+EG,Egypt,Sharm El Sheikh,,BWh,70.0,25.0,45.0,80.0,7.0,4.0
+SV,El Salvador,San Salvador,Upper middle income,Aw,66.0,19.0,40.0,94.0,20.0,89.0
+,England,London,,Cfb,,,,,,
+GQ,Equatorial Guinea,Malabo,Upper middle income,Am,,,,,,
+ER,Eritrea,Asmara,Low income,BSk,,,,,,
+ER,Eritrea,Massawa,Low income,BWh,,,,,,
+,Erongo Region,Walvis Bay,,BWk,,,,,,
+EE,Estonia,Tallinn,High income,Dfb,40.0,60.0,30.0,60.0,82.0,16.0
+ET,Ethiopia,Bahir Dar,,Aw,,,,,,
+FO,Faroe Islands,Mykines,High income,ET,,,,,,
+FO,Faroe Islands,Tórshavn,High income,Cfc,,,,,,
+FJ,Fiji,Suva,Upper middle income,Af,,,,,,
+FI,Finland,Helsinki,High income,Dfb,33.0,63.0,26.0,59.0,38.0,57.0
+FI,Finland,Jyväskylä,High income,Dfc,33.0,63.0,26.0,59.0,38.0,57.0
+FI,Finland,Oulu,High income,Dfc,33.0,63.0,26.0,59.0,38.0,57.0
+FI,Finland,Tampere,High income,Dfb,33.0,63.0,26.0,59.0,38.0,57.0
+FI,Finland,Turku,High income,Dfb,33.0,63.0,26.0,59.0,38.0,57.0
+FI,Finland,Vaasa,High income,Dfc,33.0,63.0,26.0,59.0,38.0,57.0
+,Florida,Cape Coral,,Aw,,,,,,
+,Florida,Key West,,Aw,,,,,,
+,Florida,Miami,,Am,,,,,,
+,Florida,Port St. Lucie,,Af,,,,,,
+FR,France,Bordeaux,High income,Cfb,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Briançon,High income,Cfb,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Chamonix,High income,Dfb,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Lyon,High income,Cfa,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,"Marigot, Saint Martin",High income,Aw,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Marseille,High income,Csa,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Mouthe,High income,Dfb,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Nice,High income,Csa,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Paris,High income,Cfb,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Port-aux-Français,High income,ET,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Saint Pierre and Miquelon,High income,Dfc,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Saint-Véran,High income,Dfb,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Tignes,High income,Dfc,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Toulouse,High income,Cfa,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Valence,High income,Cfa,68.0,71.0,43.0,86.0,63.0,48.0
+FR,France,Île d'Yeu,High income,Cfb,68.0,71.0,43.0,86.0,63.0,48.0
+GF,French Guiana,Cayenne,,Am,,,,,,
+GF,French Guiana,Saint-Laurent-du-Maroni,,Af,,,,,,
+PF,French Polynesia,Papeete,High income,Am,,,,,,
+GA,Gabon,Libreville,Upper middle income,Am,,,,,,
+,Gangwon Province,Chuncheon,,Dfa,,,,,,
+,Gansu,Lanzhou,,BSk,,,,,,
+GE,Georgia,Akhaltsikhe,Upper middle income,Dfb,65.0,41.0,55.0,85.0,38.0,32.0
+GE,Georgia,Kutaisi,Upper middle income,Cfa,65.0,41.0,55.0,85.0,38.0,32.0
+GE,Georgia,Tbilisi,Upper middle income,Cfa,65.0,41.0,55.0,85.0,38.0,32.0
+DE,Germany,Berlin,High income,Cfb,35.0,67.0,66.0,65.0,83.0,40.0
+DE,Germany,"Feldberg, Baden-Württemberg",High income,Dfc,35.0,67.0,66.0,65.0,83.0,40.0
+GH,Ghana,Accra,Lower middle income,BSh,80.0,15.0,40.0,65.0,4.0,72.0
+GH,Ghana,Kumasi,Lower middle income,Aw,80.0,15.0,40.0,65.0,4.0,72.0
+,Ghor,Chaghcharan,,Dfb,,,,,,
+,Gilan,Bandar-e Anzali,,Cfa,,,,,,
+,Gilan,Rasht,,Cfa,,,,,,
+GR,Greece,Aetomilitsa,High income,Dfb,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Athens,High income,Csa,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Florina,High income,Cfa,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Heraklion,High income,Csa,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Kozani,High income,Cfa,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Patras,High income,Csa,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Piraeus,High income,BSh,60.0,35.0,57.0,112.0,45.0,50.0
+GR,Greece,Thessaloniki,High income,BSk,60.0,35.0,57.0,112.0,45.0,50.0
+GL,Greenland,Ilulissat,High income,ET,,,,,,
+GL,Greenland,Ittoqqortoormiit,High income,ET,,,,,,
+GL,Greenland,Kangerlussuaq,High income,Dfc,,,,,,
+GL,Greenland,Narsarsuaq,High income,Dfc,,,,,,
+GL,Greenland,Nuuk,High income,ET,,,,,,
+GL,Greenland,Qaanaaq,High income,ET,,,,,,
+GL,Greenland,Summit Camp,High income,EF,,,,,,
+,Grisons,St. Moritz,,Dfc,,,,,,
+GP,Guadeloupe,Pointe-à-Pitre,,Af,,,,,,
+GT,Guatemala,Cobán,Upper middle income,Cfb,,,,,,
+GT,Guatemala,Puerto Barrios,Upper middle income,Af,,,,,,
+GN,Guinea,Conakry,Lower middle income,Am,,,,,,
+,Guinea-,Bissau,,Aw,,,,,,
+,Gujarat,Ahmedabad,,BSh,,,,,,
+,Hainan,Haikou,,Aw,,,,,,
+,Hainan,Sansha,,Aw,,,,,,
+,Hainan,Sanya,,Aw,,,,,,
+HT,Haiti,Port-au-Prince,Lower middle income,Aw,,,,,,
+,Hawaii,Hilo,,Af,,,,,,
+,Hawaii,Honolulu,,BSh,,,,,,
+,Hebei,Shijiazhuang,,BSk,,,,,,
+,Heilongjiang,Harbin,,Dfa,,,,,,
+,Heilongjiang,Heihe,,Dfb,,,,,,
+,Heilongjiang,Mohe,,Dfc,,,,,,
+,Hesse,Frankfurt,,Cfb,,,,,,
+,Hidalgo,Pachuca,,BSk,,,,,,
+,Himachel Pradesh,Hikkim,,Dfc,,,,,,
+,Hiva Oa,Atuona,,Af,,,,,,
+,Hokkaido,Asahikawa,,Dfb,,,,,,
+,Hokkaido,Hakodate,,Dfa,,,,,,
+,Hokkaido,Kushiro,,Dfb,,,,,,
+,Hokkaido,Sapporo,,Dfa,,,,,,
+HN,Honduras,La Ceiba,Lower middle income,Af,,,,,,
+HN,Honduras,La Esperanza,Lower middle income,Cfb,,,,,,
+HN,Honduras,San Pedro Sula,Lower middle income,Aw,,,,,,
+HN,Honduras,Siguatepeque,Lower middle income,Cfa,,,,,,
+HN,Honduras,Tegucigalpa,Lower middle income,Aw,,,,,,
+,Hubei,Wuhan,,Cfa,,,,,,
+HU,Hungary,Budapest,High income,Cfa,46.0,80.0,88.0,82.0,58.0,31.0
+HU,Hungary,Debrecen,High income,Dfb,46.0,80.0,88.0,82.0,58.0,31.0
+HU,Hungary,Győr,High income,Cfb,46.0,80.0,88.0,82.0,58.0,31.0
+HU,Hungary,Kaposvár,High income,Cfb,46.0,80.0,88.0,82.0,58.0,31.0
+HU,Hungary,Szeged,High income,Dfa,46.0,80.0,88.0,82.0,58.0,31.0
+HU,Hungary,Szombathely,High income,Dfb,46.0,80.0,88.0,82.0,58.0,31.0
+IS,Iceland,Akranes,High income,Dfc,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Akureyri,High income,Dfc,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Hafnarfjörður,High income,Cfc,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Möðrudalur,High income,ET,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Reykjavík,High income,Cfc,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Sauðárkrókur,High income,Dfc,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Vestmannaeyjar,High income,Cfc,30.0,60.0,10.0,50.0,28.0,67.0
+IS,Iceland,Ísafjörður,High income,ET,30.0,60.0,10.0,50.0,28.0,67.0
+,Illinois,Chicago,,Dfa,,,,,,
+IN,India,Leh,Lower middle income,BWk,77.0,48.0,56.0,40.0,51.0,26.0
+ID,Indonesia,Bandung,Upper middle income,Am,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Jakarta,Upper middle income,Am,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Kupang,Upper middle income,Aw,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Makassar,Upper middle income,Am,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Medan,Upper middle income,Af,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Padang,Upper middle income,Af,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Palembang,Upper middle income,Af,78.0,14.0,46.0,48.0,62.0,38.0
+ID,Indonesia,Surabaya,Upper middle income,Aw,78.0,14.0,46.0,48.0,62.0,38.0
+IR,"Iran, Islamic Republic of",Abali,,Dfb,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Bushehr,,BSh,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Dezful,,BSh,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Hamadan,,Dfa,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Isfahan,,BWk,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Karaj,,BSk,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Kerman,,BWk,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Kermanshah,,Csa,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Mashhad,,BSk,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Qom,,BWh,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Sanandaj,,Csa,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Saqqez,,Dfa,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Shiraz,,BSh,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Siah Bisheh,,Csb,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Tabriz,,BSk,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Tehran,,BSk,58.0,41.0,43.0,59.0,14.0,40.0
+IR,"Iran, Islamic Republic of",Yazd,,BWh,58.0,41.0,43.0,59.0,14.0,40.0
+IQ,Iraq,Baghdad,Upper middle income,BWh,95.0,30.0,70.0,85.0,25.0,17.0
+IQ,Iraq,Basra,Upper middle income,BWh,95.0,30.0,70.0,85.0,25.0,17.0
+IQ,Iraq,Erbil,Upper middle income,Csa,95.0,30.0,70.0,85.0,25.0,17.0
+IQ,Iraq,Mosul,Upper middle income,Csa,95.0,30.0,70.0,85.0,25.0,17.0
+IE,Ireland,Dublin,High income,Cfb,28.0,70.0,68.0,35.0,24.0,65.0
+,Irkutsk Oblast,Usolye-Sibirskoye,,Dfc,,,,,,
+IL,Israel,Jerusalem,High income,Csa,,,,,,
+IL,Israel,Tel Aviv,High income,Csa,,,,,,
+IT,Italy,Belluno,High income,Dfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Bologna,High income,Cfa,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Cortina d'Ampezzo,High income,Dfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,L'Aquila,High income,Cfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Livigno,High income,Dfc,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Merano,High income,Cfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Milan,High income,Cfa,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Naples,High income,Csa,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Palermo,High income,Csa,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Rieti,High income,Csb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Rocca di Mezzo,High income,Dfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Rome,High income,Csa,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Toblach,High income,Dfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Trepalle,High income,ET,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Trevico,High income,Cfb,50.0,76.0,70.0,75.0,61.0,30.0
+IT,Italy,Venice,High income,Cfa,50.0,76.0,70.0,75.0,61.0,30.0
+,Ivory Coast,Abidjan,,Aw,,,,,,
+,Jafara,ʽAziziya,,BWh,,,,,,
+JM,Jamaica,Port Antonio,Upper middle income,Af,,,,,,
+,Jammu and Kashmir,Srinagar,,Cfa,,,,,,
+JP,Japan,Aomori,High income,Dfa,54.0,46.0,95.0,92.0,88.0,42.0
+JP,Japan,Chichijima,High income,Am,54.0,46.0,95.0,92.0,88.0,42.0
+JP,Japan,Ishigaki,High income,Af,54.0,46.0,95.0,92.0,88.0,42.0
+JP,Japan,Osaka,High income,Cfa,54.0,46.0,95.0,92.0,88.0,42.0
+JP,Japan,Tokyo,High income,Cfa,54.0,46.0,95.0,92.0,88.0,42.0
+,Jilin,Yanji,,Dfb,,,,,,
+JO,Jordan,Amman,Lower middle income,BSk,70.0,30.0,45.0,65.0,16.0,43.0
+JO,Jordan,Irbid,Lower middle income,Csa,70.0,30.0,45.0,65.0,16.0,43.0
+JO,Jordan,Ma'an,Lower middle income,BWh,70.0,30.0,45.0,65.0,16.0,43.0
+JO,Jordan,Mafraq,Lower middle income,BSk,70.0,30.0,45.0,65.0,16.0,43.0
+,Jujuy,La Quiaca,,BSk,,,,,,
+,Kaliningrad Oblast,Baltiysk,,Cfb,,,,,,
+,Kamchatka Krai,Petropavlovsk-Kamchatsky,,Dfc,,,,,,
+,Kanagawa,Yokohama,,Cfa,,,,,,
+,Karakalpakstan,Nukus,,BWk,,,,,,
+,Karnataka,Bengaluru,,Aw,,,,,,
+,Karnataka,Mangaluru,,Am,,,,,,
+KZ,Kazakhstan,Aktau,Upper middle income,BWk,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Aktobe,Upper middle income,Dfa,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Almaty,Upper middle income,Dfa,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Astana,Upper middle income,Dfb,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Atyrau,Upper middle income,BSk,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Karaganda,Upper middle income,Dfb,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Kyzylorda,Upper middle income,BWk,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Pavlodar,Upper middle income,Dfb,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Shymkent,Upper middle income,Dfa,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Taraz,Upper middle income,BSk,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Turkistan,Upper middle income,BSk,88.0,20.0,50.0,88.0,85.0,22.0
+KZ,Kazakhstan,Zhetisay,Upper middle income,Csa,88.0,20.0,50.0,88.0,85.0,22.0
+KE,Kenya,Eldoret,Lower middle income,Cfb,,,,,,
+KE,Kenya,Garissa,Lower middle income,BWh,,,,,,
+KE,Kenya,Kisumu,Lower middle income,Af,,,,,,
+KE,Kenya,Nakuru,Lower middle income,Csb,,,,,,
+,Kerala,Kochi,,Am,,,,,,
+,Kerala,Thiruvananthapuram,,Am,,,,,,
+,Khabarovsk Krai,Okhotsk,,Dfc,,,,,,
+,Khuzestan,Ahvaz,,BWh,,,,,,
+KI,Kiribati,Kiritimati,Lower middle income,BSh,,,,,,
+KI,Kiribati,Tarawa,Lower middle income,Af,,,,,,
+KR,"Korea, Republic of",Cheonan,,Dfa,60.0,18.0,39.0,85.0,100.0,29.0
+KR,"Korea, Republic of",Geoje,,Cfa,60.0,18.0,39.0,85.0,100.0,29.0
+KR,"Korea, Republic of",Incheon,,Dfa,60.0,18.0,39.0,85.0,100.0,29.0
+KR,"Korea, Republic of",Jeju,,Cfa,60.0,18.0,39.0,85.0,100.0,29.0
+KR,"Korea, Republic of",Pyeongchang,,Dfb,60.0,18.0,39.0,85.0,100.0,29.0
+KR,"Korea, Republic of",Seoul,,Dfa,60.0,18.0,39.0,85.0,100.0,29.0
+KR,"Korea, Republic of",Ulsan,,Cfa,60.0,18.0,39.0,85.0,100.0,29.0
+XK,Kosovo,Pristina,Upper middle income,Dfb,,,,,,
+XK,Kosovo,Prizren,Upper middle income,Cfa,,,,,,
+,Krasnodar Krai,Novorossiysk,,Csa,,,,,,
+,Krasnoyarsk Krai,Dikson,,ET,,,,,,
+,Krasnoyarsk Krai,Norilsk,,Dfc,,,,,,
+KW,Kuwait,Kuwait City,High income,BWh,,,,,,
+,KwaZulu-Natal,Durban,,Cfa,,,,,,
+KG,Kyrgyzstan,Bishkek,,Dfa,,,,,,
+KG,Kyrgyzstan,Karakol,,Dfb,,,,,,
+KG,Kyrgyzstan,Osh,,Dfa,,,,,,
+,Ladakh,Dras,,Dfb,,,,,,
+LA,Lao People's Democratic Republic,Vientiane,,Aw,,,,,,
+LV,Latvia,Riga,High income,Dfb,44.0,70.0,9.0,63.0,69.0,13.0
+LB,Lebanon,Beirut,Lower middle income,Csa,75.0,40.0,65.0,50.0,14.0,25.0
+LS,Lesotho,Maseru,Lower middle income,Cfb,,,,,,
+,Liaoning,Shenyang,,Dfa,,,,,,
+LR,Liberia,Monrovia,Low income,Am,,,,,,
+LY,Libya,Benghazi,Upper middle income,BSh,80.0,38.0,52.0,68.0,23.0,34.0
+LY,Libya,Kufra,Upper middle income,BWh,80.0,38.0,52.0,68.0,23.0,34.0
+LY,Libya,Tobruk,Upper middle income,BWh,80.0,38.0,52.0,68.0,23.0,34.0
+LI,Liechtenstein,Schaan,High income,Dfb,,,,,,
+LI,Liechtenstein,Vaduz,High income,Cfb,,,,,,
+LT,Lithuania,Klaipėda,High income,Dfb,42.0,60.0,19.0,65.0,82.0,16.0
+LT,Lithuania,Vilnius,High income,Dfb,42.0,60.0,19.0,65.0,82.0,16.0
+,Los Lagos Region,Osorno,,Cfb,,,,,,
+,Los Lagos Region,Puerto Montt,,Cfb,,,,,,
+,Los Ríos Region,Valdivia,,Cfb,,,,,,
+LU,Luxembourg,Luxembourg City,High income,Cfb,40.0,60.0,50.0,70.0,64.0,56.0
+MG,Madagascar,Antalaha,Low income,Af,,,,,,
+MG,Madagascar,Toamasina,Low income,Af,,,,,,
+MG,Madagascar,Toliara,Low income,BSh,,,,,,
+,Magadan Oblast,Seymchan,,Dfc,,,,,,
+,Magadan Oblast,Susuman,,Dfc,,,,,,
+,Maharashtra,Mumbai,,Aw,,,,,,
+,Makkah Region,Mecca,,BWh,,,,,,
+MY,Malaysia,Alor Setar,Upper middle income,Am,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Brinchang,Upper middle income,Cfb,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Cameron Highlands,Upper middle income,Cfb,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Ipoh,Upper middle income,Af,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Johor Bahru,Upper middle income,Af,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Kuala Lumpur,Upper middle income,Af,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Kuching,Upper middle income,Af,100.0,26.0,50.0,36.0,41.0,57.0
+MY,Malaysia,Langkawi,Upper middle income,Am,100.0,26.0,50.0,36.0,41.0,57.0
+MV,Maldives,Malé,Upper middle income,Am,,,,,,
+ML,Mali,Bamako,Low income,Aw,,,,,,
+ML,Mali,Timbuktu,Low income,BWh,,,,,,
+MT,Malta,Valletta,High income,Csa,56.0,59.0,47.0,96.0,47.0,66.0
+,Manitoba,Winnipeg,,Dfb,,,,,,
+MH,Marshall Islands,Majuro,Upper middle income,Af,,,,,,
+,Massachusetts,Boston,,Dfa,,,,,,
+,Massachusetts United States,Worthington,,Dfb,,,,,,
+MR,Mauritania,Nouakchott,Lower middle income,BWh,,,,,,
+MU,Mauritius,Curepipe,Upper middle income,Am,,,,,,
+MU,Mauritius,Port Louis,Upper middle income,Aw,,,,,,
+,Mazandaran,Sari,,Cfa,,,,,,
+MX,Mexico,Aguascalientes (city),Upper middle income,BSh,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,Cuernavaca,Upper middle income,Aw,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,Durango,Upper middle income,BSk,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,La Paz,Upper middle income,BWh,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,"Matamoros, Tamaulipas",Upper middle income,Cfa,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,Monterrey,Upper middle income,BSh,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,Veracruz,Upper middle income,Aw,81.0,30.0,69.0,82.0,24.0,97.0
+MX,Mexico,Villahermosa,Upper middle income,Am,81.0,30.0,69.0,82.0,24.0,97.0
+,Michigan,Detroit,,Dfa,,,,,,
+FM,Micronesia,Palikir,,Af,,,,,,
+MD,Moldova,Briceni,Upper middle income,Dfb,90.0,27.0,39.0,95.0,71.0,19.0
+MD,Moldova,Chișinău,Upper middle income,Dfa,90.0,27.0,39.0,95.0,71.0,19.0
+MN,Mongolia,Baruunturuun,Upper middle income,Dfb,,,,,,
+MN,Mongolia,Bulgan,Upper middle income,Dfc,,,,,,
+MN,Mongolia,Choibalsan,Upper middle income,BSk,,,,,,
+MN,Mongolia,Dalanzadgad,Upper middle income,BWk,,,,,,
+MN,Mongolia,Darkhan,Upper middle income,Dfb,,,,,,
+MN,Mongolia,Kharkhorin,Upper middle income,Dfb,,,,,,
+MN,Mongolia,Khovd,Upper middle income,BWk,,,,,,
+MN,Mongolia,Mörön,Upper middle income,BSk,,,,,,
+MN,Mongolia,Ulaanbaatar,Upper middle income,BSk,,,,,,
+MN,Mongolia,Ölgii,Upper middle income,BWk,,,,,,
+ME,Montenegro,Cetinje,Upper middle income,Cfb,88.0,24.0,48.0,90.0,75.0,20.0
+ME,Montenegro,Pljevlja,Upper middle income,Dfb,88.0,24.0,48.0,90.0,75.0,20.0
+ME,Montenegro,Podgorica,Upper middle income,Csa,88.0,24.0,48.0,90.0,75.0,20.0
+ME,Montenegro,Žabljak,Upper middle income,Dfb,88.0,24.0,48.0,90.0,75.0,20.0
+MA,Morocco,Agadir,Lower middle income,BSh,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Casablanca,Lower middle income,Csa,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Essaouira,Lower middle income,BSk,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Imilchil,Lower middle income,Dfb,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Marrakesh,Lower middle income,BSh,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Ouarzazate,Lower middle income,BWh,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Oujda,Lower middle income,BSk,70.0,46.0,53.0,68.0,14.0,25.0
+MA,Morocco,Tangier,Lower middle income,Csa,70.0,46.0,53.0,68.0,14.0,25.0
+MZ,Mozambique,Maputo,Low income,Aw,85.0,15.0,38.0,44.0,11.0,80.0
+,Murcia,Cartagena,,BWh,,,,,,
+MM,Myanmar,Mandalay,Lower middle income,Aw,,,,,,
+MM,Myanmar,Naypyidaw,Lower middle income,Aw,,,,,,
+MM,Myanmar,Yangon,Lower middle income,Am,,,,,,
+,Namibia,Keetmanshoop,Lower middle income,BWh,,,,,,
+,Namibia,Swakopmund,Lower middle income,BWk,,,,,,
+,Namibia,Windhoek,Lower middle income,BSh,,,,,,
+,Nangarhar,Jalalabad,,BWh,,,,,,
+NR,Nauru,Yaren,High income,Af,,,,,,
+NP,Nepal,Dingboche,Lower middle income,ET,,,,,,
+NL,Netherlands,"Philipsburg, Sint Maarten",High income,Aw,38.0,80.0,14.0,53.0,67.0,68.0
+,Neuquén Province,Aluminé,,Csb,,,,,,
+,Neuquén Province,San Martín de los Andes,,Csb,,,,,,
+,Neuquén Province,Villa La Angostura,,Cfb,,,,,,
+,Nevada,Las Vegas,,BWh,,,,,,
+,New Mexico,Albuquerque,,BSk,,,,,,
+,New South Wales,Sydney,,Cfa,,,,,,
+,New South Wales,Wagga Wagga,,Cfa,,,,,,
+,New South Wales,Wollongong,,Cfb,,,,,,
+,New York,New York City,,Cfa,,,,,,
+NZ,New Zealand,Auckland,High income,Cfb,22.0,79.0,58.0,49.0,33.0,75.0
+NZ,New Zealand,Christchurch,High income,Cfb,22.0,79.0,58.0,49.0,33.0,75.0
+NZ,New Zealand,Wellington,High income,Cfb,22.0,79.0,58.0,49.0,33.0,75.0
+,Newfoundland and Labrador,Labrador City,,Dfc,,,,,,
+NI,Nicaragua,Bluefields,Lower middle income,Af,,,,,,
+NI,Nicaragua,Chinandega,Lower middle income,Aw,,,,,,
+NI,Nicaragua,Managua,Lower middle income,Aw,,,,,,
+NE,Niger,Agadez,Low income,BWh,,,,,,
+NE,Niger,Niamey,Low income,BSh,,,,,,
+NG,Nigeria,Abuja,Lower middle income,Aw,80.0,30.0,60.0,55.0,13.0,84.0
+NG,Nigeria,Kano,Lower middle income,Aw,80.0,30.0,60.0,55.0,13.0,84.0
+NG,Nigeria,Lagos,Lower middle income,Aw,80.0,30.0,60.0,55.0,13.0,84.0
+NG,Nigeria,Maiduguri,Lower middle income,BSh,80.0,30.0,60.0,55.0,13.0,84.0
+,Nineveh,Mosul,,BSh,,,,,,
+,Ningxia,Yinchuan,,BWk,,,,,,
+NU,Niue,Alofi,,Af,,,,,,
+,Nordland,Bø,,Cfc,,,,,,
+,Nordland,Lofoten,,Cfb,,,,,,
+,North Holland,Amsterdam,,Cfb,,,,,,
+KP,North Korea,Chongjin,,Dfa,,,,,,
+KP,North Korea,Hoeryong,,Dfb,,,,,,
+KP,North Korea,Hyesan,,Dfb,,,,,,
+KP,North Korea,Kaesong,,Dfa,,,,,,
+KP,North Korea,Kimchaek,,Dfa,,,,,,
+KP,North Korea,Pyongyang,,Dfa,,,,,,
+KP,North Korea,Rason,,Dfb,,,,,,
+KP,North Korea,Samjiyon,,Dfc,,,,,,
+KP,North Korea,Tanchon,,Dfa,,,,,,
+MK,North Macedonia,Bitola,Upper middle income,Dfb,90.0,22.0,45.0,87.0,62.0,35.0
+MK,North Macedonia,Gevgelija,Upper middle income,BSk,90.0,22.0,45.0,87.0,62.0,35.0
+MK,North Macedonia,Ohrid,Upper middle income,Csb,90.0,22.0,45.0,87.0,62.0,35.0
+MK,North Macedonia,Skopje,Upper middle income,Cfa,90.0,22.0,45.0,87.0,62.0,35.0
+,Northern Cape,Upington,,BWh,,,,,,
+,Northern Ireland,Belfast,,Cfb,,,,,,
+,Northern Territory,Alice Springs,,BWh,,,,,,
+,Northwest Territories,Sachs Harbour,,ET,,,,,,
+,Northwest Territories,Yellowknife,,Dfc,,,,,,
+NO,Norway,Alta,High income,Dfc,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Finse,High income,ET,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Karlsøy,High income,Cfc,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Lillehammer,High income,Dfb,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Oslo,High income,Dfb,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Røros,High income,Dfc,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Røst,High income,Csc,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Skjåk,High income,Dfc,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Tromsø,High income,Dfc,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Trondheim,High income,Dfb,31.0,69.0,8.0,50.0,35.0,55.0
+NO,Norway,Værøy,High income,Cfc,31.0,69.0,8.0,50.0,35.0,55.0
+,Nunavut,Iqaluit,,ET,,,,,,
+,Odisha,Bhubaneswar,,Aw,,,,,,
+OM,Oman,Muscat,High income,BWh,,,,,,
+OM,Oman,Saiq,High income,BSk,,,,,,
+,Ontario,Ottawa,,Dfb,,,,,,
+,Ontario,Toronto,,Dfa,,,,,,
+PK,Pakistan,Chitral,Lower middle income,Csa,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,Dera Ismail Khan,Lower middle income,BWh,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,Dir,Lower middle income,Cfa,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,"Kalat, Balochistan",Lower middle income,BWk,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,Multan,Lower middle income,BWh,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,Peshawar,Lower middle income,BSh,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,Shimshal,Lower middle income,ET,55.0,14.0,50.0,70.0,50.0,0.0
+PK,Pakistan,Skardu,Lower middle income,BSk,55.0,14.0,50.0,70.0,50.0,0.0
+PW,Palau,Koror,High income,Af,,,,,,
+PW,Palau,Ngerulmud,High income,Af,,,,,,
+PA,Panama,Bocas del Toro,High income,Af,,,,,,
+PA,Panama,Changuinola,High income,Af,,,,,,
+PA,Panama,David,High income,Am,,,,,,
+PA,Panama,Panama City,High income,Aw,,,,,,
+PG,Papua New Guinea,Lae,Lower middle income,Af,,,,,,
+PG,Papua New Guinea,Port Moresby,Lower middle income,Aw,,,,,,
+PG,Papua New Guinea,Tabubil,Lower middle income,Af,,,,,,
+PG,Papua New Guinea,Wabag,Lower middle income,Cfb,,,,,,
+PY,Paraguay,Asunción,Upper middle income,Cfa,70.0,12.0,40.0,85.0,20.0,56.0
+PY,Paraguay,Ciudad del Este,Upper middle income,Cfa,70.0,12.0,40.0,85.0,20.0,56.0
+PY,Paraguay,Mariscal Estigarribia,Upper middle income,BSh,70.0,12.0,40.0,85.0,20.0,56.0
+,Paraíba,Patos,,BSh,,,,,,
+,Pennsylvania,Philadelphia,,Cfa,,,,,,
+,Pernambuco,Petrolina,,BSh,,,,,,
+,Pernambuco,Recife,,Am,,,,,,
+PE,Peru,Arequipa,Upper middle income,BWk,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Cerro de Pasco,Upper middle income,ET,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Huánuco,Upper middle income,BSh,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Iquitos,Upper middle income,Af,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Lima,Upper middle income,BWh,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Oxapampa,Upper middle income,Cfb,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Pucallpa,Upper middle income,Am,64.0,16.0,42.0,87.0,25.0,46.0
+PE,Peru,Puerto Maldonado,Upper middle income,Am,64.0,16.0,42.0,87.0,25.0,46.0
+PH,Philippines,Baguio,Lower middle income,Am,94.0,32.0,64.0,44.0,27.0,42.0
+PH,Philippines,Balbalan,Lower middle income,Cfa,94.0,32.0,64.0,44.0,27.0,42.0
+PH,Philippines,Davao,Lower middle income,Af,94.0,32.0,64.0,44.0,27.0,42.0
+PH,Philippines,Manila,Lower middle income,Am,94.0,32.0,64.0,44.0,27.0,42.0
+PH,Philippines,Polomolok,Lower middle income,Af,94.0,32.0,64.0,44.0,27.0,42.0
+PH,Philippines,Quezon City,Lower middle income,Am,94.0,32.0,64.0,44.0,27.0,42.0
+PH,Philippines,Tacloban,Lower middle income,Af,94.0,32.0,64.0,44.0,27.0,42.0
+,Pichincha,Quito,,Cfb,,,,,,
+PL,Poland,Gdynia,High income,Cfb,68.0,60.0,64.0,93.0,38.0,29.0
+PL,Poland,Kraków,High income,Dfb,68.0,60.0,64.0,93.0,38.0,29.0
+PL,Poland,Poznań,High income,Dfb,68.0,60.0,64.0,93.0,38.0,29.0
+PL,Poland,Szczecin,High income,Cfb,68.0,60.0,64.0,93.0,38.0,29.0
+PL,Poland,Warsaw,High income,Dfb,68.0,60.0,64.0,93.0,38.0,29.0
+PL,Poland,Wrocław,High income,Cfb,68.0,60.0,64.0,93.0,38.0,29.0
+PT,Portugal,Aveiro,High income,Csb,63.0,27.0,31.0,104.0,28.0,33.0
+PT,Portugal,Funchal,High income,Csa,63.0,27.0,31.0,104.0,28.0,33.0
+PT,Portugal,Lisbon,High income,Csa,63.0,27.0,31.0,104.0,28.0,33.0
+PT,Portugal,Porto,High income,Csb,63.0,27.0,31.0,104.0,28.0,33.0
+PT,Portugal,Sintra,High income,Csb,63.0,27.0,31.0,104.0,28.0,33.0
+,Primorsky Krai,Lesozavodsk,,Dfa,,,,,,
+,Primorsky Krai,Vladivostok,,Dfb,,,,,,
+,Punjab,Lahore,,BSh,,,,,,
+QA,Qatar,Doha,High income,BWh,,,,,,
+,Qinghai,Golmud,,BWk,,,,,,
+,Qinghai,Tanggulashan,,ET,,,,,,
+,Quebec,Montreal,,Dfb,,,,,,
+,Queensland,Brisbane,,Cfa,,,,,,
+,Queensland,Cairns,,Am,,,,,,
+,Queensland,Mount Isa,,BSh,,,,,,
+,Queensland,Townsville,,Aw,,,,,,
+,Querétaro,Querétaro City,,BSh,,,,,,
+,Quintana Roo,Cancún,,Aw,,,,,,
+,Rajasthan,Jaipur,,BSh,,,,,,
+,Rajasthan,Jodhpur,,BWh,,,,,,
+,Republic of the Congo,Brazzaville,,Aw,,,,,,
+,Rhode Island,Block Island,,Cfb,,,,,,
+,Rio Grande do Sul,Porto Alegre,,Cfa,,,,,,
+,Rio de Janeiro,Teresópolis,,Cfb,,,,,,
+,Rivers State,Port Harcourt,,Am,,,,,,
+RO,Romania,Bucharest,High income,Dfa,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Caransebeș,High income,Cfb,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Cluj-Napoca,High income,Dfb,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Constanța,High income,Cfa,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Iași,High income,Dfa,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Miercurea Ciuc,High income,Dfb,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Sulina,High income,BSk,90.0,30.0,42.0,90.0,52.0,20.0
+RO,Romania,Tulcea,High income,Cfa,90.0,30.0,42.0,90.0,52.0,20.0
+RU,Russian Federation,Arkhangelsk,High income,Dfc,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Astrakhan,High income,BSk,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Irkutsk,High income,Dfb,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Khabarovsk,High income,Dfb,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Kotlas,High income,Dfc,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Krasnodar,High income,Cfa,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Moscow,High income,Dfb,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Novosibirsk,High income,Dfb,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Rostov-on-Don,High income,Dfa,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Saint Petersburg,High income,Dfb,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Samara,High income,Dfb,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Saratov,High income,Dfa,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Sochi,High income,Cfa,93.0,39.0,36.0,95.0,81.0,20.0
+RU,Russian Federation,Volgograd,High income,Dfa,93.0,39.0,36.0,95.0,81.0,20.0
+RW,Rwanda,Kigali,Low income,Aw,,,,,,
+RE,Réunion,Le Tampon,,Cfb,,,,,,
+,Saba,The Bottom,,Aw,,,,,,
+,Saint Barthélemy,Gustavia,,Aw,,,,,,
+KN,Saint Kitts and Nevis,Basseterre,,Am,,,,,,
+LC,Saint Lucia,Castries,,Af,,,,,,
+VC,Saint Vincent and the Grenadines,Kingstown,,Af,,,,,,
+,Sakha Republic,Allakh-Yun,,Dfd,,,,,,
+,Sakha Republic,Delyankir,,Dfd,,,,,,
+,Sakha Republic,Khonuu,,Dfd,,,,,,
+,Sakha Republic,Nyurba,,Dfc,,,,,,
+,Sakha Republic,Okhotsky-Perevoz,,Dfd,,,,,,
+,Sakha Republic,Oymyakon,,Dfd,,,,,,
+,Sakha Republic,Tiksi,,ET,,,,,,
+,Sakha Republic,Udachny,,Dfd,,,,,,
+,Sakha Republic,Verkhoyansk,,Dfd,,,,,,
+,Sakha Republic,Yakutsk,,Dfc,,,,,,
+WS,Samoa,Apia,Upper middle income,Af,,,,,,
+,Santa Catarina,Florianópolis,,Cfa,,,,,,
+SA,Saudi Arabia,Jeddah,High income,BWh,95.0,25.0,60.0,80.0,36.0,52.0
+SA,Saudi Arabia,Riyadh,High income,BWh,95.0,25.0,60.0,80.0,36.0,52.0
+,Saxony,Görlitz,,Dfb,,,,,,
+,Scotland,Edinburgh,,Cfb,,,,,,
+,Scotland,Glasgow,,Cfb,,,,,,
+SN,Senegal,Dakar,Lower middle income,BSh,,,,,,
+SN,Senegal,Ziguinchor,Lower middle income,Aw,,,,,,
+RS,Serbia,Belgrade,Upper middle income,Cfa,86.0,25.0,43.0,92.0,52.0,28.0
+RS,Serbia,Subotica,Upper middle income,Dfb,86.0,25.0,43.0,92.0,52.0,28.0
+RS,Serbia,Zaječar,Upper middle income,Dfa,86.0,25.0,43.0,92.0,52.0,28.0
+,Shaanxi,Xi'an,,Dfa,,,,,,
+,Shirak,Gyumri,,Dfb,,,,,,
+,Sicily,Lampedusa,,BSh,,,,,,
+,Sicily,Linguaglossa,,Dfb,,,,,,
+SL,Sierra Leone,Freetown,Low income,Am,,,,,,
+,Sindh,Karachi,,BWh,,,,,,
+SK,Slovakia,Bratislava,,Cfa,,,,,,
+SK,Slovakia,Košice,,Dfb,,,,,,
+SI,Slovenia,Koper,High income,Cfa,71.0,27.0,19.0,88.0,49.0,48.0
+SI,Slovenia,Lendava,High income,Dfb,71.0,27.0,19.0,88.0,49.0,48.0
+SI,Slovenia,Ljubljana,High income,Cfb,71.0,27.0,19.0,88.0,49.0,48.0
+SB,Solomon Islands,Honiara,Lower middle income,Af,,,,,,
+SO,Somalia,Mogadishu,,BSh,,,,,,
+,Somaliland,Hargeisa,,BSh,,,,,,
+,Sonora,Hermosillo,,BWh,,,,,,
+ZA,South Africa,Bhisho,Upper middle income,BSk,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Bloemfontein,Upper middle income,BSk,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Cape Town,Upper middle income,Csb,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Dullstroom,Upper middle income,Cfb,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Mafikeng,Upper middle income,BSh,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Mthatha,Upper middle income,Cfb,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Polokwane,Upper middle income,BSh,49.0,65.0,63.0,49.0,34.0,63.0
+ZA,South Africa,Port Elizabeth,Upper middle income,Cfb,49.0,65.0,63.0,49.0,34.0,63.0
+,South Australia,Mount Gambier,,Csb,,,,,,
+,South Australia,Port Lincoln,,Csb,,,,,,
+,South Georgia,Grytviken,,ET,,,,,,
+,South Sudan,Juba,Low income,Aw,,,,,,
+,South Sudan,Malakal,Low income,BSh,,,,,,
+,Southern District,Eilat,,BWh,,,,,,
+ES,Spain,Albacete,High income,BSk,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Alicante,High income,BSh,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Barcelona,High income,Csa,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Bilbao,High income,Cfb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Gijón,High income,Cfb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Girona,High income,Cfa,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Huesca,High income,Cfa,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Madrid,High income,BSk,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Murcia,High income,BSh,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Salamanca,High income,Csb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,San Cristóbal de la Laguna,High income,Csb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Segovia,High income,Csb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Seville,High income,Csa,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Soria,High income,Cfb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Tabernas,High income,BWk,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Valencia,High income,BSh,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Valladolid,High income,Csb,57.0,51.0,42.0,86.0,48.0,44.0
+ES,Spain,Zaragoza,High income,BSk,57.0,51.0,42.0,86.0,48.0,44.0
+LK,Sri Lanka,Batticaloa,Lower middle income,Am,,,,,,
+LK,Sri Lanka,Colombo,Lower middle income,Af,,,,,,
+LK,Sri Lanka,Kurunegala,Lower middle income,Af,,,,,,
+LK,Sri Lanka,Nuwara Eliya,Lower middle income,Cfb,,,,,,
+LK,Sri Lanka,Ratnapura,Lower middle income,Af,,,,,,
+LK,Sri Lanka,Sri Jayawardenepura Kotte,Lower middle income,Af,,,,,,
+SD,Sudan,Khartoum,Low income,BWh,,,,,,
+SR,Suriname,Paramaribo,Upper middle income,Af,,,,,,
+,Svalbard,Longyearbyen,,ET,,,,,,
+,Svalbard,Ny-Ålesund,,ET,,,,,,
+SE,Sweden,Gothenburg,High income,Cfb,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Karlskrona,High income,Csb,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Kiruna,High income,Dfc,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Luleå,High income,Dfc,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Malmö,High income,Cfb,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Stockholm,High income,Dfb,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Umeå,High income,Dfc,31.0,71.0,5.0,29.0,53.0,78.0
+SE,Sweden,Uppsala,High income,Dfb,31.0,71.0,5.0,29.0,53.0,78.0
+CH,Switzerland,Bern,High income,Cfb,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,Davos,High income,Dfc,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,Geneva,High income,Cfb,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,Juf,High income,ET,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,La Brévine,High income,Dfb,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,La Chaux-de-Fonds,High income,Dfb,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,Zermatt,High income,Dfc,34.0,68.0,70.0,58.0,74.0,66.0
+CH,Switzerland,Zurich,High income,Cfb,34.0,68.0,70.0,58.0,74.0,66.0
+SY,Syrian Arab Republic,Aleppo,Low income,BSh,,,,,,
+SY,Syrian Arab Republic,Damascus,Low income,BWk,,,,,,
+SY,Syrian Arab Republic,Daraa,Low income,BSk,,,,,,
+SY,Syrian Arab Republic,Deir ez-Zor,Low income,BWh,,,,,,
+SY,Syrian Arab Republic,Homs,Low income,Csa,,,,,,
+SY,Syrian Arab Republic,Latakia,Low income,Csa,,,,,,
+,Syunik,Goris,,Cfb,,,,,,
+,Tahiti,Papeete,,Af,,,,,,
+TW,Taiwan,Kaohsiung,,Aw,58.0,17.0,45.0,69.0,93.0,49.0
+TW,Taiwan,Orchid Island,,Af,58.0,17.0,45.0,69.0,93.0,49.0
+TW,Taiwan,Pingtung,,Am,58.0,17.0,45.0,69.0,93.0,49.0
+TW,Taiwan,Tainan,,Aw,58.0,17.0,45.0,69.0,93.0,49.0
+TW,Taiwan,Taipei,,Cfa,58.0,17.0,45.0,69.0,93.0,49.0
+TW,Taiwan,Taitung,,Am,58.0,17.0,45.0,69.0,93.0,49.0
+TJ,Tajikistan,Dushanbe,Lower middle income,Csa,,,,,,
+TJ,Tajikistan,Isfara,Lower middle income,Dfa,,,,,,
+TJ,Tajikistan,Konibodom,Lower middle income,Dfa,,,,,,
+TJ,Tajikistan,Murghob,Lower middle income,ET,,,,,,
+TJ,Tajikistan,Roghun,Lower middle income,Dfb,,,,,,
+,Tamil Nadu,Coimbatore,,BSh,,,,,,
+,Tamil Nadu,Kodaikanal,,Cfb,,,,,,
+TZ,"Tanzania, United Republic of",Dar es Salaam,Lower middle income,Aw,70.0,25.0,40.0,50.0,34.0,38.0
+TZ,"Tanzania, United Republic of",Dodoma,Lower middle income,BSh,70.0,25.0,40.0,50.0,34.0,38.0
+TZ,"Tanzania, United Republic of",Zanzibar City,Lower middle income,Am,70.0,25.0,40.0,50.0,34.0,38.0
+,Tasmania,Hobart,,Cfb,,,,,,
+,Tavush,Ijevan,,Cfa,,,,,,
+,Telangana,Hyderabad,,Aw,,,,,,
+,Terceira Island,Angra do Heroísmo,,Csa,,,,,,
+,Texas,Dallas,,Cfa,,,,,,
+,Texas,Houston,,Cfa,,,,,,
+TH,Thailand,Bangkok,Upper middle income,Aw,64.0,20.0,34.0,64.0,32.0,45.0
+TH,Thailand,Hat Yai,Upper middle income,Am,64.0,20.0,34.0,64.0,32.0,45.0
+TH,Thailand,Ko Samui,Upper middle income,Am,64.0,20.0,34.0,64.0,32.0,45.0
+TH,Thailand,Nakhon Si Thammarat,Upper middle income,Af,64.0,20.0,34.0,64.0,32.0,45.0
+TH,Thailand,Narathiwat,Upper middle income,Af,64.0,20.0,34.0,64.0,32.0,45.0
+,The Gambia,Banjul,,Aw,,,,,,
+,Tibet,Amdo,,ET,,,,,,
+,Tibet,Lhasa,,BSk,,,,,,
+,Tibet,Nagqu,,Dfc,,,,,,
+,Tibet,Shigatse,,Dfb,,,,,,
+,Ticino,Lugano,,Cfa,,,,,,
+,Tierra del Fuego,Tolhuin,,ET,,,,,,
+,Tierra del Fuego,Ushuaia,,ET,,,,,,
+TG,Togo,Lomé,Low income,Aw,,,,,,
+TO,Tonga,Nukuʻalofa,Upper middle income,Af,,,,,,
+TT,Trinidad and Tobago,Port of Spain,High income,Am,47.0,16.0,58.0,55.0,13.0,80.0
+,Trøndelag,Ørland,,Cfb,,,,,,
+TN,Tunisia,El Kef,Lower middle income,BSk,,,,,,
+TN,Tunisia,Gabès,Lower middle income,BWh,,,,,,
+TN,Tunisia,Sfax,Lower middle income,BSh,,,,,,
+TR,Turkey,Ankara,,BSk,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Antalya,,Csa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Ardahan,,Dfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Artvin,,Cfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Ağrı,,Dfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Bitlis,,Dfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Bolu,,Cfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Erzurum,,Dfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Eskişehir,,BSk,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Giresun,,Cfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Hakkâri,,Dfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Kars,,Dfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Konya,,BSk,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Kütahya,,Csb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Mersin,,Csa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Muş,,Dfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Samsun,,Cfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Sivas,,Dfb,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Zonguldak,,Cfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Çankırı,,Dfa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,İzmir,,Csa,66.0,37.0,45.0,85.0,46.0,49.0
+TR,Turkey,Şanlıurfa,,Csa,66.0,37.0,45.0,85.0,46.0,49.0
+TM,Turkmenistan,Ashgabat,Upper middle income,BWk,,,,,,
+TM,Turkmenistan,Kerki,Upper middle income,BWk,,,,,,
+TM,Turkmenistan,Serhetabat,Upper middle income,BSk,,,,,,
+,Tuva,Kyzyl,,BSk,,,,,,
+TV,Tuvalu,Funafuti,Upper middle income,Af,,,,,,
+UG,Uganda,Kabale,Low income,Cfb,,,,,,
+UG,Uganda,Kampala,Low income,Af,,,,,,
+UA,Ukraine,Dnipro,Upper middle income,Dfa,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Donetsk,Upper middle income,Dfa,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Kharkiv,Upper middle income,Dfb,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Kyiv,Upper middle income,Dfb,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Lviv,Upper middle income,Dfb,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Odesa,Upper middle income,Dfa,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Sevastopol,Upper middle income,BSk,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Simferopol,Upper middle income,Cfa,92.0,25.0,27.0,95.0,86.0,14.0
+UA,Ukraine,Yalta,Upper middle income,Cfa,92.0,25.0,27.0,95.0,86.0,14.0
+AE,United Arab Emirates,Abu Dhabi,High income,BWh,,,,,,
+AE,United Arab Emirates,Dubai,High income,BWh,,,,,,
+GB,United Kingdom,Ascension Island,High income,BWh,35.0,89.0,66.0,35.0,51.0,69.0
+GB,United Kingdom,"Jamestown, Saint Helena",High income,BWh,35.0,89.0,66.0,35.0,51.0,69.0
+GB,United Kingdom,Pitcairn Island,High income,Af,35.0,89.0,66.0,35.0,51.0,69.0
+GB,United Kingdom,"Plymouth, Montserrat",High income,Af,35.0,89.0,66.0,35.0,51.0,69.0
+GB,United Kingdom,"The Valley, Anguilla",High income,Aw,35.0,89.0,66.0,35.0,51.0,69.0
+US,United States of America,"Adak, Alaska",High income,Cfc,,,,,,
+US,United States of America,"Albuquerque, New Mexico",High income,BWk,,,,,,
+US,United States of America,"Anchorage, Alaska",High income,Dfc,,,,,,
+US,United States of America,"Bakersfield, California",High income,BWh,,,,,,
+US,United States of America,"Barnstable, Massachusetts",High income,Cfb,,,,,,
+US,United States of America,"Bethel, Alaska",High income,Dfc,,,,,,
+US,United States of America,"Bismarck, North Dakota",High income,Dfb,,,,,,
+US,United States of America,"Bodie, California",High income,Dfc,,,,,,
+US,United States of America,"Boise, Idaho",High income,BSk,,,,,,
+US,United States of America,"Brian Head, Utah",High income,Dfc,,,,,,
+US,United States of America,"Cambridge, Idaho",High income,Dfa,,,,,,
+US,United States of America,"Columbus, Ohio",High income,Dfa,,,,,,
+US,United States of America,"Delta Junction, Alaska",High income,Dfc,,,,,,
+US,United States of America,"El Paso, Texas",High income,BWh,,,,,,
+US,United States of America,"Eugene, Oregon",High income,Csb,,,,,,
+US,United States of America,"Fairbanks, Alaska",High income,Dfb,,,,,,
+US,United States of America,"Flagstaff, Arizona",High income,Dfb,,,,,,
+US,United States of America,"Fort Lauderdale, Florida",High income,Af,,,,,,
+US,United States of America,"Fort Myers, Florida",High income,Am,,,,,,
+US,United States of America,"Fraser, Colorado",High income,Dfc,,,,,,
+US,United States of America,"Fresno, California",High income,BSh,,,,,,
+US,United States of America,"Harrison, Nebraska",High income,Dfb,,,,,,
+US,United States of America,"Kenai, Alaska",High income,Dfc,,,,,,
+US,United States of America,"Ketchikan, Alaska",High income,Cfb,,,,,,
+US,United States of America,"Kingman, Arizona",High income,BWk,,,,,,
+US,United States of America,"Laredo, Texas",High income,BSh,,,,,,
+US,United States of America,"Logan, Utah",High income,Dfa,,,,,,
+US,United States of America,"Lubbock, Texas",High income,BSk,,,,,,
+US,United States of America,"Marquette, Michigan",High income,Dfb,,,,,,
+US,United States of America,"Naples, Florida",High income,Aw,,,,,,
+US,United States of America,"Nome, Alaska",High income,Dfc,,,,,,
+US,United States of America,"North Platte, Nebraska",High income,Dfa,,,,,,
+US,United States of America,"Pembina, North Dakota",High income,Dfb,,,,,,
+US,United States of America,"Phillipsburg, Kansas",High income,Dfa,,,,,,
+US,United States of America,"Phoenix, Arizona",High income,BWh,,,,,,
+US,United States of America,"Portland, Maine",High income,Dfb,,,,,,
+US,United States of America,"Portland, Oregon",High income,Csb,,,,,,
+US,United States of America,"Provo, Utah",High income,Csa,,,,,,
+US,United States of America,"Rapid City, South Dakota",High income,Dfa,,,,,,
+US,United States of America,"Reno, Nevada",High income,BSk,,,,,,
+US,United States of America,"Riverside, California",High income,BSh,,,,,,
+US,United States of America,"Sacramento, California",High income,Csa,,,,,,
+US,United States of America,"Saipan, Northern Mariana Islands",High income,Am,,,,,,
+US,United States of America,"San Diego, California",High income,Csa,,,,,,
+US,United States of America,"Soldotna, Alaska",High income,Dfc,,,,,,
+US,United States of America,"South Lake Tahoe, California",High income,Dfb,,,,,,
+US,United States of America,"St. Paul, Alaska",High income,ET,,,,,,
+US,United States of America,"Thief River Falls, Minnesota",High income,Dfb,,,,,,
+US,United States of America,"Unalaska, Alaska",High income,Cfc,,,,,,
+US,United States of America,"Utqiagvik, Alaska",High income,ET,,,,,,
+US,United States of America,"Valentine, Nebraska",High income,Dfa,,,,,,
+US,United States of America,"Volcano, Hawaii",High income,Cfb,,,,,,
+US,United States of America,"Wainwright, Alaska",High income,ET,,,,,,
+US,United States of America,Wake Island,High income,Aw,,,,,,
+US,United States of America,"Washington, D.C.",High income,Cfa,,,,,,
+US,United States of America,"Waynesville, North Carolina",High income,Cfb,,,,,,
+US,United States of America,"West Palm Beach, Florida",High income,Af,,,,,,
+US,United States of America,"Williams, Arizona",High income,Cfb,,,,,,
+US,United States of America,"Yakima, Washington",High income,BWk,,,,,,
+UY,Uruguay,Montevideo,High income,Cfa,61.0,36.0,38.0,100.0,26.0,53.0
+UY,Uruguay,Punta del Este,High income,Cfb,61.0,36.0,38.0,100.0,26.0,53.0
+,Utah,Salt Lake City,,Dfa,,,,,,
+,Utah,St. George,,BWk,,,,,,
+UZ,Uzbekistan,Bukhara,Lower middle income,BWk,,,,,,
+UZ,Uzbekistan,Chirchiq,Lower middle income,Dfa,,,,,,
+UZ,Uzbekistan,Fergana,Lower middle income,BWk,,,,,,
+UZ,Uzbekistan,Namangan,Lower middle income,BSk,,,,,,
+UZ,Uzbekistan,Navoiy,Lower middle income,BSk,,,,,,
+UZ,Uzbekistan,Samarkand,Lower middle income,BSk,,,,,,
+UZ,Uzbekistan,Tashkent,Lower middle income,Csa,,,,,,
+VU,Vanuatu,Port Vila,Lower middle income,Af,,,,,,
+VE,"Venezuela, Bolivarian Republic of",Apartaderos,,ET,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Barquisimeto,,BSh,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Caracas,,Aw,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Guanare,,Am,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Maracaibo,,BSh,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Mucuchíes,,Cfb,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Mérida,,Am,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Puerto Ayacucho,,Am,81.0,12.0,73.0,76.0,16.0,100.0
+VE,"Venezuela, Bolivarian Republic of",Punto Fijo,,BWh,81.0,12.0,73.0,76.0,16.0,100.0
+,Veracruz,Coatzacoalcos,,Am,,,,,,
+,Veracruz,Xalapa,,Cfb,,,,,,
+,Vestland,Bergen,,Cfb,,,,,,
+,Victoria,Melbourne,,Cfb,,,,,,
+,Victoria,Mildura,,BSk,,,,,,
+VN,Viet Nam,Cà Mau,Lower middle income,Am,70.0,20.0,40.0,30.0,57.0,35.0
+VN,Viet Nam,Da Nang,Lower middle income,Am,70.0,20.0,40.0,30.0,57.0,35.0
+VN,Viet Nam,Ho Chi Minh City,Lower middle income,Aw,70.0,20.0,40.0,30.0,57.0,35.0
+VN,Viet Nam,Huế,Lower middle income,Am,70.0,20.0,40.0,30.0,57.0,35.0
+VN,Viet Nam,Sa Pa,Lower middle income,Cfb,70.0,20.0,40.0,30.0,57.0,35.0
+,Vyots Dzor,Jermuk,,Dfb,,,,,,
+WF,Wallis and Futuna,Mata Utu,,Af,,,,,,
+,Washington,Forks,,Cfb,,,,,,
+,Washington,Seattle,,Csb,,,,,,
+,Washington,Spokane,,Dfb,,,,,,
+,Washington,Walla Walla,,Csa,,,,,,
+,West Bengal,Kolkata,,Aw,,,,,,
+,Western Australia,Kalgoorlie,,BSk,,,,,,
+,Western Australia,Perth,,Csa,,,,,,
+,Western Cape,L'Agulhas,,BSk,,,,,,
+EH,Western Sahara,Laayoune,,BWh,,,,,,
+,Wisconsin,Milwaukee,,Dfa,,,,,,
+,Xinjiang,Turpan,,BWk,,,,,,
+,Xinjiang,Ürümqi,,Dfa,,,,,,
+YE,Yemen,Aden,,BWh,,,,,,
+YE,Yemen,Sanaa,,BWk,,,,,,
+,Yukon,Dawson City,,Dfc,,,,,,
+,Yukon,Whitehorse,,Dfc,,,,,,
+,Yunnan,Yuanmou,,BSh,,,,,,
+,Zacatecas,Zacatecas City,,BSk,,,,,,
+ZM,Zambia,Chipata,Lower middle income,Aw,60.0,35.0,40.0,50.0,30.0,42.0
+,Zhejiang,Hangzhou,,Cfa,,,,,,
+ZW,Zimbabwe,Bulawayo,Lower middle income,BSh,,,,,,
+,ia,Tunis,,Csa,,,,,,

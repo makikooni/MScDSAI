@@ -1,0 +1,1029 @@
+City,Country,koppen_climate
+Alofi,Niue,Af
+Antalaha,Madagascar,Af
+Apia,Samoa,Af
+Atuona,Hiva Oa,Af
+Avarua,Cook Islands,Af
+Bandar Seri Begawan,Brunei,Af
+Bluefields,Nicaragua,Af
+Bocas del Toro,Panama,Af
+Boende,Democratic Republic of the Congo,Af
+Buenaventura,Colombia,Af
+Castries,Saint Lucia,Af
+Changuinola,Panama,Af
+Colombo,Sri Lanka,Af
+Davao,Philippines,Af
+"Fort Lauderdale, Florida",United States,Af
+Funafuti,Tuvalu,Af
+Hanga Roa,Easter Island,Af
+Higüey,Dominican Republic,Af
+Hilo,Hawaii,Af
+Honiara,Solomon Islands,Af
+"Innisfail, Queensland",Australia,Af
+Ipoh,Malaysia,Af
+Iquitos,Peru,Af
+Ishigaki,Japan,Af
+Johor Bahru,Malaysia,Af
+Kampala,Uganda,Af
+Kingstown,Saint Vincent and the Grenadines,Af
+Kisumu,Kenya,Af
+Koror,Palau,Af
+Kuala Lumpur,Malaysia,Af
+Kuching,Malaysia,Af
+Kurunegala,Sri Lanka,Af
+La Ceiba,Honduras,Af
+Lae,Papua New Guinea,Af
+Majuro,Marshall Islands,Af
+Manaus,Brazil,Af
+Mata Utu,Wallis and Futuna,Af
+Medan,Indonesia,Af
+Nakhon Si Thammarat,Thailand,Af
+Narathiwat,Thailand,Af
+Ngerulmud,Palau,Af
+Nukuʻalofa,Tonga,Af
+Orchid Island,Taiwan,Af
+Padang,Indonesia,Af
+Palembang,Indonesia,Af
+Palikir,Micronesia,Af
+Papeete,Tahiti,Af
+Paramaribo,Suriname,Af
+Pitcairn Island,United Kingdom,Af
+"Plymouth, Montserrat",United Kingdom,Af
+Pointe-à-Pitre,Guadeloupe,Af
+Polomolok,Philippines,Af
+Port Antonio,Jamaica,Af
+Port St. Lucie,Florida,Af
+Port Vila,Vanuatu,Af
+Puerto Barrios,Guatemala,Af
+Puyo,Ecuador,Af
+Quibdó,Colombia,Af
+Ratnapura,Sri Lanka,Af
+Saint-Laurent-du-Maroni,French Guiana,Af
+"Salvador, Bahia",Brazil,Af
+Santos,Brazil,Af
+Sri Jayawardenepura Kotte,Sri Lanka,Af
+Suva,Fiji,Af
+Tabubil,Papua New Guinea,Af
+Tacloban,Philippines,Af
+Tarawa,Kiribati,Af
+Toamasina,Madagascar,Af
+Tubuai,Austral Islands,Af
+Villa Tunari,Bolivia,Af
+"West Palm Beach, Florida",United States,Af
+Yaren,Nauru,Af
+Alor Setar,Malaysia,Am
+Aracaju,Brazil,Am
+Baguio,Philippines,Am
+Bandung,Indonesia,Am
+Barrancabermeja,Colombia,Am
+Basseterre,Saint Kitts and Nevis,Am
+Batticaloa,Sri Lanka,Am
+Belmopan,Belize,Am
+Cairns,Queensland,Am
+Cali,Colombia,Am
+Cayenne,French Guiana,Am
+Chichijima,Japan,Am
+Chittagong,Bangladesh,Am
+Christmas Island,Australia,Am
+Coatzacoalcos,Veracruz,Am
+Conakry,Guinea,Am
+Curepipe,Mauritius,Am
+Cà Mau,Vietnam,Am
+Da Nang,Vietnam,Am
+David,Panama,Am
+Douala,Cameroon,Am
+"Fort Myers, Florida",United States,Am
+Freetown,Sierra Leone,Am
+Guanare,Venezuela,Am
+Hat Yai,Thailand,Am
+Huế,Vietnam,Am
+Jakarta,Indonesia,Am
+Kisangani,Democratic Republic of the Congo,Am
+Ko Samui,Thailand,Am
+Kochi,Kerala,Am
+Langkawi,Malaysia,Am
+Libreville,Gabon,Am
+Maceió,Brazil,Am
+Makassar,Indonesia,Am
+Malabo,Equatorial Guinea,Am
+Malé,Maldives,Am
+Mangaluru,Karnataka,Am
+Manila,Philippines,Am
+Miami,Florida,Am
+Monrovia,Liberia,Am
+Mérida,Venezuela,Am
+Papeete,French Polynesia,Am
+Phuntsholing,Bhutan,Am
+Pingtung,Taiwan,Am
+Port Harcourt,Rivers State,Am
+Port of Spain,Trinidad and Tobago,Am
+Pucallpa,Peru,Am
+Puerto Ayacucho,Venezuela,Am
+Puerto Maldonado,Peru,Am
+Qionghai,China,Am
+Quezon City,Philippines,Am
+Recife,Pernambuco,Am
+Road Town,British Virgin Islands,Am
+Roseau,Dominica,Am
+"Saipan, Northern Mariana Islands",United States,Am
+Santo Domingo,Dominican Republic,Am
+Sihanoukville,Cambodia,Am
+Sylhet,Bangladesh,Am
+Taitung,Taiwan,Am
+Thiruvananthapuram,Kerala,Am
+Trinidad,Bolivia,Am
+Villahermosa,Mexico,Am
+Wanning,China,Am
+Wenchang,China,Am
+Yangon,Myanmar,Am
+Zanzibar City,Tanzania,Am
+Abidjan,Ivory Coast,Aw
+Abuja,Nigeria,Aw
+Bahir Dar,Ethiopia,Aw
+Bamako,Mali,Aw
+Bangkok,Thailand,Aw
+Bangui,Central African Republic,Aw
+Banjul,The Gambia,Aw
+Barranquilla,Colombia,Aw
+Belo Horizonte,Brazil,Aw
+Bengaluru,Karnataka,Aw
+Bhubaneswar,Odisha,Aw
+Bissau,Guinea-,Aw
+Bobo-Dioulasso,Burkina Faso,Aw
+Brasília,Brazil,Aw
+Brazzaville,Republic of the Congo,Aw
+Bridgetown,Barbados,Aw
+Bujumbura,Burundi,Aw
+Cancún,Quintana Roo,Aw
+Cape Coral,Florida,Aw
+Caracas,Venezuela,Aw
+Chinandega,Nicaragua,Aw
+Chipata,Zambia,Aw
+Cotonou,Benin,Aw
+Cuernavaca,Mexico,Aw
+Dar es Salaam,Tanzania,Aw
+"Darwin, Northern Territory",Australia,Aw
+Denpasar,Bali,Aw
+Dhaka,Bangladesh,Aw
+Dili,East Timor,Aw
+"Dongfang, Hainan",China,Aw
+Guayaquil,Ecuador,Aw
+Gustavia,Saint Barthélemy,Aw
+Haikou,Hainan,Aw
+Havana,Cuba,Aw
+Ho Chi Minh City,Vietnam,Aw
+Hyderabad,Telangana,Aw
+Jashore,Bangladesh,Aw
+Juba,South Sudan,Aw
+Kano,Nigeria,Aw
+Kaohsiung,Taiwan,Aw
+Key West,Florida,Aw
+Khulna,Bangladesh,Aw
+Kigali,Rwanda,Aw
+Kinshasa,Democratic Republic of Congo,Aw
+Kolkata,West Bengal,Aw
+Kumasi,Ghana,Aw
+Kupang,Indonesia,Aw
+Lagos,Nigeria,Aw
+Lomé,Togo,Aw
+Malanje,Angola,Aw
+Managua,Nicaragua,Aw
+Mandalay,Myanmar,Aw
+Maputo,Mozambique,Aw
+"Marigot, Saint Martin",France,Aw
+Moundou,Chad,Aw
+Mumbai,Maharashtra,Aw
+"Naples, Florida",United States,Aw
+Naypyidaw,Myanmar,Aw
+Panama City,Panama,Aw
+"Philipsburg, Sint Maarten",Netherlands,Aw
+Phnom Penh,Cambodia,Aw
+Port Louis,Mauritius,Aw
+Port Moresby,Papua New Guinea,Aw
+Port-au-Prince,Haiti,Aw
+Porto-Novo,Benin,Aw
+Rio de Janeiro,Brazil,Aw
+San Cristóbal Island,Ecuador,Aw
+San Pedro Sula,Honduras,Aw
+San Salvador,El Salvador,Aw
+Sansha,Hainan,Aw
+Santa Cruz de la Sierra,Bolivia,Aw
+Santiago de Cuba,Cuba,Aw
+Sanya,Hainan,Aw
+Surabaya,Indonesia,Aw
+Tainan,Taiwan,Aw
+Tangail,Bangladesh,Aw
+Tegucigalpa,Honduras,Aw
+The Bottom,Saba,Aw
+"The Valley, Anguilla",United Kingdom,Aw
+Townsville,Queensland,Aw
+Veracruz,Mexico,Aw
+Vientiane,Laos,Aw
+Wake Island,United States,Aw
+Yaoundé,Cameroon,Aw
+Ziguinchor,Senegal,Aw
+Accra,Ghana,BSh
+Agadir,Morocco,BSh
+Aguascalientes (city),Mexico,BSh
+Ahmedabad,Gujarat,BSh
+Airolaf,Djibouti,BSh
+Aleppo,Syria,BSh
+Alexandria,Egypt,BSh
+Alicante,Spain,BSh
+Barquisimeto,Venezuela,BSh
+Benghazi,Libya,BSh
+"Broome, Western Australia",Australia,BSh
+Bulawayo,Zimbabwe,BSh
+Bushehr,Iran,BSh
+Catamarca,Argentina,BSh
+Coimbatore,Tamil Nadu,BSh
+Dakar,Senegal,BSh
+Dezful,Iran,BSh
+Dodoma,Tanzania,BSh
+"Fresno, California",United States,BSh
+Gaborone,Botswana,BSh
+Hargeisa,Somaliland,BSh
+Honolulu,Hawaii,BSh
+Huánuco,Peru,BSh
+Jaipur,Rajasthan,BSh
+Kandahar,Afghanistan,BSh
+Kiritimati,Kiribati,BSh
+Kurnool,Andhra Pradesh,BSh
+Lahore,Punjab,BSh
+Lampedusa,Sicily,BSh
+"Laredo, Texas",United States,BSh
+Luanda,Angola,BSh
+Mafikeng,South Africa,BSh
+Maiduguri,Nigeria,BSh
+Malakal,South Sudan,BSh
+Maracaibo,Venezuela,BSh
+Mariscal Estigarribia,Paraguay,BSh
+Maroua,Cameroon,BSh
+Marrakesh,Morocco,BSh
+Mogadishu,Somalia,BSh
+Monterrey,Mexico,BSh
+Mosul,Nineveh,BSh
+Mount Isa,Queensland,BSh
+Murcia,Spain,BSh
+N'Djamena,Chad,BSh
+Niamey,Niger,BSh
+Nicosia,Cyprus,BSh
+Ouagadougou,Burkina Faso,BSh
+Patos,Paraíba,BSh
+Peshawar,Pakistan,BSh
+Petrolina,Pernambuco,BSh
+Piraeus,Greece,BSh
+Polokwane,South Africa,BSh
+Portoviejo,Ecuador,BSh
+Querétaro City,Querétaro,BSh
+"Riverside, California",United States,BSh
+San Diego,California,BSh
+Santiago del Estero,Argentina,BSh
+Sfax,Tunisia,BSh
+Shiraz,Iran,BSh
+Tlemcen,Algeria,BSh
+Toliara,Madagascar,BSh
+Valencia,Spain,BSh
+Willemstad,Curaçao,BSh
+Windhoek,Namibia,BSh
+Yuanmou,Yunnan,BSh
+Albacete,Spain,BSk
+Albuquerque,New Mexico,BSk
+Amman,Jordan,BSk
+Ankara,Turkey,BSk
+Asmara,Eritrea,BSk
+Astrakhan,Russia,BSk
+Atyrau,Kazakhstan,BSk
+Baku,Azerbaijan,BSk
+Batna,Algeria,BSk
+Bhisho,South Africa,BSk
+Bloemfontein,South Africa,BSk
+"Boise, Idaho",United States,BSk
+Choibalsan,Mongolia,BSk
+Cochabamba,Bolivia,BSk
+Comodoro Rivadavia,Argentina,BSk
+Daraa,Syria,BSk
+Denver,Colorado,BSk
+Djelfa,Algeria,BSk
+Durango,Mexico,BSk
+El Kef,Tunisia,BSk
+Eskişehir,Turkey,BSk
+Essaouira,Morocco,BSk
+Gevgelija,North Macedonia,BSk
+Herat,Afghanistan,BSk
+Kabul,Afghanistan,BSk
+Kalgoorlie,Western Australia,BSk
+Kamloops,British Columbia,BSk
+Karaj,Iran,BSk
+Konya,Turkey,BSk
+Kyzyl,Tuva,BSk
+L'Agulhas,Western Cape,BSk
+La Quiaca,Jujuy,BSk
+Lanzhou,Gansu,BSk
+Lethbridge,Alberta,BSk
+Lhasa,Tibet,BSk
+"Lubbock, Texas",United States,BSk
+Madrid,Spain,BSk
+Mafraq,Jordan,BSk
+Mashhad,Iran,BSk
+Mazar-i-Sharif,Balkh,BSk
+Medicine Hat,Alberta,BSk
+Mildura,Victoria,BSk
+Mörön,Mongolia,BSk
+Namangan,Uzbekistan,BSk
+Navoiy,Uzbekistan,BSk
+Oujda,Morocco,BSk
+Pachuca,Hidalgo,BSk
+Quetta,Balochistan,BSk
+"Reno, Nevada",United States,BSk
+Saiq,Oman,BSk
+Samarkand,Uzbekistan,BSk
+Santiago,Chile,BSk
+Serhetabat,Turkmenistan,BSk
+Setif,Algeria,BSk
+Sevastopol,Ukraine,BSk
+Shijiazhuang,Hebei,BSk
+Skardu,Pakistan,BSk
+Sulina,Romania,BSk
+Tabriz,Iran,BSk
+Taraz,Kazakhstan,BSk
+Tarija,Bolivia,BSk
+Tehran,Iran,BSk
+Thessaloniki,Greece,BSk
+Tianjin,China,BSk
+Turkistan,Kazakhstan,BSk
+Ulaanbaatar,Mongolia,BSk
+Ulan-Ude,Buryatia,BSk
+Viedma,Argentina,BSk
+Yerevan,Armenia,BSk
+Zacatecas City,Zacatecas,BSk
+Zaragoza,Spain,BSk
+Abu Dhabi,United Arab Emirates,BWh
+Aden,Yemen,BWh
+Agadez,Niger,BWh
+Ahvaz,Khuzestan,BWh
+Alice Springs,Northern Territory,BWh
+Almería,Andalusia,BWh
+Arica,Chile,BWh
+Arrecife,Canary Islands,BWh
+Ascension Island,United Kingdom,BWh
+Baghdad,Iraq,BWh
+"Bakersfield, California",United States,BWh
+Basra,Iraq,BWh
+Biskra,Algeria,BWh
+Cairo,Egypt,BWh
+Cartagena,Murcia,BWh
+Chilecito,Argentina,BWh
+Coober Pedy,Australia,BWh
+Deir ez-Zor,Syria,BWh
+Dera Ismail Khan,Pakistan,BWh
+Djibouti City,Djibouti,BWh
+Doha,Qatar,BWh
+Dubai,United Arab Emirates,BWh
+Eilat,Southern District,BWh
+"El Paso, Texas",United States,BWh
+Faya-Largeau,Chad,BWh
+Gabès,Tunisia,BWh
+Garissa,Kenya,BWh
+Hermosillo,Sonora,BWh
+Iquique,Chile,BWh
+Jalalabad,Nangarhar,BWh
+"Jamestown, Saint Helena",United Kingdom,BWh
+Jeddah,Saudi Arabia,BWh
+Jodhpur,Rajasthan,BWh
+Karachi,Sindh,BWh
+Keetmanshoop,Namibia,BWh
+Khartoum,Sudan,BWh
+Kufra,Libya,BWh
+Kuwait City,Kuwait,BWh
+La Paz,Mexico,BWh
+Laayoune,Western Sahara,BWh
+Las Vegas,Nevada,BWh
+Lashkargah,Afghanistan,BWh
+Lima,Peru,BWh
+Luxor,Egypt,BWh
+Ma'an,Jordan,BWh
+Manama,Bahrain,BWh
+Massawa,Eritrea,BWh
+Mecca,Makkah Region,BWh
+Mexicali,Baja California,BWh
+Moçâmedes,Angola,BWh
+Multan,Pakistan,BWh
+Muscat,Oman,BWh
+Nouakchott,Mauritania,BWh
+Ouarzazate,Morocco,BWh
+"Phoenix, Arizona",United States,BWh
+Praia,Cape Verde,BWh
+Puerto del Rosario,Canary Islands,BWh
+Punto Fijo,Venezuela,BWh
+Qom,Iran,BWh
+Riyadh,Saudi Arabia,BWh
+Sharm El Sheikh,Egypt,BWh
+Tamanrasset,Algeria,BWh
+Timbuktu,Mali,BWh
+Tobruk,Libya,BWh
+Tucson,Arizona,BWh
+Upington,Northern Cape,BWh
+Yazd,Iran,BWh
+ʽAziziya,Jafara,BWh
+Aktau,Kazakhstan,BWk
+"Albuquerque, New Mexico",United States,BWk
+Antofagasta,Chile,BWk
+Arequipa,Peru,BWk
+Ashgabat,Turkmenistan,BWk
+Bamyan,Afghanistan,BWk
+Bukhara,Uzbekistan,BWk
+Ciudad Juárez,Chihuahua,BWk
+Dalanzadgad,Mongolia,BWk
+Damascus,Syria,BWk
+Fergana,Uzbekistan,BWk
+Golmud,Qinghai,BWk
+Isfahan,Iran,BWk
+"Kalat, Balochistan",Pakistan,BWk
+Kerki,Turkmenistan,BWk
+Kerman,Iran,BWk
+Khovd,Mongolia,BWk
+"Kingman, Arizona",United States,BWk
+Kyzylorda,Kazakhstan,BWk
+Leh,India,BWk
+"Lorca, Spain",[16],BWk
+Naâma,Algeria,BWk
+Neuquén,Argentina,BWk
+Nukus,Karakalpakstan,BWk
+Sanaa,Yemen,BWk
+St. George,Utah,BWk
+Swakopmund,Namibia,BWk
+Tabernas,Spain,BWk
+Turpan,Xinjiang,BWk
+Walvis Bay,Erongo Region,BWk
+"Yakima, Washington",United States,BWk
+Yinchuan,Ningxia,BWk
+Ölgii,Mongolia,BWk
+Asunción,Paraguay,Cfa
+Balbalan,Philippines,Cfa
+Bandar-e Anzali,Gilan,Cfa
+Belgrade,Serbia,Cfa
+Bologna,Italy,Cfa
+Bratislava,Slovakia,Cfa
+Brisbane,Queensland,Cfa
+Budapest,Hungary,Cfa
+Buenos Aires,Argentina,Cfa
+Chongqing,China,Cfa
+Ciudad del Este,Paraguay,Cfa
+Constanța,Romania,Cfa
+Dallas,Texas,Cfa
+Dir,Pakistan,Cfa
+Durban,KwaZulu-Natal,Cfa
+Florianópolis,Santa Catarina,Cfa
+Florina,Greece,Cfa
+Geoje,South Korea,Cfa
+Giresun,Turkey,Cfa
+Girona,Spain,Cfa
+Hangzhou,Zhejiang,Cfa
+Houston,Texas,Cfa
+Huesca,Spain,Cfa
+Ijevan,Tavush,Cfa
+Jeju,South Korea,Cfa
+Koper,Slovenia,Cfa
+Kozani,Greece,Cfa
+Krasnodar,Russia,Cfa
+Kutaisi,Georgia,Cfa
+La Plata,Argentina,Cfa
+Lugano,Ticino,Cfa
+Lyon,France,Cfa
+"Matamoros, Tamaulipas",Mexico,Cfa
+Maykop,Adygea,Cfa
+Milan,Italy,Cfa
+Montevideo,Uruguay,Cfa
+Mostar,Bosnia and Herzegovina,Cfa
+Nagoya,Aichi,Cfa
+New York City,New York,Cfa
+Osaka,Japan,Cfa
+Philadelphia,Pennsylvania,Cfa
+Porto Alegre,Rio Grande do Sul,Cfa
+Prizren,Kosovo,Cfa
+Rasht,Gilan,Cfa
+Rijeka,Croatia,Cfa
+Rosario,Argentina,Cfa
+Samsun,Turkey,Cfa
+Sari,Mazandaran,Cfa
+Shanghai,China,Cfa
+Siguatepeque,Honduras,Cfa
+Simferopol,Ukraine,Cfa
+Skopje,North Macedonia,Cfa
+Sochi,Russia,Cfa
+Srinagar,Jammu and Kashmir,Cfa
+Sydney,New South Wales,Cfa
+São Paulo,Brazil,Cfa
+Taipei,Taiwan,Cfa
+Tbilisi,Georgia,Cfa
+Tirana,Albania,Cfa
+Tokyo,Japan,Cfa
+Toulouse,France,Cfa
+Tulcea,Romania,Cfa
+Tébessa,Algeria,Cfa
+Ulsan,South Korea,Cfa
+Valence,France,Cfa
+Venice,Italy,Cfa
+Vienna,Austria,Cfa
+Wagga Wagga,New South Wales,Cfa
+"Washington, D.C.",United States,Cfa
+Wuhan,Hubei,Cfa
+Yalta,Ukraine,Cfa
+Yokohama,Kanagawa,Cfa
+Zaqatala,Azerbaijan,Cfa
+Zonguldak,Turkey,Cfa
+Amsterdam,North Holland,Cfb
+Andorra la Vella,Andorra,Cfb
+Artvin,Turkey,Cfb
+Auckland,New Zealand,Cfb
+Baltiysk,Kaliningrad Oblast,Cfb
+"Barnstable, Massachusetts",United States,Cfb
+Belfast,Northern Ireland,Cfb
+Bergen,Vestland,Cfb
+Berlin,Germany,Cfb
+Bern,Switzerland,Cfb
+Bilbao,Spain,Cfb
+Block Island,Rhode Island,Cfb
+Bogotá,Colombia,Cfb
+Bolu,Turkey,Cfb
+Bordeaux,France,Cfb
+Bornholm,Denmark,Cfb
+Briançon,France,Cfb
+Brinchang,Malaysia,Cfb
+Brussels,Belgium,Cfb
+Cameron Highlands,Malaysia,Cfb
+Canberra,Australian Capital Territory,Cfb
+Caransebeș,Romania,Cfb
+Cetinje,Montenegro,Cfb
+Christchurch,New Zealand,Cfb
+Cobán,Guatemala,Cfb
+Copenhagen,Denmark,Cfb
+Dublin,Ireland,Cfb
+Dullstroom,South Africa,Cfb
+Edinburgh,Scotland,Cfb
+Eldoret,Kenya,Cfb
+Forks,Washington,Cfb
+Frankfurt,Hesse,Cfb
+Gdynia,Poland,Cfb
+Geneva,Switzerland,Cfb
+Gijón,Spain,Cfb
+Glasgow,Scotland,Cfb
+Goris,Syunik,Cfb
+Gothenburg,Sweden,Cfb
+Graz,Austria,Cfb
+Győr,Hungary,Cfb
+Hobart,Tasmania,Cfb
+Kabale,Uganda,Cfb
+Kaposvár,Hungary,Cfb
+"Ketchikan, Alaska",United States,Cfb
+Kodaikanal,Tamil Nadu,Cfb
+L'Aquila,Italy,Cfb
+La Esperanza,Honduras,Cfb
+Le Tampon,Réunion,Cfb
+"Lithgow, New South Wales",Australia,Cfb
+Ljubljana,Slovenia,Cfb
+Lofoten,Nordland,Cfb
+London,England,Cfb
+Luxembourg City,Luxembourg,Cfb
+Malmö,Sweden,Cfb
+Manizales,Colombia,Cfb
+Mar del Plata,Argentina,Cfb
+Maseru,Lesotho,Cfb
+Melbourne,Victoria,Cfb
+Merano,Italy,Cfb
+Mthatha,South Africa,Cfb
+Mucuchíes,Venezuela,Cfb
+Munich,Bavaria,Cfb
+Nuwara Eliya,Sri Lanka,Cfb
+Oruro,Bolivia,Cfb
+Osorno,Los Lagos Region,Cfb
+Oxapampa,Peru,Cfb
+Paris,France,Cfb
+Port Elizabeth,South Africa,Cfb
+Prague,Czech Republic,Cfb
+"Prince Rupert, British Columbia",Canada,Cfb
+Puerto Montt,Los Lagos Region,Cfb
+Puerto Natales,Chile,Cfb
+Punta del Este,Uruguay,Cfb
+Quito,Pichincha,Cfb
+Riobamba,Ecuador,Cfb
+Sa Pa,Vietnam,Cfb
+Salzburg,Austria,Cfb
+Sarajevo,Bosnia and Herzegovina,Cfb
+Skagen,Denmark,Cfb
+Soria,Spain,Cfb
+Szczecin,Poland,Cfb
+Teresópolis,Rio de Janeiro,Cfb
+Trevico,Italy,Cfb
+Tropojë,Albania,Cfb
+Tunja,Colombia,Cfb
+Vaduz,Liechtenstein,Cfb
+Valdivia,Los Ríos Region,Cfb
+Vancouver,British Columbia,Cfb
+Villa La Angostura,Neuquén Province,Cfb
+"Volcano, Hawaii",United States,Cfb
+Wabag,Papua New Guinea,Cfb
+"Waynesville, North Carolina",United States,Cfb
+Wellington,New Zealand,Cfb
+"Williams, Arizona",United States,Cfb
+Wollongong,New South Wales,Cfb
+Wrocław,Poland,Cfb
+Xalapa,Veracruz,Cfb
+"Yarmouth, Nova Scotia",Canada,Cfb
+Zagreb,Croatia,Cfb
+Zurich,Switzerland,Cfb
+Île d'Yeu,France,Cfb
+Ørland,Trøndelag,Cfb
+"Adak, Alaska",United States,Cfc
+Bø,Nordland,Cfc
+Hafnarfjörður,Iceland,Cfc
+Karlsøy,Norway,Cfc
+"Miena, Tasmania",Australia,Cfc
+Punta Arenas,Chile,Cfc
+Reykjavík,Iceland,Cfc
+"Río Grande, Tierra del Fuego",Argentina,Cfc
+"Río Turbio, Santa Cruz Province",Argentina,Cfc
+Tórshavn,Faroe Islands,Cfc
+"Unalaska, Alaska",United States,Cfc
+Vestmannaeyjar,Iceland,Cfc
+Værøy,Norway,Cfc
+Adelaide,Australia,Csa
+Algiers,Algeria,Csa
+Angra do Heroísmo,Terceira Island,Csa
+Antalya,Turkey,Csa
+Athens,Greece,Csa
+Barcelona,Spain,Csa
+Beirut,Lebanon,Csa
+Casablanca,Morocco,Csa
+Chitral,Pakistan,Csa
+Dubrovnik,Croatia,Csa
+Dushanbe,Tajikistan,Csa
+Erbil,Iraq,Csa
+Funchal,Portugal,Csa
+Heraklion,Greece,Csa
+Homs,Syria,Csa
+"Ilam, Iran",[27],Csa
+Irbid,Jordan,Csa
+Jerusalem,Israel,Csa
+Kardzhali,Bulgaria,Csa
+Kermanshah,Iran,Csa
+Latakia,Syria,Csa
+Lisbon,Portugal,Csa
+Los Angeles,California,Csa
+Marseille,France,Csa
+Maymana,Afghanistan,Csa
+Melipilla,Chile,Csa
+Menorca,Balearic Islands,Csa
+Mersin,Turkey,Csa
+Mosul,Iraq,Csa
+Naples,Italy,Csa
+Nice,France,Csa
+Novorossiysk,Krasnodar Krai,Csa
+Palermo,Italy,Csa
+Patras,Greece,Csa
+Perth,Western Australia,Csa
+Podgorica,Montenegro,Csa
+"Provo, Utah",United States,Csa
+Rome,Italy,Csa
+"Sacramento, California",United States,Csa
+"San Diego, California",United States,Csa
+Sanandaj,Iran,Csa
+Seville,Spain,Csa
+Shkodër,Albania,Csa
+Tangier,Morocco,Csa
+Tashkent,Uzbekistan,Csa
+Tecate,Baja California,Csa
+Tel Aviv,Israel,Csa
+Tlemcen,Algeria,Csa
+Tunis,ia,Csa
+Valletta,Malta,Csa
+Walla Walla,Washington,Csa
+Zhetisay,Kazakhstan,Csa
+İzmir,Turkey,Csa
+Şanlıurfa,Turkey,Csa
+"Albany, Western Australia",Australia,Csb
+Aluminé,Neuquén Province,Csb
+Aveiro,Portugal,Csb
+Cape Town,South Africa,Csb
+"Eugene, Oregon",United States,Csb
+Ipiales,Colombia,Csb
+Karlskrona,Sweden,Csb
+Korçë,Albania,Csb
+Kütahya,Turkey,Csb
+"León, Spain",[14],Csb
+Lonquimay,Araucanía Region,Csb
+Mount Gambier,South Australia,Csb
+Nakuru,Kenya,Csb
+Nanaimo,British Columbia,Csb
+Ohrid,North Macedonia,Csb
+Port Lincoln,South Australia,Csb
+"Portland, Oregon",United States,Csb
+Porto,Portugal,Csb
+Rieti,Italy,Csb
+Salamanca,Spain,Csb
+San Carlos de Bariloche,Argentina,Csb
+San Cristóbal de la Laguna,Spain,Csb
+San Francisco,California,Csb
+San Martín de los Andes,Neuquén Province,Csb
+Seattle,Washington,Csb
+Segovia,Spain,Csb
+Siah Bisheh,Iran,Csb
+Sintra,Portugal,Csb
+Tulcán,Ecuador,Csb
+Valladolid,Spain,Csb
+"Victoria, British Columbia",Canada,Csb
+Liawenee,Australia,Csc
+Røst,Norway,Csc
+Aktobe,Kazakhstan,Dfa
+Almaty,Kazakhstan,Dfa
+Aomori,Japan,Dfa
+Beijing,China,Dfa
+Bishkek,Kyrgyzstan,Dfa
+Bitlis,Turkey,Dfa
+Blagoveshchensk,Amur Oblast,Dfa
+Boston,Massachusetts,Dfa
+Bucharest,Romania,Dfa
+"Cambridge, Idaho",United States,Dfa
+Cheonan,South Korea,Dfa
+Chicago,Illinois,Dfa
+Chirchiq,Uzbekistan,Dfa
+Chișinău,Moldova,Dfa
+Chongjin,North Korea,Dfa
+Chuncheon,Gangwon Province,Dfa
+"Columbus, Ohio",United States,Dfa
+Detroit,Michigan,Dfa
+Dnipro,Ukraine,Dfa
+Donetsk,Ukraine,Dfa
+Fayzabad,Badakhshan,Dfa
+Ghazni,Afghanistan,Dfa
+Hakkâri,Turkey,Dfa
+Hakodate,Hokkaido,Dfa
+Hamadan,Iran,Dfa
+"Hamilton, Ontario",Canada,Dfa
+Harbin,Heilongjiang,Dfa
+Iași,Romania,Dfa
+Incheon,South Korea,Dfa
+Isfara,Tajikistan,Dfa
+Kaesong,North Korea,Dfa
+Kimchaek,North Korea,Dfa
+Konibodom,Tajikistan,Dfa
+Lesozavodsk,Primorsky Krai,Dfa
+"Logan, Utah",United States,Dfa
+"Lytton, British Columbia",Canada,Dfa
+Milwaukee,Wisconsin,Dfa
+Muş,Turkey,Dfa
+"North Platte, Nebraska",United States,Dfa
+Odesa,Ukraine,Dfa
+Osh,Kyrgyzstan,Dfa
+"Phillipsburg, Kansas",United States,Dfa
+Pleven,Bulgaria,Dfa
+Pogradec,Albania,Dfa
+Pyongyang,North Korea,Dfa
+Qabala,Azerbaijan,Dfa
+"Rapid City, South Dakota",United States,Dfa
+Rostov-on-Don,Russia,Dfa
+Salt Lake City,Utah,Dfa
+Sapporo,Hokkaido,Dfa
+Saqqez,Iran,Dfa
+Saratov,Russia,Dfa
+Seoul,South Korea,Dfa
+Shamakhi,Azerbaijan,Dfa
+Shenyang,Liaoning,Dfa
+Shymkent,Kazakhstan,Dfa
+Szeged,Hungary,Dfa
+Tanchon,North Korea,Dfa
+Toronto,Ontario,Dfa
+"Valentine, Nebraska",United States,Dfa
+Volgograd,Russia,Dfa
+"Windsor, Ontario",Canada,Dfa
+Xi'an,Shaanxi,Dfa
+Zaječar,Serbia,Dfa
+Çankırı,Turkey,Dfa
+Ürümqi,Xinjiang,Dfa
+Abali,Iran,Dfb
+Aetomilitsa,Greece,Dfb
+Akhaltsikhe,Georgia,Dfb
+Alto Río Senguer,Chubut Province,Dfb
+Ardahan,Turkey,Dfb
+Asahikawa,Hokkaido,Dfb
+Astana,Kazakhstan,Dfb
+Augsburg,Bavaria,Dfb
+Ağrı,Turkey,Dfb
+Baruunturuun,Mongolia,Dfb
+Belluno,Italy,Dfb
+"Bismarck, North Dakota",United States,Dfb
+Bitola,North Macedonia,Dfb
+Briceni,Moldova,Dfb
+Brno,Czech Republic,Dfb
+Calgary,Alberta,Dfb
+"Castlegar, British Columbia",Canada,Dfb
+Chaghcharan,Ghor,Dfb
+Chamonix,France,Dfb
+Cluj-Napoca,Romania,Dfb
+Cortina d'Ampezzo,Italy,Dfb
+Darkhan,Mongolia,Dfb
+Debrecen,Hungary,Dfb
+Dras,Ladakh,Dfb
+Edmonton,Alberta,Dfb
+El Pas de la Casa,Andorra,Dfb
+Erzurum,Turkey,Dfb
+"Fairbanks, Alaska",United States,Dfb
+Falun,Dalarna,Dfb
+"Flagstaff, Arizona",United States,Dfb
+Gospić,Croatia,Dfb
+Gyumri,Shirak,Dfb
+Görlitz,Saxony,Dfb
+"Harrison, Nebraska",United States,Dfb
+Heihe,Heilongjiang,Dfb
+Helsinki,Finland,Dfb
+Hoeryong,North Korea,Dfb
+Hyesan,North Korea,Dfb
+Imilchil,Morocco,Dfb
+Innsbruck,Austria,Dfb
+Irkutsk,Russia,Dfb
+Jermuk,Vyots Dzor,Dfb
+Karaganda,Kazakhstan,Dfb
+Karakol,Kyrgyzstan,Dfb
+Kars,Turkey,Dfb
+Khabarovsk,Russia,Dfb
+Kharkhorin,Mongolia,Dfb
+Kharkiv,Ukraine,Dfb
+Klagenfurt am Wörthersee,Austria,Dfb
+Klaipėda,Lithuania,Dfb
+Košice,Slovakia,Dfb
+Kraków,Poland,Dfb
+Kushiro,Hokkaido,Dfb
+Kyiv,Ukraine,Dfb
+La Brévine,Switzerland,Dfb
+La Chaux-de-Fonds,Switzerland,Dfb
+Lendava,Slovenia,Dfb
+Lillehammer,Norway,Dfb
+Linguaglossa,Sicily,Dfb
+Livno,Bosnia and Herzegovina,Dfb
+Lviv,Ukraine,Dfb
+"Marquette, Michigan",United States,Dfb
+Miercurea Ciuc,Romania,Dfb
+Minsk,Belarus,Dfb
+Montreal,Quebec,Dfb
+Moscow,Russia,Dfb
+"Mount Buller, Victoria",Australia,Dfb
+Mouthe,France,Dfb
+Mutsu,Aomori Prefecture,Dfb
+Novosibirsk,Russia,Dfb
+Oslo,Norway,Dfb
+Ottawa,Ontario,Dfb
+Pavlodar,Kazakhstan,Dfb
+"Pembina, North Dakota",United States,Dfb
+Pljevlja,Montenegro,Dfb
+"Portland, Maine",United States,Dfb
+Poznań,Poland,Dfb
+Pristina,Kosovo,Dfb
+Pyeongchang,South Korea,Dfb
+Rason,North Korea,Dfb
+Regensburg,Bavaria,Dfb
+Riga,Latvia,Dfb
+Rocca di Mezzo,Italy,Dfb
+Roghun,Tajikistan,Dfb
+Saint Petersburg,Russia,Dfb
+Saint-Véran,France,Dfb
+Samara,Russia,Dfb
+Schaan,Liechtenstein,Dfb
+Shigatse,Tibet,Dfb
+Sivas,Turkey,Dfb
+Smolyan,Bulgaria,Dfb
+Sofia,Bulgaria,Dfb
+"South Lake Tahoe, California",United States,Dfb
+Spokane,Washington,Dfb
+Stockholm,Sweden,Dfb
+Subotica,Serbia,Dfb
+Szombathely,Hungary,Dfb
+Tallinn,Estonia,Dfb
+Tampere,Finland,Dfb
+"Thief River Falls, Minnesota",United States,Dfb
+Toblach,Italy,Dfb
+Trondheim,Norway,Dfb
+Turku,Finland,Dfb
+Uppsala,Sweden,Dfb
+Vanadzor,Armenia,Dfb
+Vilnius,Lithuania,Dfb
+Vladivostok,Primorsky Krai,Dfb
+Warsaw,Poland,Dfb
+Winnipeg,Manitoba,Dfb
+Worthington,Massachusetts United States,Dfb
+Yanji,Jilin,Dfb
+Žabljak,Montenegro,Dfb
+Akranes,Iceland,Dfc
+Akureyri,Iceland,Dfc
+Alta,Norway,Dfc
+Anadyr,Chukotka,Dfc
+"Anchorage, Alaska",United States,Dfc
+Arkhangelsk,Russia,Dfc
+"Atlin, British Columbia",Canada,Dfc
+"Bethel, Alaska",United States,Dfc
+"Bodie, California",United States,Dfc
+"Brian Head, Utah",United States,Dfc
+Bulgan,Mongolia,Dfc
+Davos,Switzerland,Dfc
+Dawson City,Yukon,Dfc
+"Delta Junction, Alaska",United States,Dfc
+"Feldberg, Baden-Württemberg",Germany,Dfc
+Fort McMurray,Alberta,Dfc
+"Fraser, Colorado",United States,Dfc
+Hikkim,Himachel Pradesh,Dfc
+Horská Kvilda,Czech Republic,Dfc
+Jyväskylä,Finland,Dfc
+Kangerlussuaq,Greenland,Dfc
+"Kenai, Alaska",United States,Dfc
+Kiruna,Sweden,Dfc
+Kotlas,Russia,Dfc
+Labrador City,Newfoundland and Labrador,Dfc
+Livigno,Italy,Dfc
+Luleå,Sweden,Dfc
+Mohe,Heilongjiang,Dfc
+Nagqu,Tibet,Dfc
+Narsarsuaq,Greenland,Dfc
+"Nome, Alaska",United States,Dfc
+Norilsk,Krasnoyarsk Krai,Dfc
+Nyurba,Sakha Republic,Dfc
+Obergurgl,Austria,Dfc
+Okhotsk,Khabarovsk Krai,Dfc
+Oulu,Finland,Dfc
+Petropavlovsk-Kamchatsky,Kamchatka Krai,Dfc
+Røros,Norway,Dfc
+Saint Pierre and Miquelon,France,Dfc
+Samjiyon,North Korea,Dfc
+Sauðárkrókur,Iceland,Dfc
+Seymchan,Magadan Oblast,Dfc
+Skjåk,Norway,Dfc
+"Soldotna, Alaska",United States,Dfc
+St. Moritz,Grisons,Dfc
+Susuman,Magadan Oblast,Dfc
+Tignes,France,Dfc
+Tromsø,Norway,Dfc
+Tsetserleg,Arkhangai Province,Dfc
+Umeå,Sweden,Dfc
+Usolye-Sibirskoye,Irkutsk Oblast,Dfc
+Vaasa,Finland,Dfc
+Whitehorse,Yukon,Dfc
+Yakutsk,Sakha Republic,Dfc
+Yellowknife,Northwest Territories,Dfc
+"Yushu City, Qinghai",China,Dfc
+Zermatt,Switzerland,Dfc
+Allakh-Yun,Sakha Republic,Dfd
+Delyankir,Sakha Republic,Dfd
+Khonuu,Sakha Republic,Dfd
+Okhotsky-Perevoz,Sakha Republic,Dfd
+Oymyakon,Sakha Republic,Dfd
+Udachny,Sakha Republic,Dfd
+Verkhoyansk,Sakha Republic,Dfd
+Amundsen–Scott Station,Antarctica,EF
+Casey Station,Antarctica,EF
+Marambio Base,Antarctica,EF
+McMurdo Station,Antarctica,EF
+Summit Camp,Greenland,EF
+Vostok Station,Antarctica,EF
+"Alert, Nunavut",Canada,ET
+Amdo,Tibet,ET
+Apartaderos,Venezuela,ET
+Bernardo O'Higgins Base,Antarctica,ET
+Cerro de Pasco,Peru,ET
+Davis Station,Antarctica,ET
+Dikson,Krasnoyarsk Krai,ET
+Dingboche,Nepal,ET
+El Aguilar,Argentina,ET
+El Alto,Bolivia,ET
+Esperanza Base,Antarctica,ET
+Finse,Norway,ET
+Grytviken,South Georgia,ET
+Ilulissat,Greenland,ET
+Iqaluit,Nunavut,ET
+Ittoqqortoormiit,Greenland,ET
+Juf,Switzerland,ET
+Longyearbyen,Svalbard,ET
+Murghob,Tajikistan,ET
+Mykines,Faroe Islands,ET
+Mys Shmidta,Chukotka,ET
+Möðrudalur,Iceland,ET
+North Salang,Afghanistan,ET
+Nuuk,Greenland,ET
+Ny-Ålesund,Svalbard,ET
+Palmer Station,Antarctica,ET
+Phari,China,ET
+Port-aux-Français,France,ET
+Puerto Williams,Chile,ET
+Putre,Chile,ET
+Qaanaaq,Greenland,ET
+Qarabolaq,Afghanistan,ET
+Sachs Harbour,Northwest Territories,ET
+Shimshal,Pakistan,ET
+"St. Paul, Alaska",United States,ET
+Tanggulashan,Qinghai,ET
+Tiksi,Sakha Republic,ET
+Tolhuin,Tierra del Fuego,ET
+Trepalle,Italy,ET
+Ushuaia,Tierra del Fuego,ET
+"Utqiagvik, Alaska",United States,ET
+Vetas,Colombia,ET
+"Wainwright, Alaska",United States,ET
+Ísafjörður,Iceland,ET
